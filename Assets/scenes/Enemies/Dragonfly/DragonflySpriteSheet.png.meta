@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 0ca0897527a60dd44b85ef47c6104308
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DragonflySpriteSheet_0
+    21300002: DragonflySpriteSheet_1
+    21300004: DragonflySpriteSheet_2
+    21300006: DragonflySpriteSheet_3
+    21300008: DragonflySpriteSheet_4
+    21300010: DragonflySpriteSheet_5
+    21300012: DragonflySpriteSheet_6
+    21300014: DragonflySpriteSheet_7
+    21300016: DragonflySpriteSheet_8
+    21300018: DragonflySpriteSheet_9
+    21300020: DragonflySpriteSheet_10
+    21300022: DragonflySpriteSheet_11
+    21300024: DragonflySpriteSheet_12
+    21300026: DragonflySpriteSheet_13
+    21300028: DragonflySpriteSheet_14
+    21300030: DragonflySpriteSheet_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DragonflySpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1203
+        width: 465
+        height: 760
+      alignment: 9
+      pivot: {x: .600969911, y: .990397751}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1207
+        width: 613
+        height: 760
+      alignment: 9
+      pivot: {x: .0715228468, y: .988822997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 1373
+        width: 576
+        height: 496
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 779
+        width: 142
+        height: 270
+      alignment: 9
+      pivot: {x: .37423104, y: .802302599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 807
+        width: 210
+        height: 212
+      alignment: 9
+      pivot: {x: .845668852, y: .850017071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 819
+        width: 244
+        height: 212
+      alignment: 9
+      pivot: {x: .899205685, y: .88112253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 789
+        width: 219
+        height: 252
+      alignment: 9
+      pivot: {x: .243306756, y: .794142962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 771
+        width: 68
+        height: 304
+      alignment: 9
+      pivot: {x: .515976846, y: .888543785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 807
+        width: 242
+        height: 212
+      alignment: 9
+      pivot: {x: .0959972069, y: .882798076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 881
+        width: 156
+        height: 84
+      alignment: 9
+      pivot: {x: .926758587, y: .150042579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 359
+        width: 222
+        height: 298
+      alignment: 9
+      pivot: {x: .647451818, y: .725791752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 472
+        width: 364
+        height: 107
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 445
+        width: 217
+        height: 152
+      alignment: 9
+      pivot: {x: .77703321, y: .500000417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 125
+        width: 339
+        height: 364
+      alignment: 9
+      pivot: {x: .977308989, y: .543450892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 17
+        width: 1124
+        height: 262
+      alignment: 9
+      pivot: {x: .00888330117, y: .349216431}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DragonflySpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 179
+        width: 251
+        height: 248
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

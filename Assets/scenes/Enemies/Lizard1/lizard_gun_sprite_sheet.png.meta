@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 564ee960fc9dcbb4e8042e555f7e4187
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: lizard_gun_sprite_sheet_0
+    21300002: lizard_gun_sprite_sheet_1
+    21300004: lizard_gun_sprite_sheet_2
+    21300006: lizard_gun_sprite_sheet_3
+    21300008: lizard_gun_sprite_sheet_4
+    21300010: lizard_gun_sprite_sheet_5
+    21300012: lizard_gun_sprite_sheet_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: lizard_gun_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 841
+        width: 452
+        height: 179
+      alignment: 9
+      pivot: {x: .879032612, y: .393403292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lizard_gun_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 703
+        width: 516
+        height: 314
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lizard_gun_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 643
+        width: 376
+        height: 192
+      alignment: 9
+      pivot: {x: .281798303, y: .306500435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lizard_gun_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 380
+        width: 708
+        height: 260
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lizard_gun_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 28
+        width: 200
+        height: 550
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lizard_gun_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 152
+        width: 498
+        height: 213
+      alignment: 9
+      pivot: {x: .99497062, y: .894158185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lizard_gun_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 12
+        width: 451
+        height: 127
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 7de881402a9023c4f9aa227f68a2de4b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DuckSpriteSheet_0
+    21300002: DuckSpriteSheet_1
+    21300004: DuckSpriteSheet_2
+    21300006: DuckSpriteSheet_3
+    21300008: DuckSpriteSheet_4
+    21300010: DuckSpriteSheet_5
+    21300012: DuckSpriteSheet_6
+    21300014: DuckSpriteSheet_7
+    21300016: DuckSpriteSheet_8
+    21300018: DuckSpriteSheet_9
+    21300020: DuckSpriteSheet_10
+    21300022: DuckSpriteSheet_11
+    21300024: DuckSpriteSheet_12
+    21300026: DuckSpriteSheet_13
+    21300028: DuckSpriteSheet_14
+    21300030: DuckSpriteSheet_15
+    21300032: DuckSpriteSheet_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DuckSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1751
+        width: 340
+        height: 170
+      alignment: 9
+      pivot: {x: .966048717, y: .544920444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1611
+        width: 308
+        height: 320
+      alignment: 9
+      pivot: {x: .602662921, y: .020573426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1787
+        width: 180
+        height: 164
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1496
+        width: 346
+        height: 443
+      alignment: 9
+      pivot: {x: .379454494, y: .0106661348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1537
+        width: 230
+        height: 103
+      alignment: 9
+      pivot: {x: .976539791, y: .794945598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1600
+        width: 196
+        height: 117
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1163
+        width: 524
+        height: 144
+      alignment: 9
+      pivot: {x: .839656711, y: .649991333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 747
+        width: 794
+        height: 560
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 729
+        width: 136
+        height: 238
+      alignment: 9
+      pivot: {x: .599535108, y: .759009123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 728
+        width: 137
+        height: 239
+      alignment: 9
+      pivot: {x: .599535108, y: .759009123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 111
+        width: 349
+        height: 430
+      alignment: 9
+      pivot: {x: .484574556, y: .730797231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 111
+        width: 346
+        height: 430
+      alignment: 9
+      pivot: {x: .484574586, y: .730797172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 291
+        width: 358
+        height: 162
+      alignment: 9
+      pivot: {x: .761576533, y: .708162487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 291
+        width: 356
+        height: 162
+      alignment: 9
+      pivot: {x: .761576474, y: .708162487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1414
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1088
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuckSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1281
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

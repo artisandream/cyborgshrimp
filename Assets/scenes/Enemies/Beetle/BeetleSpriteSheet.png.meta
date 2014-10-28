@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: 7c22f58ac794a644a90b9819c3c9a52d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BeetleSpriteSheet_0
+    21300002: BeetleSpriteSheet_1
+    21300004: BeetleSpriteSheet_2
+    21300006: BeetleSpriteSheet_3
+    21300008: BeetleSpriteSheet_4
+    21300010: BeetleSpriteSheet_5
+    21300012: BeetleSpriteSheet_6
+    21300014: BeetleSpriteSheet_7
+    21300016: BeetleSpriteSheet_8
+    21300018: BeetleSpriteSheet_9
+    21300020: BeetleSpriteSheet_10
+    21300022: BeetleSpriteSheet_11
+    21300024: BeetleSpriteSheet_12
+    21300026: BeetleSpriteSheet_13
+    21300028: BeetleSpriteSheet_14
+    21300030: BeetleSpriteSheet_15
+    21300032: BeetleSpriteSheet_16
+    21300034: BeetleSpriteSheet_17
+    21300036: BeetleSpriteSheet_18
+    21300038: BeetleSpriteSheet_19
+    21300040: BeetleSpriteSheet_20
+    21300042: BeetleSpriteSheet_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BeetleSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1813
+        width: 334
+        height: 144
+      alignment: 9
+      pivot: {x: .842881978, y: .521794617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1573
+        width: 372
+        height: 344
+      alignment: 9
+      pivot: {x: .965182245, y: .412259489}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1685
+        width: 132
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 1423
+        width: 515
+        height: 572
+      alignment: 9
+      pivot: {x: .444501162, y: .0961179957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1597
+        width: 172
+        height: 110
+      alignment: 9
+      pivot: {x: .931327045, y: .0858908892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1369
+        width: 169
+        height: 120
+      alignment: 9
+      pivot: {x: .919359803, y: .0814208984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1139
+        width: 952
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 735
+        width: 424
+        height: 510
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 728
+        width: 137
+        height: 216
+      alignment: 9
+      pivot: {x: .319540858, y: .803009331}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 704
+        width: 280
+        height: 241
+      alignment: 9
+      pivot: {x: .160685509, y: .815901279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 728
+        width: 137
+        height: 215
+      alignment: 9
+      pivot: {x: .305239946, y: .807559013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 705
+        width: 280
+        height: 240
+      alignment: 9
+      pivot: {x: .164616182, y: .815199256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 63
+        width: 762
+        height: 564
+      alignment: 9
+      pivot: {x: .065260686, y: .730552793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 411
+        width: 93
+        height: 213
+      alignment: 9
+      pivot: {x: .46751222, y: .797688246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 389
+        width: 182
+        height: 240
+      alignment: 9
+      pivot: {x: .255058527, y: .812714398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 411
+        width: 92
+        height: 213
+      alignment: 9
+      pivot: {x: .46751219, y: .797688186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 389
+        width: 182
+        height: 240
+      alignment: 9
+      pivot: {x: .255058497, y: .812714398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 88
+        width: 84
+        height: 216
+      alignment: 9
+      pivot: {x: .505748928, y: .791850626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 93
+        width: 194
+        height: 240
+      alignment: 9
+      pivot: {x: .755736649, y: .813196957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 88
+        width: 84
+        height: 216
+      alignment: 9
+      pivot: {x: .505748928, y: .791850626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 93
+        width: 192
+        height: 240
+      alignment: 9
+      pivot: {x: .755736589, y: .813197017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BeetleSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1429
+        width: 916
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

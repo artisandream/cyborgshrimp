@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: 076b134928e34a146a196689ef749024
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rocks2_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 907
+        width: 274
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_1
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 897
+        width: 277
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_2
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 889
+        width: 214
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_3
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 894
+        width: 114
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 800
+        width: 219
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 787
+        width: 161
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_6
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 781
+        width: 148
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_7
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 794
+        width: 167
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_8
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 800
+        width: 126
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 553
+        width: 266
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 676
+        width: 154
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 665
+        width: 200
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_12
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 665
+        width: 138
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_13
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 548
+        width: 121
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_14
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 552
+        width: 141
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_15
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 539
+        width: 141
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_16
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 541
+        width: 178
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_17
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 387
+        width: 204
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_18
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 389
+        width: 141
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_19
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 400
+        width: 131
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_20
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 408
+        width: 117
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_21
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 265
+        width: 304
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_22
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 261
+        width: 116
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_23
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 263
+        width: 145
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_24
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 273
+        width: 110
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_25
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 266
+        width: 169
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 130
+        width: 164
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_27
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 130
+        width: 245
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_28
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 135
+        width: 148
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_29
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 130
+        width: 216
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_30
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 134
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 4
+        width: 168
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 10
+        width: 161
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_33
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 5
+        width: 191
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks2_34
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 6
+        width: 322
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

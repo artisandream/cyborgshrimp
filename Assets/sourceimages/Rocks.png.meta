@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: e07089e6ef1a744aeb4149672a875cfd
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rocks_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1693
+        width: 343
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_1
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1359
+        width: 286
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_2
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1733
+        width: 578
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_3
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 1855
+        width: 200
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_4
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1359
+        width: 286
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_5
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 1056
+        width: 225
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 587
+        width: 184
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 400
+        width: 224
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_8
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 245
+        width: 120
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Rocks_9
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 8
+        width: 138
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

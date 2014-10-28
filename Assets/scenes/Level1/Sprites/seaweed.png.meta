@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 65d26dfeee172b64b8aae8674a29a980
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: seaweed_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1688
+        width: 128
+        height: 184
+      alignment: 9
+      pivot: {x: .659648538, y: .0295091718}
+    - name: seaweed_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1690
+        width: 162
+        height: 255
+      alignment: 9
+      pivot: {x: .417433947, y: .020632755}
+    - name: seaweed_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1693
+        width: 267
+        height: 332
+      alignment: 9
+      pivot: {x: .410939991, y: .0120658418}
+    - name: seaweed_3
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1691
+        width: 268
+        height: 284
+      alignment: 9
+      pivot: {x: .617840886, y: .0185598452}
+    - name: seaweed_4
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 1693
+        width: 131
+        height: 202
+      alignment: 9
+      pivot: {x: .874382198, y: .0144145703}
+    - name: seaweed_5
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1693
+        width: 330
+        height: 272
+      alignment: 9
+      pivot: {x: .439201206, y: .0178092513}
+    - name: seaweed_6
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1694
+        width: 145
+        height: 257
+      alignment: 9
+      pivot: {x: .426995218, y: .0188368261}
+    - name: seaweed_7
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1692
+        width: 240
+        height: 296
+      alignment: 9
+      pivot: {x: .601460755, y: .01506826}
+    - name: seaweed_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1325
+        width: 192
+        height: 254
+      alignment: 9
+      pivot: {x: .472427279, y: .0150064779}
+    - name: seaweed_9
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1321
+        width: 294
+        height: 278
+      alignment: 9
+      pivot: {x: .484559983, y: .0114504583}
+    - name: seaweed_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1187
+        width: 226
+        height: 418
+      alignment: 9
+      pivot: {x: .379711598, y: .0105152773}
+    - name: seaweed_12
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 1242
+        width: 637
+        height: 413
+      alignment: 9
+      pivot: {x: .5, y: .0490592606}
+    - name: seaweed_13
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 1262
+        width: 367
+        height: 365
+      alignment: 9
+      pivot: {x: .5, y: .0438489951}
+    - name: seaweed_14
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 985
+        width: 194
+        height: 256
+      alignment: 9
+      pivot: {x: .438997418, y: .00787258148}
+    - name: seaweed_15
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 632
+        width: 350
+        height: 475
+      alignment: 9
+      pivot: {x: .551413417, y: .0143149924}
+    - name: seaweed_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 637
+        width: 194
+        height: 269
+      alignment: 9
+      pivot: {x: .52228725, y: .01105054}
+    - name: seaweed_18
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 838
+        width: 248
+        height: 289
+      alignment: 9
+      pivot: {x: .489782035, y: .0650924072}
+    - name: seaweed_20
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 839
+        width: 557
+        height: 391
+      alignment: 9
+      pivot: {x: .5, y: .0368043557}
+    - name: seaweed_22
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 663
+        width: 241
+        height: 479
+      alignment: 9
+      pivot: {x: .501008332, y: .00811793096}
+    - name: seaweed_24
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 425
+        width: 404
+        height: 390
+      alignment: 9
+      pivot: {x: .57382381, y: .00806133542}
+    - name: seaweed_25
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 381
+        width: 252
+        height: 448
+      alignment: 9
+      pivot: {x: .73370409, y: .0055812425}
+    - name: seaweed_26
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 373
+        width: 308
+        height: 436
+      alignment: 9
+      pivot: {x: .499507755, y: .00800393522}
+    - name: seaweed_27
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 73
+        width: 163
+        height: 343
+      alignment: 9
+      pivot: {x: .497890741, y: .0115567092}
+    - name: seaweed_28
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 71
+        width: 255
+        height: 464
+      alignment: 9
+      pivot: {x: .47080797, y: .00732489303}
+    - name: seaweed_30
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 66
+        width: 305
+        height: 454
+      alignment: 9
+      pivot: {x: .519703329, y: .00817582011}
+    - name: seaweed_31
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 21
+        width: 201
+        height: 396
+      alignment: 9
+      pivot: {x: .718841076, y: .00948477257}
+    - name: seaweed_31
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 15
+        width: 372
+        height: 358
+      alignment: 9
+      pivot: {x: .51427108, y: .0155348107}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: f03713aba7ec7994ca880c1e3ca6fb33
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Lizard1SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1335
+        width: 704
+        height: 684
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Lizard1SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1577
+        width: 520
+        height: 430
+      alignment: 9
+      pivot: {x: .913576782, y: .325376719}
+    - name: Lizard1SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1779
+        width: 612
+        height: 240
+      alignment: 9
+      pivot: {x: .864874721, y: .371171057}
+    - name: Lizard1SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1303
+        width: 129
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Lizard1SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1368
+        width: 556
+        height: 370
+      alignment: 9
+      pivot: {x: .819327176, y: .798834085}
+    - name: Lizard1SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 847
+        width: 228
+        height: 465
+      alignment: 9
+      pivot: {x: .921279967, y: .408972293}
+    - name: Lizard1SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 840
+        width: 302
+        height: 425
+      alignment: 9
+      pivot: {x: .160100877, y: .523812592}
+    - name: Lizard1SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 808
+        width: 197
+        height: 331
+      alignment: 9
+      pivot: {x: .361324728, y: .789011598}
+    - name: Lizard1SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1021
+        width: 260
+        height: 260
+      alignment: 9
+      pivot: {x: .680044293, y: .684770346}
+    - name: Lizard1SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1013
+        width: 261
+        height: 258
+      alignment: 9
+      pivot: {x: .675491273, y: .684632778}
+    - name: Lizard1SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 271
+        width: 289
+        height: 554
+      alignment: 9
+      pivot: {x: .874947309, y: .471375942}
+    - name: Lizard1SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 641
+        width: 404
+        height: 132
+      alignment: 9
+      pivot: {x: .0752164647, y: .508280873}
+    - name: Lizard1SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 456
+        width: 230
+        height: 241
+      alignment: 9
+      pivot: {x: .277787983, y: .737315834}
+    - name: Lizard1SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 456
+        width: 233
+        height: 241
+      alignment: 9
+      pivot: {x: .277450621, y: .738451183}
+    - name: Lizard1SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 459
+        width: 192
+        height: 328
+      alignment: 9
+      pivot: {x: .364061981, y: .787333071}
+    - name: Lizard1SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 367
+        width: 350
+        height: 188
+      alignment: 9
+      pivot: {x: .109616615, y: .505814075}
+    - name: Lizard1SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 13
+        width: 293
+        height: 155
+      alignment: 9
+      pivot: {x: .497701973, y: .725886762}
+    - name: Lizard1SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 11
+        width: 418
+        height: 301
+      alignment: 9
+      pivot: {x: .111635201, y: .598058641}
+    - name: Lizard1SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 21
+        width: 140
+        height: 300
+      alignment: 9
+      pivot: {x: .633564532, y: .829321086}
+    - name: Lizard1SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 21
+        width: 138
+        height: 300
+      alignment: 9
+      pivot: {x: .630732, y: .831212759}
+    - name: Lizard1SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 24
+        width: 290
+        height: 155
+      alignment: 9
+      pivot: {x: .495903909, y: .767889798}
+  spritePackingTag: 
+  userData: 
