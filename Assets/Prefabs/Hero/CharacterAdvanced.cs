@@ -16,6 +16,7 @@ public class CharacterAdvanced : MonoBehaviour {
 	public float jumpSpeed = 10;
 	public float gravity = 20;
 
+	//Hello Class!
 	void Start () {
 		MoveCharacterViaButtons.MoveCharacter += ChangeInputFloat;
 		MoveCharacterViaArrowKeys.MoveCharacter += ChangeInputFloat;
