@@ -11,6 +11,7 @@ public class WeaponClass : MonoBehaviour {
 	public bool ifAvaliable = false;
 	public int currentAmmo = 0;
 	public int ammoSpeed = 10;
+	public int ammoPower = 1;
 	public float powerUpScale = 0.14f;
 	public float playScale = 0.8f;
 

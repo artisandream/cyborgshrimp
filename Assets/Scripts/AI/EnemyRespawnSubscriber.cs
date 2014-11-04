@@ -13,7 +13,7 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	public float nextActivate = 1.0F;// the next time an enemy can respawn
 	private Vector3 SpawnLocation;//the location that the enemy will appear after respawning
 	private bool canRespawn;
-	private List<AmmoSpawner> damageAmountList;
+	private List<WeaponClass> damageAmountList;
 
 //	private int i = 0;
 	
@@ -26,12 +26,12 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	}
 
 	void Start() {
-		damageAmountList = new List<AmmoSpawner>();
+		damageAmountList = new List<WeaponClass>();
 		healthReturn = health;//sets the return health to the users current health value
-		WeaponsPickUpAndSwitch.AmmoPowerEvent += ChangeDamageNum;//subscribes to the SwitchWeapon event
+		WeaponClass.AddWeaponToList += ChangeDamageNum;//subscribes to the SwitchWeapon event
 	}
 
-	public void ChangeDamageNum (AmmoSpawner _aS) {//this sets the damage to the enemy from the current weapon in the SwitchWeapon Script
+	public void ChangeDamageNum (WeaponClass _aS) {//this sets the damage to the enemy from the current weapon in the SwitchWeapon Script
 		damageAmountList.Add(_aS);
 	}
 
@@ -44,11 +44,13 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 		EnemySpawnerDelegate.ActivateEnemyEvent -= Reactivate;//unsubscripts the Reactivate function the the EnemySpawnerDelegate event
 	}
 	
-	void OnCollisionEnter (Collision _c) {
+	public void LowerHealth (Collider _c) {
 		string _t = _c.gameObject.tag;//_t is tag
-		foreach (AmmoSpawner _aS in damageAmountList) {//_aS is a var for AmmoSpawner
-			if(_t == _aS.ammoTag) health -= _aS.ammoPower;
-			Debug.Log(_aS.ammoPower);
+		Debug.Log (_t);
+		foreach (WeaponClass _aS in damageAmountList) {//_aS is a var for AmmoSpawner
+			Debug.Log(_aS);
+			if(_t == _aS.thisWeaponSelection.ToString()) health -= _aS.ammoPower;
+				Debug.Log(_aS.ammoPower);
 		}
 		if(health <= 0) {//tests for current health value
 			this.gameObject.SetActive(false);//deactivates this gameOjbect
