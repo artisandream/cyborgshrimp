@@ -11,7 +11,8 @@ public class ButtonTrans : MonoBehaviour {
 	public Color fadedColor;
 	private Color currentColor;
 	public bool activeButton = false;
-	
+	public int activateNum = 0;
+
 	public float duration = 1.0F;
 	
 	public enum ButtonStates {
@@ -35,9 +36,11 @@ public class ButtonTrans : MonoBehaviour {
 		}
 	}
 
-	void SetSwitchButton () {
-		activeButton = true;
-		SetButtonStartState();
+	void SetSwitchButton (int _a) {
+		if(_a == activateNum){
+				activeButton = true;
+				SetButtonStartState ();
+		}
 	}
 
 	void Start () {
