@@ -25,13 +25,17 @@ public class AmmoClass : MonoBehaviour {
 	}	
 
 	void OnTriggerEnter () {
-		ammoAnim.SetBool("Restart", false);//sets the animators restart custom perameter
-		ammoAnim.SetBool("Impact", true);
-		rigidbody.Sleep();
 		StartCoroutine(StopImpact());
 	}
 
+//	void OnTriggerStay () {
+//		OnTriggerEnter ();
+//	}
+
 	IEnumerator StopImpact () {
+		ammoAnim.SetBool("Restart", false);//sets the animators restart custom perameter
+		rigidbody.Sleep();
+		ammoAnim.SetBool("Impact", true);
 		yield return new WaitForSeconds(0.1f);
 		ammoAnim.SetBool("Impact", false);
 	}
