@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class EnemyRespawnSubscriber : MonoBehaviour {
 
 	public int health = 3;//the enemy health
-	[HideInInspector]//Hides the next line from the Unity Editor
 	public int healthReturn = 3;//the value that the enemy should return to if upon respawning
 
 	public int randomSpawningTime = 10;
@@ -49,8 +48,11 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 		Debug.Log (_t);
 		foreach (WeaponClass _aS in damageAmountList) {//_aS is a var for AmmoSpawner
 			Debug.Log(_aS);
-			if(_t == _aS.thisWeaponSelection.ToString()) health -= _aS.ammoPower;
-				Debug.Log(_aS.ammoPower);
+			if(_t == _aS.thisWeaponSelection.ToString()) 
+				health -= _aS.ammoPower;
+
+			Debug.Log(_aS.ammoPower);
+			Debug.Log(health);
 		}
 		if(health <= 0) {//tests for current health value
 			this.gameObject.SetActive(false);//deactivates this gameOjbect

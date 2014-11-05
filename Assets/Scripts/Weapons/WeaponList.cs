@@ -6,8 +6,7 @@ using System;
 public class WeaponList : MonoBehaviour {
 
 	public List<WeaponClass> avaliableWeapons;
-	public static Action ActivateWeaponSwitch;
-	public int activeCount = 0;
+	public static Action<int> ActivateWeaponSwitch;
 	public int currentWeaponNum = 0;
 	public Vector3 weaponLocation;
 
@@ -21,9 +20,8 @@ public class WeaponList : MonoBehaviour {
 
 	void AddWeapons (WeaponClass _w) {
 		avaliableWeapons.Add(_w);
-		if(avaliableWeapons.Count > activeCount) 
-			if(ActivateWeaponSwitch != null)
-				ActivateWeaponSwitch();
+		if(ActivateWeaponSwitch != null)
+			ActivateWeaponSwitch(avaliableWeapons.Count);
 
 		//_w.weaponArt.localScale = new Vector3(_w.playScale, _w.playScale, _w.playScale);
 		_w.gameObject.transform.parent = this.gameObject.transform;
