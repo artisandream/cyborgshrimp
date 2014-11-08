@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class EffectSettings : MonoBehaviour
 {
-	//AR Code
-	public Transform resetPos;
+	public static Action<GameObject> ResetAmmo;
 
 	
   public float ColliderRadius = 0.2f;
@@ -50,14 +49,18 @@ public class EffectSettings : MonoBehaviour
     var handler = EffectDeactivated;
     if (handler!=null)
       handler(this, EventArgs.Empty);
+
+		if (ResetAmmo != null) {
+			ResetAmmo(this.gameObject);
+		}
   }
 
   private void Deactivate()
   {
     OnEffectDeactivatedHandler();
 		//AR
-		StartCoroutine ("Restart");
-    //gameObject.SetActive(false);
+//		StartCoroutine ("Restart");
+    gameObject.SetActive(false);
   }
 
   private void SetGoActive()
@@ -94,18 +97,7 @@ public class EffectSettings : MonoBehaviour
     CancelInvoke("Deactivate");
     currentActiveGo = 0;
     currentInactiveGo = 0;
-		//AR
-		StartCoroutine ("Restart");
   }
-
-	public IEnumerator ResetThis() 
-
-	{
-		yield return new WaitForSeconds(0.2F);
-		//AR
-		transform.localPosition = resetPos.position;
-		this.gameObject.SetActive (true);
-	}
 
   public void RegistreActiveElement(GameObject go, float time)
   {
