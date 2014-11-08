@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EffectSettings : MonoBehaviour
 {
-	public static Action<GameObject> ResetAmmo;
+	public static Action<EffectSettings> ResetAmmo;
 
 	
   public float ColliderRadius = 0.2f;
@@ -49,17 +49,16 @@ public class EffectSettings : MonoBehaviour
     var handler = EffectDeactivated;
     if (handler!=null)
       handler(this, EventArgs.Empty);
-
-		if (ResetAmmo != null) {
-			ResetAmmo(this.gameObject);
-		}
   }
 
   private void Deactivate()
   {
     OnEffectDeactivatedHandler();
-		//AR
-//		StartCoroutine ("Restart");
+		
+		if (ResetAmmo != null) {
+			ResetAmmo(this);
+		}
+
     gameObject.SetActive(false);
   }
 
