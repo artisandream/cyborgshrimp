@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class EffectSettings : MonoBehaviour
 {
+	//AR Code
+	public Transform resetPos;
+
+	
   public float ColliderRadius = 0.2f;
   public float EffectRadius = 0;
   public GameObject Target;
@@ -50,7 +55,9 @@ public class EffectSettings : MonoBehaviour
   private void Deactivate()
   {
     OnEffectDeactivatedHandler();
-    gameObject.SetActive(false);
+		//AR
+		StartCoroutine ("Restart");
+    //gameObject.SetActive(false);
   }
 
   private void SetGoActive()
@@ -87,7 +94,18 @@ public class EffectSettings : MonoBehaviour
     CancelInvoke("Deactivate");
     currentActiveGo = 0;
     currentInactiveGo = 0;
+		//AR
+		StartCoroutine ("Restart");
   }
+
+	public IEnumerator ResetThis() 
+
+	{
+		yield return new WaitForSeconds(0.2F);
+		//AR
+		transform.localPosition = resetPos.position;
+		this.gameObject.SetActive (true);
+	}
 
   public void RegistreActiveElement(GameObject go, float time)
   {
