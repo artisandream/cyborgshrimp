@@ -6,8 +6,19 @@ using UnityEngine;
 
 public class EffectSettings : MonoBehaviour
 {
+	public static Action<EffectSettings> AddToAmmoList;
 	public static Action<EffectSettings> ResetAmmo;
 
+	public void Awake () 
+	{
+//		Debug.Log ("Hello");
+		if(AddToAmmoList != null) 
+		{
+			AddToAmmoList(this);
+			Debug.Log ("Hello");
+		} 
+		this.gameObject.SetActive (false);
+	}
 	
   public float ColliderRadius = 0.2f;
   public float EffectRadius = 0;

@@ -1,46 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyAutoFire : MonoBehaviour {
 
-	public EffectSettings[] enemyAmmo;
+	//public EffectSettings[] enemyAmmo;
+	public List<EffectSettings> activeAmmo;
+	public float firingTime = 1;
 
-	// Use this for initialization
-	void Start () {
+	void AddToAmmoList (EffectSettings obj)
+	{
+		activeAmmo.Add (obj);
+	}
+
+	void Awake () {
+		EffectSettings.AddToAmmoList += AddToAmmoList;
 		StartCoroutine ("StartFiring");
-		//enemyAmmo [0].gameObject.SetActive (true);
 		EffectSettings.ResetAmmo += ResetAmmo;
+		activeAmmo = new List<EffectSettings> ();
 	}
 
 	IEnumerator StartFiring ()
 	{
-		foreach (EffectSettings _es in enemyAmmo) {
-			yield return new WaitForSeconds (0.25f);
-			_es.gameObject.SetActive(true);
+		yield return new WaitForSeconds (firingTime);
+		Debug.Log("start");
+		if(activeAmmo.Count > 1) 
+		{
+			Debug.Log("now");
+			activeAmmo[0].gameObject.SetActive(true);
+			//activeAmmo.RemoveAt(0);
 		}
+//		foreach (EffectSettings _es in activeAmmo) {
+			
+//			_es.gameObject.SetActive(true);
+//		}
 	}
-
 
 	IEnumerator Restart (EffectSettings _e) 
 
 	{
 		_e.transform.localPosition = this.transform.position;
-		yield return new WaitForSeconds(0.001f);
-		Debug.Log("Restart");
+		yield return new WaitForSeconds(firingTime);
+		Debug.Log(_e.gameObject.name);
 		_e.gameObject.SetActive (true);
 	}
 
 	void ResetAmmo (EffectSettings _go) {
-		foreach (EffectSettings _e in enemyAmmo) {
+		foreach (EffectSettings _e in activeAmmo) {
 			if(_go == _e)
 				StartCoroutine ("Restart", _e);	
 		}
 	}
-	
-//	public float fireRate = 0.5F;
-//	private float nextFire = 0.0F;
-//	void Update() {
-//		nextFire = Time.time + fireRate;
-//		GameObject clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
-//	}
 }
