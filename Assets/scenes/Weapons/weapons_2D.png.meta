@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 2591aeded66a2394dba77fe9632e2d35
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: weapons_2D_0
+    21300002: weapons_2D_1
+    21300004: Blaster
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +39,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -45,28 +50,31 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 337
-        y: 599
+        y: 1614
         width: 1367
-        height: 380
+        height: 400
       alignment: 9
       pivot: {x: .930745602, y: .441375494}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: weapons_2D_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 92
+        y: 1116
         width: 818
         height: 439
       alignment: 9
       pivot: {x: .877628446, y: .495849818}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Blaster
       rect:
         serializedVersion: 2
         x: 1214
-        y: 111
+        y: 1135
         width: 666
         height: 345
       alignment: 9
       pivot: {x: .899501562, y: .770667613}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
