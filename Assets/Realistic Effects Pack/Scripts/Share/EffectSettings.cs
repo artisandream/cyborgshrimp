@@ -7,6 +7,18 @@ public class EffectSettings : MonoBehaviour
 {
 
 	public Action<EffectSettings> ResetAmmo;
+	public GameObject[] targets;
+
+	public void SetTarget (EffectSettings _e) 
+	{
+
+	}
+
+	void Awake () 
+	{
+		ResetAmmo += SetTarget;
+	}
+
 
   public float ColliderRadius = 0.2f;
   public float EffectRadius = 0;
