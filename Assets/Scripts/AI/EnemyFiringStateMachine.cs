@@ -4,18 +4,22 @@ using System.Collections;
 public class EnemyFiringStateMachine : MonoBehaviour {
 	
 	public Animator enemyAnim;//instance of an Animator component
+	public EnemyAutoFire myAutoFire;
 	
 	void OnTriggerEnter(Collider _c) {//runs when colliding with a trigger component of a game object
 		if (_c.gameObject.tag == "Player") { //Game objects can have custom tags that can be tested for as strings
 			ChangeState("Armed", true); //Custom function changes the animators state
 			//ChangeState("Disarm", false); //Custom function changes the animators state
+			ChangeState("Fire", true);
 		} 
 	}
 	
 	void OnTriggerStay (Collider _c) {
 		if (_c.gameObject.tag == "Player") { 
 			ChangeState("Armed", true); 
-			ChangeState("Fire", true); 
+//			if(myAutoFire.canFire) {
+//				ChangeState("Fire", true);
+//			} 
 		}
 	} 
 	

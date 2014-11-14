@@ -5,36 +5,50 @@ using System.Collections.Generic;
 public class EnemyAutoFire : MonoBehaviour {
 
 	public EffectSettings[] enemyAmmo;
+	public List<EffectSettings> enemyAmmoList;
 	public float firingTime = 1;
-	
-	void Awake () {
-		StartCoroutine ("StartFiring");
-		EffectSettings.ResetAmmo += ResetAmmo;
-	}
+	public int i = 0;
+	public bool canFire = false;
+	public Animator EnemyAnimation;
+	public Transform ammoStart;
 
-	IEnumerator StartFiring ()
+	void StartAmmo (EffectSettings obj)
 	{
-		yield return new WaitForSeconds (firingTime);
-
-		foreach (EffectSettings _es in enemyAmmo) {
-			
-			_es.gameObject.SetActive(true);
-		}
+		enemyAmmoList.Add(obj);
+		EnemyAnimation.SetBool("Fire", true);
 	}
 
-	IEnumerator Restart (EffectSettings _e) 
-
+	void AddAllToList ()
 	{
-		_e.transform.localPosition = this.transform.position;
-		yield return new WaitForSeconds(firingTime);
-		Debug.Log(_e.gameObject.name);
-		_e.gameObject.SetActive (true);
-	}
-
-	void ResetAmmo (EffectSettings _go) {
 		foreach (EffectSettings _e in enemyAmmo) {
-			if(_go == _e)
-				StartCoroutine ("Restart", _e);	
+			enemyAmmoList.Add(_e);
 		}
+	}
+
+	void Fire ()
+	{
+		if (enemyAmmoList.Count > 0) {
+			//canFire = true;
+
+			enemyAmmoList [i].transform.localPosition = ammoStart.transform.position;
+			enemyAmmoList [i].gameObject.SetActive (true);
+			enemyAmmoList.RemoveAt (0);
+		} else {
+			//canFire = false;
+			EnemyAnimation.SetBool("Fire", false);
+		}
+	}
+
+	void Awake () {
+		enemyAmmoList = new List<EffectSettings> ();
+		AddAllToList ();
+		foreach (EffectSettings _e in enemyAmmoList) {
+			_e.ResetAmmo += StartAmmo;
+		}
+	}
+
+	void OnMouseDown () 
+	{
+		Fire ();
 	}
 }
