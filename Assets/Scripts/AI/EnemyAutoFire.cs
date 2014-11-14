@@ -6,9 +6,9 @@ public class EnemyAutoFire : MonoBehaviour {
 
 	public EffectSettings[] enemyAmmo;
 	public List<EffectSettings> enemyAmmoList;
-	public float firingTime = 1;
-	public int i = 0;
-	public bool canFire = false;
+	//public float firingTime = 1;
+	private int i = 0;
+	//public bool canFire = false;
 	public Animator EnemyAnimation;
 	public Transform ammoStart;
 
