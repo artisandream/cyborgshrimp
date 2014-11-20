@@ -30,7 +30,7 @@ public class EnemyAutoFire : MonoBehaviour {
 		if (enemyAmmoList.Count > 0) {
 			//canFire = true;
 
-			enemyAmmoList [i].transform.localPosition = ammoStart.transform.position;
+			enemyAmmoList [i].transform.position = ammoStart.transform.position;
 			enemyAmmoList [i].gameObject.SetActive (true);
 			enemyAmmoList.RemoveAt (0);
 		} else {
