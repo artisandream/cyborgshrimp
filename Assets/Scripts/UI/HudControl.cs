@@ -21,8 +21,14 @@ public class HudControl : MonoBehaviour
 
 	public GameObject healthBar;
 	private Slider healthSlider;
+	
+	public delegate void Hold();
+	public Hold onLeftHold;
+	public Hold onRightHold;
+	
+	public float holdRateInSeconds;
 
-
+	//private bool isHolding;
 
 	/*public int count;
 	public int maxCount;
@@ -100,5 +106,36 @@ public class HudControl : MonoBehaviour
 		Animator anim = obj.GetComponent<Animator>();
 
 		anim.Play("ButtonUpdate", 0, 0.0f);
+	}
+	
+	public void TurnOnLeftHold()
+	{
+		StartCoroutine("ActivateHold", onLeftHold);
+	}
+	
+	public void TurnOffLeftHold()
+	{
+		StopCoroutine("ActivateHold");
+	}
+	
+	public void TurnOnRightHold()
+	{
+		StartCoroutine("ActivateHold", onRightHold);
+	}
+	
+	public void TurnOffRightHold()
+	{
+		StopCoroutine("ActivateHold");
+	}
+	
+	private IEnumerator ActivateHold(Hold _holdDir)
+	{
+		while(true)
+		{
+			if(_holdDir != null)
+				_holdDir();
+			
+			yield return new WaitForSeconds(holdRateInSeconds);
+		}
 	}
 }

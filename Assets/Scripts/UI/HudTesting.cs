@@ -15,6 +15,9 @@ public class HudTesting : MonoBehaviour
 	void Awake () 
 	{
 		cont = GetComponent<HudControl>();
+		
+		cont.onLeftHold = DebugDelegate;
+		cont.onRightHold = DebugDelegate;
 	}
 	
 	public void UpdateHud()
@@ -22,5 +25,15 @@ public class HudTesting : MonoBehaviour
 		cont.SetBulletCount(count, maxCount);
 		cont.SetHealthBar(health, maxHealth);
 		cont.SetMoneyCount(mCount);
+	}
+	
+	public void DebugMessage(string _object)
+	{
+		Debug.Log(_object + " is working");
+	}
+	
+	public void DebugDelegate()
+	{
+		Debug.Log("Delegate is working");
 	}
 }
