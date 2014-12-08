@@ -56,9 +56,10 @@ public class CharacterAdvanced : MonoBehaviour {
 				myAnim.SetFloat(animName, hInput);
 			}
 			
-			if (Input.GetButton("Jump")) 
+			if (Input.GetButton("Jump")) {
+				myAnim.SetBool("Jump", true);
 				moveDirection.z = jumpSpeed;
-		
+			}	
 		}
 		moveDirection.z -= gravity * Time.deltaTime;
 		myController.Move(moveDirection*Time.deltaTime);// move is a keyword (method really) that moves a charactor controller
