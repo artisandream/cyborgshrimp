@@ -1,6 +1,14 @@
 fileFormatVersion: 2
 guid: 0c22f2c9d2d364b4f86df9b1d53f5e1a
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: shrimp2_sprite_sheet_0
+    21300002: shrimp2_sprite_sheet_1
+    21300004: shrimp2_sprite_sheet_2
+    21300006: shrimp2_sprite_sheet_3
+    21300008: shrimp2_sprite_sheet_4
+    21300010: shrimp2_sprite_sheet_5
+    21300012: shrimp2_sprite_sheet_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +43,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +59,7 @@ TextureImporter:
         height: 446
       alignment: 9
       pivot: {x: .909298658, y: .396192193}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: shrimp2_sprite_sheet_1
       rect:
         serializedVersion: 2
@@ -59,6 +69,7 @@ TextureImporter:
         height: 545
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: shrimp2_sprite_sheet_2
       rect:
         serializedVersion: 2
@@ -68,6 +79,7 @@ TextureImporter:
         height: 520
       alignment: 9
       pivot: {x: .5, y: .828371048}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: shrimp2_sprite_sheet_3
       rect:
         serializedVersion: 2
@@ -77,6 +89,7 @@ TextureImporter:
         height: 130
       alignment: 9
       pivot: {x: .5, y: .50999999}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: shrimp2_sprite_sheet_4
       rect:
         serializedVersion: 2
@@ -86,6 +99,7 @@ TextureImporter:
         height: 328
       alignment: 9
       pivot: {x: .874587834, y: .768912554}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: shrimp2_sprite_sheet_5
       rect:
         serializedVersion: 2
@@ -95,6 +109,7 @@ TextureImporter:
         height: 133
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: shrimp2_sprite_sheet_6
       rect:
         serializedVersion: 2
@@ -104,5 +119,6 @@ TextureImporter:
         height: 213
       alignment: 9
       pivot: {x: .847500026, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

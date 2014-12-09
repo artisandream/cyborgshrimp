@@ -1,6 +1,22 @@
 fileFormatVersion: 2
 guid: 11e13a140337128448d42b440f1c988e
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: gun
+    21300002: eye
+    21300004: neck
+    21300006: body
+    21300008: fins
+    21300010: head
+    21300012: engine
+    21300014: tail_segment_3
+    21300016: tail_segment_1
+    21300018: tail_segment_8
+    21300020: tail_segment_7
+    21300022: tail_segment_6
+    21300024: tail_segment_5
+    21300026: tail_segment_4
+    21300028: tail_segment_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +67,7 @@ TextureImporter:
         height: 108
       alignment: 5
       pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: eye
       rect:
         serializedVersion: 2
@@ -59,6 +77,7 @@ TextureImporter:
         height: 80
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: neck
       rect:
         serializedVersion: 2
@@ -68,6 +87,7 @@ TextureImporter:
         height: 370
       alignment: 9
       pivot: {x: .436099321, y: .172695175}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: body
       rect:
         serializedVersion: 2
@@ -77,6 +97,7 @@ TextureImporter:
         height: 696
       alignment: 9
       pivot: {x: .344827294, y: .490386784}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: fins
       rect:
         serializedVersion: 2
@@ -86,6 +107,7 @@ TextureImporter:
         height: 406
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: head
       rect:
         serializedVersion: 2
@@ -95,6 +117,7 @@ TextureImporter:
         height: 394
       alignment: 9
       pivot: {x: .705353379, y: .161293924}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: engine
       rect:
         serializedVersion: 2
@@ -104,6 +127,7 @@ TextureImporter:
         height: 146
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_3
       rect:
         serializedVersion: 2
@@ -113,6 +137,7 @@ TextureImporter:
         height: 193
       alignment: 9
       pivot: {x: .492788762, y: .71824038}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_1
       rect:
         serializedVersion: 2
@@ -122,6 +147,7 @@ TextureImporter:
         height: 239
       alignment: 9
       pivot: {x: .4202362, y: .696929634}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_8
       rect:
         serializedVersion: 2
@@ -131,6 +157,7 @@ TextureImporter:
         height: 91
       alignment: 9
       pivot: {x: .843025446, y: .433483422}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_7
       rect:
         serializedVersion: 2
@@ -140,6 +167,7 @@ TextureImporter:
         height: 112
       alignment: 9
       pivot: {x: .728417277, y: .514236987}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_6
       rect:
         serializedVersion: 2
@@ -149,6 +177,7 @@ TextureImporter:
         height: 137
       alignment: 9
       pivot: {x: .608968079, y: .59494406}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_5
       rect:
         serializedVersion: 2
@@ -158,6 +187,7 @@ TextureImporter:
         height: 155
       alignment: 9
       pivot: {x: .538571835, y: .681985736}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_4
       rect:
         serializedVersion: 2
@@ -167,6 +197,7 @@ TextureImporter:
         height: 150
       alignment: 9
       pivot: {x: .548557281, y: .837924659}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tail_segment_2
       rect:
         serializedVersion: 2
@@ -176,5 +207,6 @@ TextureImporter:
         height: 218
       alignment: 9
       pivot: {x: .474062502, y: .698595464}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

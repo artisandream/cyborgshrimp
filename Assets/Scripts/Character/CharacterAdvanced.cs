@@ -27,7 +27,13 @@ public class CharacterAdvanced : MonoBehaviour {
 	}
 	void Update () 
 	{
+
+		if ((myController.collisionFlags & CollisionFlags.Sides) == 0) {
+			//myAnim.SetBool("Jump", false);
+		}
+
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
+			myAnim.SetBool("Jump", false);
 			moveDirection = new Vector3(hInput*speed, 0, 0);
 			if(hInput <= -0.2f ) {
 				myAnim.SetFloat(animName, hInput);
@@ -60,7 +66,7 @@ public class CharacterAdvanced : MonoBehaviour {
 				myAnim.SetBool("Jump", true);
 				moveDirection.z = jumpSpeed;
 			}	
-		}
+		} 
 		moveDirection.z -= gravity * Time.deltaTime;
 		myController.Move(moveDirection*Time.deltaTime);// move is a keyword (method really) that moves a charactor controller
 	}
