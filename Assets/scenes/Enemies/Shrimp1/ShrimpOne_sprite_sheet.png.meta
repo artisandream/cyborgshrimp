@@ -1,6 +1,24 @@
 fileFormatVersion: 2
 guid: 735487239b55ca145a92afaa030ea733
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: Belly
+    21300004: Tail1
+    21300006: Tail3
+    21300008: Body
+    21300010: Jaw
+    21300012: Tail2
+    21300014: BackClaw
+    21300016: BackLowerArm
+    21300018: FrontUpperArm
+    21300020: TailTip
+    21300022: Claw
+    21300024: FrontLowerArm
+    21300026: BackUpperArm
+    21300028: Tail4
+    21300030: ClawBlade
+    21300032: GunDoor
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +69,7 @@ TextureImporter:
         height: 708
       alignment: 9
       pivot: {x: .909646988, y: .286582977}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Belly
       rect:
         serializedVersion: 2
@@ -59,6 +79,7 @@ TextureImporter:
         height: 370
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Tail1
       rect:
         serializedVersion: 2
@@ -68,6 +89,7 @@ TextureImporter:
         height: 492
       alignment: 9
       pivot: {x: .20758681, y: .738524675}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Tail3
       rect:
         serializedVersion: 2
@@ -77,6 +99,7 @@ TextureImporter:
         height: 255
       alignment: 9
       pivot: {x: .522994876, y: .880167186}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Body
       rect:
         serializedVersion: 2
@@ -86,6 +109,7 @@ TextureImporter:
         height: 631
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Jaw
       rect:
         serializedVersion: 2
@@ -95,6 +119,7 @@ TextureImporter:
         height: 519
       alignment: 9
       pivot: {x: .864080131, y: .551103234}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Tail2
       rect:
         serializedVersion: 2
@@ -104,6 +129,7 @@ TextureImporter:
         height: 382
       alignment: 9
       pivot: {x: .230512023, y: .790539145}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackClaw
       rect:
         serializedVersion: 2
@@ -113,6 +139,7 @@ TextureImporter:
         height: 398
       alignment: 9
       pivot: {x: .867468238, y: .579196632}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackLowerArm
       rect:
         serializedVersion: 2
@@ -122,6 +149,7 @@ TextureImporter:
         height: 190
       alignment: 9
       pivot: {x: .757221699, y: .540557921}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontUpperArm
       rect:
         serializedVersion: 2
@@ -131,6 +159,7 @@ TextureImporter:
         height: 488
       alignment: 9
       pivot: {x: .602351069, y: .755052924}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: TailTip
       rect:
         serializedVersion: 2
@@ -140,6 +169,7 @@ TextureImporter:
         height: 271
       alignment: 9
       pivot: {x: .902285278, y: .764009476}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Claw
       rect:
         serializedVersion: 2
@@ -149,6 +179,7 @@ TextureImporter:
         height: 332
       alignment: 9
       pivot: {x: .870453954, y: .669170558}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontLowerArm
       rect:
         serializedVersion: 2
@@ -158,6 +189,7 @@ TextureImporter:
         height: 188
       alignment: 9
       pivot: {x: .757221699, y: .540557861}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackUpperArm
       rect:
         serializedVersion: 2
@@ -167,6 +199,7 @@ TextureImporter:
         height: 482
       alignment: 9
       pivot: {x: .602351129, y: .755052924}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Tail4
       rect:
         serializedVersion: 2
@@ -176,6 +209,7 @@ TextureImporter:
         height: 321
       alignment: 9
       pivot: {x: .682370007, y: .876875937}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ClawBlade
       rect:
         serializedVersion: 2
@@ -185,6 +219,7 @@ TextureImporter:
         height: 178
       alignment: 9
       pivot: {x: .967996001, y: .224114597}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: GunDoor
       rect:
         serializedVersion: 2
@@ -194,5 +229,6 @@ TextureImporter:
         height: 68
       alignment: 9
       pivot: {x: 1.03690755, y: .268069983}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -1,6 +1,18 @@
 fileFormatVersion: 2
 guid: 8e383de694ad840f78e18d0be8bc1d22
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Missile
+    21300002: Bullet
+    21300004: SonicExplosion
+    21300006: Plasma_06
+    21300008: Plasma_05
+    21300010: Plasma_04
+    21300012: Plasma_01
+    21300014: Plasma_02
+    21300016: Plasma_03
+    21300018: StandardExplosion
+    21300020: MuzzleFlash
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +63,7 @@ TextureImporter:
         height: 158
       alignment: 9
       pivot: {x: .0427695476, y: .48643899}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Bullet
       rect:
         serializedVersion: 2
@@ -59,6 +73,7 @@ TextureImporter:
         height: 28
       alignment: 4
       pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SonicExplosion
       rect:
         serializedVersion: 2
@@ -68,6 +83,7 @@ TextureImporter:
         height: 324
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Plasma_06
       rect:
         serializedVersion: 2
@@ -77,6 +93,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: .949999988, y: .540000021}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Plasma_05
       rect:
         serializedVersion: 2
@@ -86,6 +103,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: .949999988, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Plasma_04
       rect:
         serializedVersion: 2
@@ -95,6 +113,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: .935000002, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Plasma_01
       rect:
         serializedVersion: 2
@@ -104,6 +123,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: .639999986, y: .519999981}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Plasma_02
       rect:
         serializedVersion: 2
@@ -113,6 +133,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: .842932463, y: .515630424}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Plasma_03
       rect:
         serializedVersion: 2
@@ -122,6 +143,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: .883806467, y: .515630424}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: StandardExplosion
       rect:
         serializedVersion: 2
@@ -131,6 +153,7 @@ TextureImporter:
         height: 473
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: MuzzleFlash
       rect:
         serializedVersion: 2
@@ -140,5 +163,6 @@ TextureImporter:
         height: 204
       alignment: 9
       pivot: {x: .285601646, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
