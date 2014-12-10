@@ -56,6 +56,7 @@ ModelImporter:
     2300028: 8in8out03
     2300030: 8in8out04
     2300032: 8in8out05
+    2300034: //RootNode
     3300000: 0in4out
     3300002: 4in4out01
     3300004: 4in4out02
@@ -73,6 +74,7 @@ ModelImporter:
     3300028: 8in8out03
     3300030: 8in8out04
     3300032: 8in8out05
+    3300034: //RootNode
     4300000: 8in4out03
     4300002: 8in4out02
     4300004: 8in4out01
