@@ -1,6 +1,14 @@
 fileFormatVersion: 2
 guid: a2dba8b525cc93c4e8b4ead6fed3606d
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: SeaStuff_0
+    21300002: SeaStuff_1
+    21300004: SeaStuff_2
+    21300006: SeaStuff_4
+    21300008: SeaStuff_5
+    21300010: SeaStuff_6
+    21300012: SeaStuff_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +43,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +59,7 @@ TextureImporter:
         height: 92
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SeaStuff_1
       rect:
         serializedVersion: 2
@@ -59,6 +69,7 @@ TextureImporter:
         height: 90
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SeaStuff_2
       rect:
         serializedVersion: 2
@@ -68,6 +79,7 @@ TextureImporter:
         height: 128
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SeaStuff_4
       rect:
         serializedVersion: 2
@@ -77,6 +89,7 @@ TextureImporter:
         height: 82
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SeaStuff_5
       rect:
         serializedVersion: 2
@@ -86,6 +99,7 @@ TextureImporter:
         height: 128
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SeaStuff_6
       rect:
         serializedVersion: 2
@@ -95,6 +109,7 @@ TextureImporter:
         height: 117
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: SeaStuff_6
       rect:
         serializedVersion: 2
@@ -104,5 +119,6 @@ TextureImporter:
         height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

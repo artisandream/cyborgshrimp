@@ -11,12 +11,24 @@ public class MenuControl : MonoBehaviour
 	public GameObject fadeObj;
 	
 	public Vector2[] mapPos;
-	private string[] mapNames;
+	//private string[] mapNames;
+	//public LevelInfo[] mapLevels;
+	
+	public LevelInfo[] levels;
+	public WeaponInfo[] weapons;
+	public Sprite[] weaponTextures;
 	
 	public AnimationCurve curve;
 	
 	public GameObject map;
 	public GameObject mapName;
+	public GameObject lockGrp;
+	public GameObject requirements;
+	public Sprite starActive;
+	public Sprite starDeactive;
+	public GameObject[] stars;
+	public GameObject inventoryGroup;
+	private GameObject[] inventoryItems;
 	private RectTransform mapRect;
 	private int mapIndex;
 	
@@ -32,10 +44,48 @@ public class MenuControl : MonoBehaviour
 		
 		//mapPos = map.GetComponentsInChildren<RectTransform>();
 		
-		mapNames = new string[3];
+		/*mapNames = new string[3];
 		mapNames[0] = "level 1";
 		mapNames[1] = "level 2";
-		mapNames[2] = "level 3";
+		mapNames[2] = "level 3";*/
+		
+		levels = new LevelInfo[3];
+		levels[0].Name = "Level 1";
+		levels[0].Position = new Vector2(225, -95);
+		levels[0].Difficulty = 1;
+		levels[0].isLocked = false;
+		levels[0].Requirement = "None";
+		levels[0].LevelFileName = "hud testing";
+		
+		levels[1].Name = "Level 2";
+		levels[1].Position = new Vector2(18, 65);
+		levels[1].Difficulty = 2;
+		levels[1].isLocked = true;
+		levels[1].Requirement = "Beat level 1";
+		levels[1].LevelFileName = "hud testing";
+		
+		levels[2].Name = "Level 3";
+		levels[2].Position = new Vector2(-210, -145);
+		levels[2].Difficulty = 3;
+		levels[2].isLocked = true;
+		levels[2].Requirement = "Kill 30 enemies";
+		levels[2].LevelFileName = "hud testing";
+		
+		weapons = new WeaponInfo[2];
+		weapons[0].Name = "Blaster";
+		weapons[0].Texture = weaponTextures[0];
+		
+		weapons[1].Name = "Blaster";
+		weapons[1].Texture = weaponTextures[1];
+		
+		inventoryItems = new GameObject[inventoryGroup.transform.childCount];
+		for(int i = 0; i < inventoryItems.Length; i++)
+		{
+			inventoryGroup[i] = 
+		}
+		
+		/*inventoryGroup.transform.GetChild(0).transform.GetChild(0).GetComponent<Image>() = weapons[0].Texture;
+		inventoryGroup.transform.GetChild(1).transform.GetChild(0).GetComponent<Image>() = weapons[1].Texture;*/
 		
 		mapIndex = 0;
 		
@@ -43,7 +93,8 @@ public class MenuControl : MonoBehaviour
 		{
 			mapRect = map.GetComponent<RectTransform>();
 			mapRect.anchoredPosition = mapPos[0];
-			mapName.GetComponent<Text>().text = mapNames[mapIndex];
+			mapName.GetComponent<Text>().text = levels[mapIndex].Name;
+			SetStarDifficulty();
 		}
 		
 	}
@@ -60,7 +111,7 @@ public class MenuControl : MonoBehaviour
 			//Debug.Log("Play click animation");
 			GameObject obj = (GameObject)_object;
 			Animator anim = obj.GetComponent<Animator>();
-			
+		
 			anim.Play("ButtonUpdate", 0, 0.0f);
 
 		}
@@ -95,8 +146,7 @@ public class MenuControl : MonoBehaviour
 		itemImage.color = color;
 		
 		itemImage.overrideSprite = selectImg.sprite;
-		Debug.Log(selectImg.name);
-		Debug.Log(itemImage.name);
+
 	}
 
 	public void AnimationEnded()
@@ -112,15 +162,15 @@ public class MenuControl : MonoBehaviour
 	
 	public void NextMapLocation()
 	{
-		Vector2 pos1 = mapPos[mapIndex];
+		Vector2 pos1 = levels[mapIndex].Position;
 		//Vector2 pos1 = Camera.main.WorldToScreenPoint(new Vector3(mapPos[mapIndex].x, mapPos[mapIndex].y, this.transform.position.z));
 		
-		if(mapIndex >= mapPos.Length - 1)
+		if(mapIndex >= levels.Length - 1)
 			mapIndex = 0;
 		else
 			mapIndex++;
 			
-		Vector2 pos2 = mapPos[mapIndex];
+		Vector2 pos2 = levels[mapIndex].Position;
 		//Vector2 pos2 = Camera.main.WorldToScreenPoint(new Vector3(mapPos[mapIndex].x, mapPos[mapIndex].y, this.transform.position.z));
 		
 		StartCoroutine(MoveMap(pos1, pos2));
@@ -129,15 +179,15 @@ public class MenuControl : MonoBehaviour
 	
 	public void PreviousMapLocation()
 	{
-		Vector2 pos1 = mapPos[mapIndex];
+		Vector2 pos1 = levels[mapIndex].Position;
 		//Vector2 pos1 = Camera.main.WorldToScreenPoint(new Vector3(mapPos[mapIndex].x, mapPos[mapIndex].y, this.transform.position.z));
 		
 		if(mapIndex <= 0)
-			mapIndex = mapPos.Length - 1;
+			mapIndex = levels.Length - 1;
 		else
 			mapIndex--;
 		
-		Vector2 pos2 = mapPos[mapIndex];
+		Vector2 pos2 = levels[mapIndex].Position;
 		//Vector2 pos2 = Camera.main.WorldToScreenPoint(new Vector3(mapPos[mapIndex].x, mapPos[mapIndex].y, this.transform.position.z));
 		
 		StartCoroutine(MoveMap(pos1, pos2));
@@ -154,7 +204,16 @@ public class MenuControl : MonoBehaviour
 			
 			if(t >= 1)
 			{
-				mapName.GetComponent<Text>().text = mapNames[mapIndex];
+				mapName.GetComponent<Text>().text = levels[mapIndex].Name;
+				requirements.GetComponent<Text>().text = levels[mapIndex].Requirement;
+				
+				if(levels[mapIndex].isLocked)
+					lockGrp.SetActive(true);
+				else
+					lockGrp.SetActive(false);
+						
+				SetStarDifficulty();
+					
 				break;
 			}
 				
@@ -163,9 +222,39 @@ public class MenuControl : MonoBehaviour
 			yield return null;
 		}
 	}
+	
+	public void SetStarDifficulty()
+	{
+		for(int i = 0; i < levels[mapIndex].Difficulty; i++)
+			stars[i].GetComponent<Image>().overrideSprite = starActive;
+		
+		for(int i = levels[mapIndex].Difficulty; i < 10; i++)
+			stars[i].GetComponent<Image>().overrideSprite = starDeactive;
+	}
+	
+	public void GoToLevel()
+	{
+		Application.LoadLevel(levels[mapIndex].LevelFileName);
+	}
 
 	public void ZZZZZZZZZZZZZZZZTestDebug()
 	{
 		Debug.Log("Test");
 	}
+}
+
+public struct LevelInfo
+{
+	public string Name{get;set;}
+	public string LevelFileName{get;set;}
+	public string Requirement{get;set;}
+	public int Difficulty{get;set;}
+	public Vector2 Position{get;set;}
+	public bool isLocked{get;set;}
+}
+
+public struct WeaponInfo
+{
+	public string Name{get;set;}
+	public Sprite Texture{get;set;}
 }

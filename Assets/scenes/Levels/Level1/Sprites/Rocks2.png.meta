@@ -1,6 +1,42 @@
 fileFormatVersion: 2
 guid: 076b134928e34a146a196689ef749024
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rocks2_0
+    21300002: Rocks2_1
+    21300004: Rocks2_2
+    21300006: Rocks2_3
+    21300008: Rocks2_4
+    21300010: Rocks2_5
+    21300012: Rocks2_6
+    21300014: Rocks2_7
+    21300016: Rocks2_8
+    21300018: Rocks2_9
+    21300020: Rocks2_10
+    21300022: Rocks2_11
+    21300024: Rocks2_12
+    21300026: Rocks2_13
+    21300028: Rocks2_14
+    21300030: Rocks2_15
+    21300032: Rocks2_16
+    21300034: Rocks2_17
+    21300036: Rocks2_18
+    21300038: Rocks2_19
+    21300040: Rocks2_20
+    21300042: Rocks2_21
+    21300044: Rocks2_22
+    21300046: Rocks2_23
+    21300048: Rocks2_24
+    21300050: Rocks2_25
+    21300052: Rocks2_26
+    21300054: Rocks2_27
+    21300056: Rocks2_28
+    21300058: Rocks2_29
+    21300060: Rocks2_30
+    21300062: Rocks2_31
+    21300064: Rocks2_32
+    21300066: Rocks2_33
+    21300068: Rocks2_34
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +71,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +87,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_1
       rect:
         serializedVersion: 2
@@ -59,6 +97,7 @@ TextureImporter:
         height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_2
       rect:
         serializedVersion: 2
@@ -68,6 +107,7 @@ TextureImporter:
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_3
       rect:
         serializedVersion: 2
@@ -77,6 +117,7 @@ TextureImporter:
         height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_4
       rect:
         serializedVersion: 2
@@ -86,6 +127,7 @@ TextureImporter:
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_5
       rect:
         serializedVersion: 2
@@ -95,6 +137,7 @@ TextureImporter:
         height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_6
       rect:
         serializedVersion: 2
@@ -104,6 +147,7 @@ TextureImporter:
         height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_7
       rect:
         serializedVersion: 2
@@ -113,6 +157,7 @@ TextureImporter:
         height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_8
       rect:
         serializedVersion: 2
@@ -122,6 +167,7 @@ TextureImporter:
         height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_9
       rect:
         serializedVersion: 2
@@ -131,6 +177,7 @@ TextureImporter:
         height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_10
       rect:
         serializedVersion: 2
@@ -140,6 +187,7 @@ TextureImporter:
         height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_11
       rect:
         serializedVersion: 2
@@ -149,6 +197,7 @@ TextureImporter:
         height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_12
       rect:
         serializedVersion: 2
@@ -158,6 +207,7 @@ TextureImporter:
         height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_13
       rect:
         serializedVersion: 2
@@ -167,6 +217,7 @@ TextureImporter:
         height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_14
       rect:
         serializedVersion: 2
@@ -176,6 +227,7 @@ TextureImporter:
         height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_15
       rect:
         serializedVersion: 2
@@ -185,6 +237,7 @@ TextureImporter:
         height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_16
       rect:
         serializedVersion: 2
@@ -194,6 +247,7 @@ TextureImporter:
         height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_17
       rect:
         serializedVersion: 2
@@ -203,6 +257,7 @@ TextureImporter:
         height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_18
       rect:
         serializedVersion: 2
@@ -212,6 +267,7 @@ TextureImporter:
         height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_19
       rect:
         serializedVersion: 2
@@ -221,6 +277,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_20
       rect:
         serializedVersion: 2
@@ -230,6 +287,7 @@ TextureImporter:
         height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_21
       rect:
         serializedVersion: 2
@@ -239,6 +297,7 @@ TextureImporter:
         height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_22
       rect:
         serializedVersion: 2
@@ -248,6 +307,7 @@ TextureImporter:
         height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_23
       rect:
         serializedVersion: 2
@@ -257,6 +317,7 @@ TextureImporter:
         height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_24
       rect:
         serializedVersion: 2
@@ -266,6 +327,7 @@ TextureImporter:
         height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_25
       rect:
         serializedVersion: 2
@@ -275,6 +337,7 @@ TextureImporter:
         height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_26
       rect:
         serializedVersion: 2
@@ -284,6 +347,7 @@ TextureImporter:
         height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_27
       rect:
         serializedVersion: 2
@@ -293,6 +357,7 @@ TextureImporter:
         height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_28
       rect:
         serializedVersion: 2
@@ -302,6 +367,7 @@ TextureImporter:
         height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_29
       rect:
         serializedVersion: 2
@@ -311,6 +377,7 @@ TextureImporter:
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_30
       rect:
         serializedVersion: 2
@@ -320,6 +387,7 @@ TextureImporter:
         height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_31
       rect:
         serializedVersion: 2
@@ -329,6 +397,7 @@ TextureImporter:
         height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_32
       rect:
         serializedVersion: 2
@@ -338,6 +407,7 @@ TextureImporter:
         height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_33
       rect:
         serializedVersion: 2
@@ -347,6 +417,7 @@ TextureImporter:
         height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rocks2_34
       rect:
         serializedVersion: 2
@@ -356,5 +427,6 @@ TextureImporter:
         height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

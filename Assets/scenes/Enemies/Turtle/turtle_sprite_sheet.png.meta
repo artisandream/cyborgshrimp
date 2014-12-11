@@ -1,6 +1,22 @@
 fileFormatVersion: 2
 guid: 1aed5764c7d42b1448f9a8d11c972cbe
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: turtle_sprite_sheet_1
+    21300002: turtle_sprite_sheet_2
+    21300004: turtle_sprite_sheet_3
+    21300006: turtle_sprite_sheet_4
+    21300008: turtle_sprite_sheet_5
+    21300010: turtle_sprite_sheet_6
+    21300012: turtle_sprite_sheet_7
+    21300014: turtle_sprite_sheet_8
+    21300016: turtle_sprite_sheet_9
+    21300018: turtle_sprite_sheet_10
+    21300020: turtle_sprite_sheet_11
+    21300022: turtle_sprite_sheet_12
+    21300024: turtle_sprite_sheet_14
+    21300026: turtle_sprite_sheet_13
+    21300028: turtle_sprite_sheet_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +67,7 @@ TextureImporter:
         height: 467
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_2
       rect:
         serializedVersion: 2
@@ -59,6 +77,7 @@ TextureImporter:
         height: 309
       alignment: 9
       pivot: {x: .905522585, y: .534271359}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_3
       rect:
         serializedVersion: 2
@@ -68,6 +87,7 @@ TextureImporter:
         height: 153
       alignment: 9
       pivot: {x: .189879879, y: .514530778}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_4
       rect:
         serializedVersion: 2
@@ -77,6 +97,7 @@ TextureImporter:
         height: 128
       alignment: 9
       pivot: {x: -.74295187, y: .529382706}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_5
       rect:
         serializedVersion: 2
@@ -86,6 +107,7 @@ TextureImporter:
         height: 98
       alignment: 9
       pivot: {x: -1.59300673, y: .538927972}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_6
       rect:
         serializedVersion: 2
@@ -95,6 +117,7 @@ TextureImporter:
         height: 248
       alignment: 9
       pivot: {x: .148140892, y: .745428026}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_7
       rect:
         serializedVersion: 2
@@ -104,6 +127,7 @@ TextureImporter:
         height: 126
       alignment: 9
       pivot: {x: .893581688, y: .763981402}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_8
       rect:
         serializedVersion: 2
@@ -113,6 +137,7 @@ TextureImporter:
         height: 324
       alignment: 9
       pivot: {x: .174435243, y: .808937728}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_9
       rect:
         serializedVersion: 2
@@ -122,6 +147,7 @@ TextureImporter:
         height: 565
       alignment: 9
       pivot: {x: .585411429, y: 1.04894471}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_10
       rect:
         serializedVersion: 2
@@ -131,6 +157,7 @@ TextureImporter:
         height: 555
       alignment: 9
       pivot: {x: .429238647, y: 1.06061971}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_11
       rect:
         serializedVersion: 2
@@ -140,6 +167,7 @@ TextureImporter:
         height: 173
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_12
       rect:
         serializedVersion: 2
@@ -149,6 +177,7 @@ TextureImporter:
         height: 291
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_14
       rect:
         serializedVersion: 2
@@ -158,6 +187,7 @@ TextureImporter:
         height: 95
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_13
       rect:
         serializedVersion: 2
@@ -167,6 +197,7 @@ TextureImporter:
         height: 92
       alignment: 9
       pivot: {x: .979681194, y: .384257436}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: turtle_sprite_sheet_14
       rect:
         serializedVersion: 2
@@ -176,5 +207,6 @@ TextureImporter:
         height: 145
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
