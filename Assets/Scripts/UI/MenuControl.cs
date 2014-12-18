@@ -81,7 +81,10 @@ public class MenuControl : MonoBehaviour
 		inventoryItems = new GameObject[inventoryGroup.transform.childCount];
 		for(int i = 0; i < inventoryItems.Length; i++)
 		{
-			inventoryGroup[i] = 
+			inventoryItems[i] = inventoryGroup.transform.GetChild(i).transform.GetChild(0).gameObject;
+			
+			if(i < weapons.Length)
+				inventoryItems[i].GetComponent<Image>().overrideSprite = weapons[i].Texture;
 		}
 		
 		/*inventoryGroup.transform.GetChild(0).transform.GetChild(0).GetComponent<Image>() = weapons[0].Texture;
@@ -138,14 +141,22 @@ public class MenuControl : MonoBehaviour
 	public void ChangeItemTexture(Object _object)
 	{
 		GameObject temp = (GameObject)_object;
-		Image selectImg = temp.transform.GetChild(0).GetComponent<Image>();
+		//Image selectImg = temp.transform.GetChild(0).GetComponent<Image>();
 		
 		Image itemImage = currentButton.transform.GetChild(0).GetComponent<Image>();
 		Color color = itemImage.color;
 		color.a = 1;
 		itemImage.color = color;
 		
-		itemImage.overrideSprite = selectImg.sprite;
+		//itemImage.overrideSprite = selectImg.sprite;
+		
+		for(int i = 0; i < inventoryItems.Length; i++)
+		{
+			Debug.Log("temp " + temp.name);
+			Debug.Log("current obj " + inventoryItems[i].transform.parent.gameObject.name);
+			if(temp == inventoryItems[i].transform.parent.gameObject)
+				itemImage.overrideSprite = weapons[i].Texture;
+		}
 
 	}
 
