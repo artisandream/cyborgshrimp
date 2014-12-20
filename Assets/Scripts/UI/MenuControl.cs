@@ -17,7 +17,7 @@ public class MenuControl : MonoBehaviour
 	//public LevelInfo[] mapLevels;
 	
 	public LevelInfo[] levels;
-	public WeaponInfo[] weapons;
+	public static WeaponInfo[] weapons;
 	public Sprite[] weaponTextures;
 	
 	public AnimationCurve curve;
@@ -42,12 +42,14 @@ public class MenuControl : MonoBehaviour
 	private Text[] itemNames;
 	[SerializeField]
 	private GameObject inventoryGroup;
+	[SerializeField]
+	private GameObject character;
 	private GameObject[] inventoryItems;
 	private RectTransform mapRect;
 	private int mapIndex;
 
 	[HideInInspector]
-	public int[] selectedItems;
+	public static int[] selectedItems;
 	
 	
 	// Use this for initialization
@@ -85,6 +87,9 @@ public class MenuControl : MonoBehaviour
 		weapons[1].Texture = weaponTextures[1];
 
 		selectedItems = new int[3];
+		selectedItems[0] = -1;
+		selectedItems[1] = -1;
+		selectedItems[2] = -1;
 		
 		inventoryItems = new GameObject[inventoryGroup.transform.childCount];
 		for(int i = 0; i < inventoryItems.Length; i++)
@@ -107,7 +112,12 @@ public class MenuControl : MonoBehaviour
 			mapName.GetComponent<Text>().text = levels[mapIndex].Name;
 			SetStarDifficulty();
 		}
-		
+
+		int xMulti = Screen.width / 100;
+		int yMulti = Screen.height / 100;
+
+		character.transform.localScale = new Vector3(20 * xMulti, 2, 33 * yMulti);
+		character.transform.localPosition = new Vector3(0.5f * xMulti, -20 * yMulti, 0);
 	}
 	
 	// Update is called once per frame

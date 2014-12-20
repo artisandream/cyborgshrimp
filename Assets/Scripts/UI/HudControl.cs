@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HudControl : MonoBehaviour 
 {
 
-	public Sprite[] weaponGfx;
+	//public Sprite[] weaponGfx;
 
 	private int weaponIndex;
 
@@ -50,6 +50,14 @@ public class HudControl : MonoBehaviour
 
 		if(healthBar != null)
 			healthSlider = healthBar.GetComponent<Slider>();
+
+		/*Debug.Log("weapon index 1 " + MenuControl.selectedItems[0]);
+		Debug.Log("weapon index 2 " + MenuControl.selectedItems[1]);
+		Debug.Log("weapon index 3 " + MenuControl.selectedItems[2]);*/
+
+		weaponIndex = -1;
+		weaponImg.gameObject.SetActive(true);
+		SwitchWeapons();
 	}
 	
 	// Update is called once per frame
@@ -64,12 +72,27 @@ public class HudControl : MonoBehaviour
 
 	public void SwitchWeapons()
 	{
-		if(weaponIndex >= weaponGfx.Length - 1)
+		/*if(weaponIndex >= weaponGfx.Length - 1)
 			weaponIndex = 0;
 		else
 			weaponIndex++;
 
-		weaponImg.overrideSprite = weaponGfx[weaponIndex];
+		weaponImg.overrideSprite = weaponGfx[weaponIndex];*/
+		
+
+		if(weaponIndex >= MenuControl.selectedItems.Length - 1)
+			weaponIndex = 0;
+		else
+			weaponIndex++;
+
+		/*Debug.Log("weaponIndex " + weaponIndex);
+		Debug.Log("MenuControl.selectedItems[weaponIndex] " + MenuControl.selectedItems[weaponIndex]);
+		Debug.Log("Texture " + MenuControl.weapons[MenuControl.selectedItems[weaponIndex]].Texture);*/
+
+		if(MenuControl.selectedItems[weaponIndex] >= 0)
+			weaponImg.overrideSprite = MenuControl.weapons[MenuControl.selectedItems[weaponIndex]].Texture;
+		else
+			SwitchWeapons();
 	}
 
 	public void SetBulletCount(int _count, int _maxCount)
