@@ -6,11 +6,13 @@ public class MenuControl : MonoBehaviour
 {
 	private bool isMoving;
 	
-	private Button currentButton;
-	
-	public GameObject fadeObj;
-	
-	public Vector2[] mapPos;
+	private int currentButton;
+
+	[SerializeField]
+	private GameObject fadeObj;
+
+	[SerializeField]
+	private Vector2[] mapPos;
 	//private string[] mapNames;
 	//public LevelInfo[] mapLevels;
 	
@@ -19,35 +21,39 @@ public class MenuControl : MonoBehaviour
 	public Sprite[] weaponTextures;
 	
 	public AnimationCurve curve;
-	
-	public GameObject map;
-	public GameObject mapName;
-	public GameObject lockGrp;
-	public GameObject requirements;
-	public Sprite starActive;
-	public Sprite starDeactive;
-	public GameObject[] stars;
-	public GameObject inventoryGroup;
+
+	[SerializeField]
+	private GameObject map;
+	[SerializeField]
+	private GameObject mapName;
+	[SerializeField]
+	private GameObject lockGrp;
+	[SerializeField]
+	private GameObject requirements;
+	[SerializeField]
+	private Sprite starActive;
+	[SerializeField]
+	private Sprite starDeactive;
+	[SerializeField]
+	private GameObject[] stars;
+	[SerializeField]
+	private Image[] itemButtons;
+	[SerializeField]
+	private Text[] itemNames;
+	[SerializeField]
+	private GameObject inventoryGroup;
 	private GameObject[] inventoryItems;
 	private RectTransform mapRect;
 	private int mapIndex;
+
+	[HideInInspector]
+	public int[] selectedItems;
 	
 	
 	// Use this for initialization
 	void Awake () 
 	{
 		isMoving = false;
-		
-		/*mapPos = new Vector2[2];
-		mapPos[0] = new Vector2(-50, 50);
-		mapPos[1] = new Vector2(0, -100);*/
-		
-		//mapPos = map.GetComponentsInChildren<RectTransform>();
-		
-		/*mapNames = new string[3];
-		mapNames[0] = "level 1";
-		mapNames[1] = "level 2";
-		mapNames[2] = "level 3";*/
 		
 		levels = new LevelInfo[3];
 		levels[0].Name = "Level 1";
@@ -75,8 +81,10 @@ public class MenuControl : MonoBehaviour
 		weapons[0].Name = "Blaster";
 		weapons[0].Texture = weaponTextures[0];
 		
-		weapons[1].Name = "Blaster";
+		weapons[1].Name = "Bazooka";
 		weapons[1].Texture = weaponTextures[1];
+
+		selectedItems = new int[3];
 		
 		inventoryItems = new GameObject[inventoryGroup.transform.childCount];
 		for(int i = 0; i < inventoryItems.Length; i++)
@@ -132,31 +140,25 @@ public class MenuControl : MonoBehaviour
 		}
 	}
 	
-	public void SetItemClicked(Object _object)
+	public void SetItemClicked(int _item)
 	{
-		GameObject temp = (GameObject)_object;
-		currentButton = temp.transform.GetComponent<Button>();
+		/*GameObject temp = (GameObject)_object;
+		currentButton = temp.transform.GetComponent<Button>();*/
+
+		currentButton = _item;
 	}
 	
-	public void ChangeItemTexture(Object _object)
+	public void ChangeItemTexture(int _item)
 	{
-		GameObject temp = (GameObject)_object;
-		//Image selectImg = temp.transform.GetChild(0).GetComponent<Image>();
-		
-		Image itemImage = currentButton.transform.GetChild(0).GetComponent<Image>();
-		Color color = itemImage.color;
+		selectedItems[currentButton] = _item;
+
+		Color color = itemButtons[currentButton].color;
 		color.a = 1;
-		itemImage.color = color;
+		itemButtons[currentButton].color = color;
 		
-		//itemImage.overrideSprite = selectImg.sprite;
-		
-		for(int i = 0; i < inventoryItems.Length; i++)
-		{
-			Debug.Log("temp " + temp.name);
-			Debug.Log("current obj " + inventoryItems[i].transform.parent.gameObject.name);
-			if(temp == inventoryItems[i].transform.parent.gameObject)
-				itemImage.overrideSprite = weapons[i].Texture;
-		}
+		itemButtons[currentButton].overrideSprite = weapons[_item].Texture;
+
+		itemNames[currentButton].text = weapons[_item].Name;
 
 	}
 
@@ -164,11 +166,6 @@ public class MenuControl : MonoBehaviour
 	{
 		//Debug.Log("End animation");
 		isMoving = false;
-	}
-	
-	public void AtFadeIn()
-	{
-		
 	}
 	
 	public void NextMapLocation()
@@ -242,10 +239,20 @@ public class MenuControl : MonoBehaviour
 		for(int i = levels[mapIndex].Difficulty; i < 10; i++)
 			stars[i].GetComponent<Image>().overrideSprite = starDeactive;
 	}
-	
-	public void GoToLevel()
+
+	public void StartFade()
 	{
-		Application.LoadLevel(levels[mapIndex].LevelFileName);
+		if(!levels[mapIndex].isLocked)
+		{
+			Animator anim = GetComponent<Animator>();
+		
+			anim.Play("FadeBlackIn", 0, 0.0f);
+		}
+	}
+	
+	public void LoadTheLevel()
+	{
+			Application.LoadLevel(levels[mapIndex].LevelFileName);
 	}
 
 	public void ZZZZZZZZZZZZZZZZTestDebug()
