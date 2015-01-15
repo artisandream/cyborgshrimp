@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: eb35489975bf74d44a2b45bff95133bd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: 0in4out
+    100002: 4in4out01
+    100004: 4in4out02
+    100006: 4in4out03
+    100008: 4in4out04
+    100010: 4in4out05
+    100012: 4in8out01
+    100014: 4in8out02
+    100016: 4in8out03
+    100018: 8in4out01
+    100020: 8in4out02
+    100022: 8in4out03
+    100024: 8in8out01
+    100026: 8in8out02
+    100028: 8in8out03
+    100030: 8in8out04
+    100032: 8in8out05
+    100034: //RootNode
+    400000: 0in4out
+    400002: 4in4out01
+    400004: 4in4out02
+    400006: 4in4out03
+    400008: 4in4out04
+    400010: 4in4out05
+    400012: 4in8out01
+    400014: 4in8out02
+    400016: 4in8out03
+    400018: 8in4out01
+    400020: 8in4out02
+    400022: 8in4out03
+    400024: 8in8out01
+    400026: 8in8out02
+    400028: 8in8out03
+    400030: 8in8out04
+    400032: 8in8out05
+    400034: //RootNode
+    2300000: 0in4out
+    2300002: 4in4out01
+    2300004: 4in4out02
+    2300006: 4in4out03
+    2300008: 4in4out04
+    2300010: 4in4out05
+    2300012: 4in8out01
+    2300014: 4in8out02
+    2300016: 4in8out03
+    2300018: 8in4out01
+    2300020: 8in4out02
+    2300022: 8in4out03
+    2300024: 8in8out01
+    2300026: 8in8out02
+    2300028: 8in8out03
+    2300030: 8in8out04
+    2300032: 8in8out05
+    2300034: //RootNode
+    3300000: 0in4out
+    3300002: 4in4out01
+    3300004: 4in4out02
+    3300006: 4in4out03
+    3300008: 4in4out04
+    3300010: 4in4out05
+    3300012: 4in8out01
+    3300014: 4in8out02
+    3300016: 4in8out03
+    3300018: 8in4out01
+    3300020: 8in4out02
+    3300022: 8in4out03
+    3300024: 8in8out01
+    3300026: 8in8out02
+    3300028: 8in8out03
+    3300030: 8in8out04
+    3300032: 8in8out05
+    3300034: //RootNode
+    4300000: 8in4out03
+    4300002: 8in4out02
+    4300004: 8in4out01
+    4300006: 8in8out05
+    4300008: 8in8out04
+    4300010: 8in8out03
+    4300012: 8in8out02
+    4300014: 8in8out01
+    4300016: 0in4out
+    4300018: 4in8out03
+    4300020: 4in8out02
+    4300022: 4in8out01
+    4300024: 4in4out05
+    4300026: 4in4out04
+    4300028: 4in4out03
+    4300030: 4in4out01
+    4300032: 4in4out02
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

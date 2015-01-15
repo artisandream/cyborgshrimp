@@ -51,19 +51,19 @@ TextureImporter:
     - name: weapons_2D_0
       rect:
         serializedVersion: 2
-        x: 337
-        y: 1614
-        width: 1367
-        height: 400
+        x: 0
+        y: 1673
+        width: 1328
+        height: 375
       alignment: 9
       pivot: {x: .930745602, y: .441375494}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: weapons_2D_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1116
-        width: 818
+        x: 0
+        y: 1140
+        width: 781
         height: 439
       alignment: 9
       pivot: {x: .877628446, y: .495849818}
@@ -71,18 +71,18 @@ TextureImporter:
     - name: Blaster
       rect:
         serializedVersion: 2
-        x: 1214
-        y: 1135
-        width: 666
-        height: 345
+        x: 1399
+        y: 1701
+        width: 601
+        height: 319
       alignment: 9
-      pivot: {x: .899501562, y: .770667613}
+      pivot: {x: .949626625, y: .770667791}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: weapons_2D_3
       rect:
         serializedVersion: 2
-        x: 317
-        y: 803
+        x: 793
+        y: 1363
         width: 1203
         height: 196
       alignment: 9
@@ -91,8 +91,8 @@ TextureImporter:
     - name: weapons_2D_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 287
+        x: 4
+        y: 838
         width: 2032
         height: 302
       alignment: 9
