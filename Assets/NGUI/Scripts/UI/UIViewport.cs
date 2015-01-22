@@ -23,11 +23,7 @@ public class UIViewport : MonoBehaviour
 
 	void Start ()
 	{
-#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 		mCam = camera;
-#else
-		mCam = GetComponent<Camera>();
-#endif
 		if (sourceCamera == null) sourceCamera = Camera.main;
 	}
 

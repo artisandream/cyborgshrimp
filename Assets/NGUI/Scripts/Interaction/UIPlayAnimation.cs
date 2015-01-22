@@ -3,6 +3,10 @@
 // Copyright © 2011-2014 Tasharen Entertainment
 //----------------------------------------------
 
+#if !UNITY_3_5 && !UNITY_4_0 && !UNITY_4_1 && !UNITY_4_2
+#define USE_MECANIM
+#endif
+
 using UnityEngine;
 using System.Collections.Generic;
 using AnimationOrTween;
@@ -15,20 +19,19 @@ using AnimationOrTween;
 [AddComponentMenu("NGUI/Interaction/Play Animation")]
 public class UIPlayAnimation : MonoBehaviour
 {
-	static public UIPlayAnimation current = null;
-
 	/// <summary>
 	/// Target animation to activate.
 	/// </summary>
 
 	public Animation target;
 
+#if USE_MECANIM
 	/// <summary>
 	/// Target animator system.
 	/// </summary>
 
 	public Animator animator;
-
+#endif
 	/// <summary>
 	/// Optional clip name, if the animation has more than one clip.
 	/// </summary>
@@ -111,6 +114,7 @@ public class UIPlayAnimation : MonoBehaviour
 	{
 		mStarted = true;
 
+#if USE_MECANIM
 		// Automatically try to find the animator
 		if (target == null && animator == null)
 		{
@@ -128,6 +132,7 @@ public class UIPlayAnimation : MonoBehaviour
 			// Don't continue since we already have an animator to work with
 			return;
 		}
+#endif // USE_MECANIM
 
 		if (target == null)
 		{
@@ -182,24 +187,15 @@ public class UIPlayAnimation : MonoBehaviour
 	void OnPress (bool isPressed)
 	{
 		if (!enabled) return;
-		if (UICamera.currentTouchID < -1) return;
 		if ( trigger == Trigger.OnPress ||
 			(trigger == Trigger.OnPressTrue && isPressed) ||
 			(trigger == Trigger.OnPressFalse && !isPressed))
 			Play(isPressed, dualState);
 	}
 
-	void OnClick ()
-	{
-		if (UICamera.currentTouchID < -1) return;
-		if (enabled && trigger == Trigger.OnClick) Play(true, false);
-	}
+	void OnClick () { if (enabled && trigger == Trigger.OnClick) Play(true, false); }
 
-	void OnDoubleClick ()
-	{
-		if (UICamera.currentTouchID < -1) return;
-		if (enabled && trigger == Trigger.OnDoubleClick) Play(true, false);
-	}
+	void OnDoubleClick () { if (enabled && trigger == Trigger.OnDoubleClick) Play(true, false); }
 
 	void OnSelect (bool isSelected)
 	{
@@ -252,7 +248,11 @@ public class UIPlayAnimation : MonoBehaviour
 
 	public void Play (bool forward, bool onlyIfDifferent)
 	{
+#if USE_MECANIM
 		if (target || animator)
+#else
+		if (target)
+#endif
 		{
 			if (onlyIfDifferent)
 			{
@@ -265,9 +265,13 @@ public class UIPlayAnimation : MonoBehaviour
 
 			int pd = -(int)playDirection;
 			Direction dir = forward ? playDirection : ((Direction)pd);
+#if USE_MECANIM
 			ActiveAnimation anim = target ?
 				ActiveAnimation.Play(target, clipName, dir, ifDisabledOnPlay, disableWhenFinished) :
 				ActiveAnimation.Play(animator, clipName, dir, ifDisabledOnPlay, disableWhenFinished);
+#else
+			ActiveAnimation anim = ActiveAnimation.Play(target, clipName, dir, ifDisabledOnPlay, disableWhenFinished);
+#endif
 
 			if (anim != null)
 			{
@@ -284,17 +288,12 @@ public class UIPlayAnimation : MonoBehaviour
 
 	void OnFinished ()
 	{
-		if (current == null)
-		{
-			current = this;
-			EventDelegate.Execute(onFinished);
+		EventDelegate.Execute(onFinished);
 
-			// Legacy functionality
-			if (eventReceiver != null && !string.IsNullOrEmpty(callWhenFinished))
-				eventReceiver.SendMessage(callWhenFinished, SendMessageOptions.DontRequireReceiver);
+		// Legacy functionality
+		if (eventReceiver != null && !string.IsNullOrEmpty(callWhenFinished))
+			eventReceiver.SendMessage(callWhenFinished, SendMessageOptions.DontRequireReceiver);
 
-			eventReceiver = null;
-			current = null;
-		}
+		eventReceiver = null;
 	}
 }
