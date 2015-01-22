@@ -43,7 +43,7 @@ public class EnableRecycle : MonoBehaviour
 		//ReportAchievements.ChangeLevelAction -= ChangeLevel;
 	}
 
-	void OnTriggerEnter2D (Collider2D _c) {
+	void OnTriggerEnter (Collider _c) {
 		//addback when adding worlds
 		bool setRecycle = false;
 		if(levelChoices == StaticVars.currentLevel) 
