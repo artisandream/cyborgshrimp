@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 80cd74e98632e0f4989659946d5854e8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GUISprites_HealthBackground
+    21300002: GUISprites_healthBar
+    21300004: GUISprites_lock
+    21300006: GUISprites_button
+    21300008: GUISprites_weapon1
+    21300010: GUISprites_weapon2
+    21300012: GUISprites_6
+    21300014: GUISprites_circle
+    21300016: GUISprites_rightArrow
+    21300018: GUISprites_moneyBackground
+    21300020: GUISprites_jumpButton
+    21300022: GUISprites_healthMask
+    21300024: GUISprites_leftArrow
+    21300026: GUISprites_switchButton
+    21300028: GUISprites_attackButton
+    21300030: GUISprites_starActive
+    21300032: GUISprites_starDeactive
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: GUISprites_HealthBackground
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 4121
+        width: 392
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_healthBar
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 4133
+        width: 419
+        height: 127
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_lock
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 4110
+        width: 104
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_button
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 4112
+        width: 133
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 60, y: 40, z: 60, w: 40}
+    - name: GUISprites_weapon1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 4035
+        width: 109
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_weapon2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 4034
+        width: 109
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 4010
+        width: 409
+        height: 116
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_circle
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3903
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_rightArrow
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 3909
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_moneyBackground
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3906
+        width: 317
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_jumpButton
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3799
+        width: 97
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_healthMask
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 3860
+        width: 301
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_leftArrow
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 3908
+        width: 159
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_switchButton
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 3805
+        width: 95
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_attackButton
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 3809
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_starActive
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 4168
+        width: 87
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUISprites_starDeactive
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 4167
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

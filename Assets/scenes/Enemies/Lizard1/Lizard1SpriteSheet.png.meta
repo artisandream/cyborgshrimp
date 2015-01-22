@@ -1,6 +1,28 @@
 fileFormatVersion: 2
 guid: f03713aba7ec7994ca880c1e3ca6fb33
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Lizard1SpriteSheet_0
+    21300002: Lizard1SpriteSheet_1
+    21300004: Lizard1SpriteSheet_2
+    21300006: Lizard1SpriteSheet_3
+    21300008: Lizard1SpriteSheet_4
+    21300010: Lizard1SpriteSheet_5
+    21300012: Lizard1SpriteSheet_6
+    21300014: Lizard1SpriteSheet_7
+    21300016: Lizard1SpriteSheet_8
+    21300018: Lizard1SpriteSheet_9
+    21300020: Lizard1SpriteSheet_10
+    21300022: Lizard1SpriteSheet_11
+    21300024: Lizard1SpriteSheet_12
+    21300026: Lizard1SpriteSheet_13
+    21300028: Lizard1SpriteSheet_14
+    21300030: Lizard1SpriteSheet_15
+    21300032: Lizard1SpriteSheet_16
+    21300034: Lizard1SpriteSheet_17
+    21300036: Lizard1SpriteSheet_18
+    21300038: Lizard1SpriteSheet_19
+    21300040: Lizard1SpriteSheet_20
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +73,7 @@ TextureImporter:
         height: 684
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_1
       rect:
         serializedVersion: 2
@@ -59,6 +83,7 @@ TextureImporter:
         height: 430
       alignment: 9
       pivot: {x: .913576782, y: .325376719}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_2
       rect:
         serializedVersion: 2
@@ -68,6 +93,7 @@ TextureImporter:
         height: 240
       alignment: 9
       pivot: {x: .864874721, y: .371171057}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_3
       rect:
         serializedVersion: 2
@@ -77,6 +103,7 @@ TextureImporter:
         height: 128
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_4
       rect:
         serializedVersion: 2
@@ -86,6 +113,7 @@ TextureImporter:
         height: 370
       alignment: 9
       pivot: {x: .819327176, y: .798834085}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_5
       rect:
         serializedVersion: 2
@@ -95,6 +123,7 @@ TextureImporter:
         height: 465
       alignment: 9
       pivot: {x: .921279967, y: .408972293}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_6
       rect:
         serializedVersion: 2
@@ -104,6 +133,7 @@ TextureImporter:
         height: 425
       alignment: 9
       pivot: {x: .160100877, y: .523812592}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_7
       rect:
         serializedVersion: 2
@@ -113,6 +143,7 @@ TextureImporter:
         height: 331
       alignment: 9
       pivot: {x: .361324728, y: .789011598}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_8
       rect:
         serializedVersion: 2
@@ -122,6 +153,7 @@ TextureImporter:
         height: 260
       alignment: 9
       pivot: {x: .680044293, y: .684770346}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_9
       rect:
         serializedVersion: 2
@@ -131,6 +163,7 @@ TextureImporter:
         height: 258
       alignment: 9
       pivot: {x: .675491273, y: .684632778}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_10
       rect:
         serializedVersion: 2
@@ -140,6 +173,7 @@ TextureImporter:
         height: 554
       alignment: 9
       pivot: {x: .874947309, y: .471375942}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_11
       rect:
         serializedVersion: 2
@@ -149,6 +183,7 @@ TextureImporter:
         height: 132
       alignment: 9
       pivot: {x: .0752164647, y: .508280873}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_12
       rect:
         serializedVersion: 2
@@ -158,6 +193,7 @@ TextureImporter:
         height: 241
       alignment: 9
       pivot: {x: .277787983, y: .737315834}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_13
       rect:
         serializedVersion: 2
@@ -167,6 +203,7 @@ TextureImporter:
         height: 241
       alignment: 9
       pivot: {x: .277450621, y: .738451183}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_14
       rect:
         serializedVersion: 2
@@ -176,6 +213,7 @@ TextureImporter:
         height: 328
       alignment: 9
       pivot: {x: .364061981, y: .787333071}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_15
       rect:
         serializedVersion: 2
@@ -185,6 +223,7 @@ TextureImporter:
         height: 188
       alignment: 9
       pivot: {x: .109616615, y: .505814075}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_16
       rect:
         serializedVersion: 2
@@ -194,6 +233,7 @@ TextureImporter:
         height: 155
       alignment: 9
       pivot: {x: .497701973, y: .725886762}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_17
       rect:
         serializedVersion: 2
@@ -203,6 +243,7 @@ TextureImporter:
         height: 301
       alignment: 9
       pivot: {x: .111635201, y: .598058641}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_18
       rect:
         serializedVersion: 2
@@ -212,6 +253,7 @@ TextureImporter:
         height: 300
       alignment: 9
       pivot: {x: .633564532, y: .829321086}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_19
       rect:
         serializedVersion: 2
@@ -221,6 +263,7 @@ TextureImporter:
         height: 300
       alignment: 9
       pivot: {x: .630732, y: .831212759}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Lizard1SpriteSheet_20
       rect:
         serializedVersion: 2
@@ -230,5 +273,6 @@ TextureImporter:
         height: 155
       alignment: 9
       pivot: {x: .495903909, y: .767889798}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

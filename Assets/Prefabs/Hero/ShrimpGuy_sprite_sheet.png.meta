@@ -1,6 +1,23 @@
 fileFormatVersion: 2
 guid: 123a833d2638d464b99542fe3984638e
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: pipes
+    21300002: FrontUpperLeg
+    21300004: Helmet
+    21300006: FrontLowerLeg
+    21300008: BackLowerLeg
+    21300010: FrontLowerArm
+    21300012: BackUpperArm
+    21300014: FrontUpperArm
+    21300016: Torso
+    21300018: Abs
+    21300020: Pelvis
+    21300022: BackUpperLeg
+    21300024: BackFist
+    21300026: BackLowerArm
+    21300028: FrontFoot
+    21300030: BackFoot
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +72,7 @@ TextureImporter:
         height: 440
       alignment: 9
       pivot: {x: .907656908, y: .82323277}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontUpperLeg
       rect:
         serializedVersion: 2
@@ -63,6 +82,7 @@ TextureImporter:
         height: 356
       alignment: 9
       pivot: {x: .426911831, y: .71612376}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Helmet
       rect:
         serializedVersion: 2
@@ -72,6 +92,7 @@ TextureImporter:
         height: 881
       alignment: 9
       pivot: {x: .432419807, y: .251234978}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontLowerLeg
       rect:
         serializedVersion: 2
@@ -81,6 +102,7 @@ TextureImporter:
         height: 370
       alignment: 9
       pivot: {x: .581677079, y: .78356272}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackLowerLeg
       rect:
         serializedVersion: 2
@@ -90,6 +112,7 @@ TextureImporter:
         height: 370
       alignment: 9
       pivot: {x: .618803203, y: .815069735}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontLowerArm
       rect:
         serializedVersion: 2
@@ -99,6 +122,7 @@ TextureImporter:
         height: 332
       alignment: 9
       pivot: {x: .133949354, y: .464887142}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackUpperArm
       rect:
         serializedVersion: 2
@@ -108,6 +132,7 @@ TextureImporter:
         height: 395
       alignment: 9
       pivot: {x: .23148337, y: .494098276}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontUpperArm
       rect:
         serializedVersion: 2
@@ -117,6 +142,7 @@ TextureImporter:
         height: 588
       alignment: 9
       pivot: {x: .627959311, y: .678267896}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Torso
       rect:
         serializedVersion: 2
@@ -126,6 +152,7 @@ TextureImporter:
         height: 794
       alignment: 9
       pivot: {x: .604185998, y: .0595382974}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Abs
       rect:
         serializedVersion: 2
@@ -135,6 +162,7 @@ TextureImporter:
         height: 404
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pelvis
       rect:
         serializedVersion: 2
@@ -144,6 +172,7 @@ TextureImporter:
         height: 349
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackUpperLeg
       rect:
         serializedVersion: 2
@@ -153,6 +182,7 @@ TextureImporter:
         height: 356
       alignment: 9
       pivot: {x: .366497964, y: .831036627}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackFist
       rect:
         serializedVersion: 2
@@ -162,6 +192,7 @@ TextureImporter:
         height: 274
       alignment: 9
       pivot: {x: .183981836, y: .687202156}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackLowerArm
       rect:
         serializedVersion: 2
@@ -171,6 +202,7 @@ TextureImporter:
         height: 350
       alignment: 9
       pivot: {x: .194522455, y: .486677468}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrontFoot
       rect:
         serializedVersion: 2
@@ -180,6 +212,7 @@ TextureImporter:
         height: 238
       alignment: 9
       pivot: {x: .251292914, y: .671056807}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BackFoot
       rect:
         serializedVersion: 2
@@ -189,5 +222,6 @@ TextureImporter:
         height: 238
       alignment: 9
       pivot: {x: .248754457, y: .662053645}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
