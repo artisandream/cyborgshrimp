@@ -92,6 +92,23 @@ ModelImporter:
     4300032: 4in4out02
     7400000: Default Take
     9500000: //RootNode
+    13700000: 0in4out
+    13700002: 4in4out01
+    13700004: 4in4out02
+    13700006: 4in4out03
+    13700008: 4in4out04
+    13700010: 4in4out05
+    13700012: 4in8out01
+    13700014: 4in8out02
+    13700016: 4in8out03
+    13700018: 8in4out01
+    13700020: 8in4out02
+    13700022: 8in4out03
+    13700024: 8in8out01
+    13700026: 8in8out02
+    13700028: 8in8out03
+    13700030: 8in8out04
+    13700032: 8in8out05
   materials:
     importMaterials: 1
     materialName: 0
