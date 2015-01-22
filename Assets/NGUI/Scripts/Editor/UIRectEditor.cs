@@ -12,11 +12,13 @@ using System.Collections.Generic;
 /// </summary>
 
 [CanEditMultipleObjects]
+#if UNITY_3_5
+[CustomEditor(typeof(UIRect))]
+#else
 [CustomEditor(typeof(UIRect), true)]
+#endif
 public class UIRectEditor : Editor
 {
-	static public UIRectEditor instance;
-
 	static protected string[] PrefixName = new string[] { "Left", "Right", "Bottom", "Top" };
 	static protected string[] FieldName = new string[] { "leftAnchor", "rightAnchor", "bottomAnchor", "topAnchor" };
 	static protected string[] HorizontalList = new string[] { "Target's Left", "Target's Center", "Target's Right", "Custom", "Set to Current Position" };
@@ -69,11 +71,7 @@ public class UIRectEditor : Editor
 	{
 		Transform target = sp.objectReferenceValue as Transform;
 		if (target == null) return null;
-#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 		return target.camera;
-#else
-		return target.GetComponent<Camera>();
-#endif
 	}
 
 	/// <summary>
@@ -82,20 +80,15 @@ public class UIRectEditor : Editor
 
 	protected virtual void OnEnable ()
 	{
-		instance = this;
-
 		if (serializedObject.isEditingMultipleObjects)
 		{
 			mAnchorType = AnchorType.Advanced;
 		}
-		else ReEvaluateAnchorType();
+		else
+		{
+			ReEvaluateAnchorType();
+		}
 	}
-
-	/// <summary>
-	/// Clear the instance reference.
-	/// </summary>
-
-	protected virtual void OnDisable () { instance = null; }
 
 	/// <summary>
 	/// Manually re-evaluate the current anchor type.
@@ -147,20 +140,17 @@ public class UIRectEditor : Editor
 	/// Draw the "Anchors" property block.
 	/// </summary>
 
-	protected virtual void DrawFinalProperties () { if (!NGUISettings.unifiedTransform) DrawAnchorTransform(); }
-	protected virtual void OnDrawFinalProperties () { }
-
-	public void DrawAnchorTransform ()
+	protected virtual void DrawFinalProperties ()
 	{
 		if (NGUIEditorTools.DrawHeader("Anchors"))
 		{
 			NGUIEditorTools.BeginContents();
-			NGUIEditorTools.SetLabelWidth(NGUISettings.minimalisticLook ? 69f : 62f);
+			NGUIEditorTools.SetLabelWidth(62f);
 
 			EditorGUI.BeginDisabledGroup(!((target as UIRect).canBeAnchored));
 			GUILayout.BeginHorizontal();
 			AnchorType type = (AnchorType)EditorGUILayout.EnumPopup("Type", mAnchorType);
-			NGUIEditorTools.DrawPadding();
+			GUILayout.Space(18f);
 			GUILayout.EndHorizontal();
 
 			SerializedProperty[] tg = new SerializedProperty[4];
@@ -232,6 +222,8 @@ public class UIRectEditor : Editor
 		}
 	}
 
+	protected virtual void OnDrawFinalProperties () { }
+
 	/// <summary>
 	/// Draw a selection for a single target (one target sets all 4 sides)
 	/// </summary>
@@ -263,11 +255,11 @@ public class UIRectEditor : Editor
 
 	protected void DrawAnchor (int index, bool targetSelection)
 	{
-		//if (targetSelection) GUILayout.Space(3f);
+		if (targetSelection) GUILayout.Space(3f);
 
-		//NGUIEditorTools.SetLabelWidth(16f);
+		NGUIEditorTools.SetLabelWidth(16f);
 		GUILayout.BeginHorizontal();
-		GUILayout.Label(PrefixName[index], GUILayout.Width(NGUISettings.minimalisticLook ? 65f : 56f));
+		GUILayout.Label(PrefixName[index], GUILayout.Width(56f));
 
 		UIRect myRect = serializedObject.targetObject as UIRect;
 		string name = FieldName[index];
@@ -279,7 +271,7 @@ public class UIRectEditor : Editor
 		if (targetSelection)
 		{
 			Object before = tar.objectReferenceValue;
-			NGUIEditorTools.DrawProperty("", tar, false, GUILayout.MinWidth(20f));
+			NGUIEditorTools.DrawProperty("", tar, false);
 			Object after = tar.objectReferenceValue;
 
 			if (after != null || tar.hasMultipleDifferentValues)
@@ -290,7 +282,7 @@ public class UIRectEditor : Editor
 
 			GUILayout.EndHorizontal();
 			GUILayout.BeginHorizontal();
-			GUILayout.Label(" ", GUILayout.Width(NGUISettings.minimalisticLook ? 65f : 56f));
+			GUILayout.Space(64f);
 		}
 
 		UIRect targetRect = GetRect(tar);
@@ -309,8 +301,8 @@ public class UIRectEditor : Editor
 		// Draw the origin selection list
 		EditorGUI.BeginDisabledGroup(targetRect == null && targetCam == null);
 		int newOrigin = IsHorizontal[index] ?
-			EditorGUILayout.Popup(previousOrigin, HorizontalList) :
-			EditorGUILayout.Popup(previousOrigin, VerticalList);
+			EditorGUILayout.Popup(previousOrigin, HorizontalList, GUILayout.MinWidth(110f)) :
+			EditorGUILayout.Popup(previousOrigin, VerticalList, GUILayout.MinWidth(110f));
 		EditorGUI.EndDisabledGroup();
 
 		// "Set to Current" choice
@@ -381,9 +373,17 @@ public class UIRectEditor : Editor
 			serializedObject.Update();
 		}
 
-		if (mCustom[index])
+		if (!mCustom[index])
+		{
+			// Draw the absolute value
+			NGUIEditorTools.SetLabelWidth(16f);
+			NGUIEditorTools.DrawProperty("+", abs, true, GUILayout.MinWidth(10f));
+		}
+		else
 		{
 			// Draw the relative value
+			NGUIEditorTools.SetLabelWidth(16f);
+			NGUIEditorTools.DrawProperty(" ", rel, true, GUILayout.MinWidth(10f));
 			GUILayout.EndHorizontal();
 			GUILayout.BeginHorizontal();
 			GUILayout.Space(64f);
@@ -394,10 +394,7 @@ public class UIRectEditor : Editor
 			// Horizontal slider for relative values, for convenience
 			EditorGUI.BeginDisabledGroup(isOutside01);
 			{
-				GUILayout.Space(10f);
-				float val = GUILayout.HorizontalSlider(relative, 0f, 1f);
-
-				NGUIEditorTools.DrawProperty("", rel, false, GUILayout.Width(40f));
+				float val = GUILayout.HorizontalSlider(relative, 0f, 1f, GUILayout.MinWidth(110f));
 
 				if (!isOutside01 && val != relative)
 				{
@@ -426,14 +423,13 @@ public class UIRectEditor : Editor
 				}
 			}
 			EditorGUI.EndDisabledGroup();
-		}
 
-		// Draw the absolute value
-		NGUIEditorTools.SetLabelWidth(16f);
-		NGUIEditorTools.DrawProperty("+", abs, false, GUILayout.Width(60f));
+			// Draw the absolute value
+			NGUIEditorTools.DrawProperty("+", abs, true, GUILayout.MinWidth(10f));
+		}
 		
 		GUILayout.EndHorizontal();
-		NGUIEditorTools.SetLabelWidth(NGUISettings.minimalisticLook ? 69f : 62f);
+		NGUIEditorTools.SetLabelWidth(62f);
 	}
 
 	/// <summary>
@@ -537,15 +533,9 @@ public class UIRectEditor : Editor
 				anchor.Set(anchor.relative, val);
 			}
 		}
-#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 		else if (anchor.target.camera != null)
 		{
 			Vector3[] sides = anchor.target.camera.GetSides(parent);
-#else
-		else if (anchor.target.GetComponent<Camera>() != null)
-		{
-			Vector3[] sides = anchor.target.GetComponent<Camera>().GetSides(parent);
-#endif
 			Vector3 side0 = sides[0];
 			Vector3 side1 = sides[2];
 
@@ -622,15 +612,9 @@ public class UIRectEditor : Editor
 				anchor.Set(anchor.relative, val);
 			}
 		}
-#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 		else if (anchor.target.camera != null)
 		{
 			Vector3[] sides = anchor.target.camera.GetSides(parent);
-#else
-		else if (anchor.target.GetComponent<Camera>() != null)
-		{
-			Vector3[] sides = anchor.target.GetComponent<Camera>().GetSides(parent);
-#endif
 			Vector3 side0 = sides[3];
 			Vector3 side1 = sides[1];
 

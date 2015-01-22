@@ -37,6 +37,7 @@ public class SpringPanel : MonoBehaviour
 
 	UIPanel mPanel;
 	Transform mTrans;
+	float mThreshold = 0f;
 	UIScrollView mDrag;
 
 	/// <summary>
@@ -67,11 +68,18 @@ public class SpringPanel : MonoBehaviour
 	{
 		float delta = RealTime.deltaTime;
 
+		if (mThreshold == 0f)
+		{
+			mThreshold = (target - mTrans.localPosition).magnitude * 0.005f;
+			mThreshold = Mathf.Max(mThreshold, 0.00001f);
+			mThreshold *= mThreshold;
+		}
+
 		bool trigger = false;
 		Vector3 before = mTrans.localPosition;
 		Vector3 after = NGUIMath.SpringLerp(mTrans.localPosition, target, strength, delta);
 
-		if ((after - target).sqrMagnitude < 0.01f)
+		if (mThreshold >= (after - target).sqrMagnitude)
 		{
 			after = target;
 			enabled = false;
@@ -106,6 +114,7 @@ public class SpringPanel : MonoBehaviour
 		sp.target = pos;
 		sp.strength = strength;
 		sp.onFinished = null;
+		sp.mThreshold = 0f;
 		sp.enabled = true;
 		return sp;
 	}

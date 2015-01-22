@@ -52,7 +52,7 @@ public class UIScrollBar : UISlider
 
 				if (NGUITools.GetActive(this))
 				{
-					if (current == null && onChange != null)
+					if (onChange != null)
 					{
 						current = this;
 						EventDelegate.Execute(onChange);
@@ -101,15 +101,8 @@ public class UIScrollBar : UISlider
 	{
 		base.OnStart();
 
-		if (mFG != null && mFG.gameObject != gameObject)
+		if (mFG != null && mFG.collider != null && mFG.gameObject != gameObject)
 		{
-#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6
-			bool hasCollider = (mFG.collider != null) || (mFG.GetComponent<Collider2D>() != null);
-#else
-			bool hasCollider = (mFG.GetComponent<Collider>() != null) || (mFG.GetComponent<Collider2D>() != null);
-#endif
-			if (!hasCollider) return;
-
 			UIEventListener fgl = UIEventListener.Get(mFG.gameObject);
 			fgl.onPress += OnPressForeground;
 			fgl.onDrag += OnDragForeground;
