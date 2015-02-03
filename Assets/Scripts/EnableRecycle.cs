@@ -45,6 +45,9 @@ public class EnableRecycle : MonoBehaviour
 
 	void OnTriggerEnter (Collider _c) {
 		//addback when adding worlds
+		//if (_c.gameObject.layer.ToString() == "RecycleEnabler") {
+			Debug.Log (_c.gameObject.layer);
+		//}
 		bool setRecycle = false;
 		if(levelChoices == StaticVars.currentLevel) 
 			setRecycle = true;
