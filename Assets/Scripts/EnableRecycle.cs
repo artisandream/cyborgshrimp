@@ -24,7 +24,8 @@ public class EnableRecycle : MonoBehaviour
 
 	public void ToggleChildrenOnOff (bool _b) {
 		foreach (GameObject _go in tileChildren) {
-			_go.SetActive(_b);
+			//_go.SetActive(_b);
+			_go.GetComponent<BoxCollider>().isTrigger = _b;
 		}
 	}
 
