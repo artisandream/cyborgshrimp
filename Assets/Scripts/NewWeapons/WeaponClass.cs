@@ -53,8 +53,12 @@ public class WeaponClass : MonoBehaviour {
 		if(Time.time > activationTime) {//checks if time is greater than the activation time var
 				activationTime = Time.time + nextActivate;//adds the nextActive var to time
 			if(avaliableAmmo.Count-1 >= currentAmmo) {
-				avaliableAmmo[currentAmmo].OnActivateAmmo(weaponArt.position, weaponDirection, ammoSpeed);
-				currentAmmo++;
+				if(!avaliableAmmo[currentAmmo].gameObject.activeSelf) {
+					avaliableAmmo[currentAmmo].transform.position = this.transform.position;
+					avaliableAmmo[currentAmmo].OnActivateAmmo();
+	//				avaliableAmmo[currentAmmo].OnActivateAmmo(weaponArt.position, weaponDirection, ammoSpeed);
+					currentAmmo++;
+				}
 			} else {
 				currentAmmo = 0;
 			}

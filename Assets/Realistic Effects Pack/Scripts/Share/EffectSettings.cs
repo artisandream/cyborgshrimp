@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class EffectSettings : MonoBehaviour
 {
-
-	public Action<EffectSettings> ResetAmmo;
-	public GameObject[] targets;
-
+	
   public float ColliderRadius = 0.2f;
   public float EffectRadius = 0;
   public GameObject Target;
@@ -52,15 +48,15 @@ public class EffectSettings : MonoBehaviour
       Invoke("Deactivate", DeactivateTimeDelay);
     }
   }
-  public void OnEffectDeactivatedHandler()
+  public virtual void OnEffectDeactivatedHandler()
   {
     var handler = EffectDeactivated;
     if (handler != null)
       handler(this, EventArgs.Empty);
 
-	if (ResetAmmo != null) {
-		ResetAmmo (this);
-	}
+//	if (ResetAmmo != null) {
+//		ResetAmmo (this);
+//	}
   }
 
   public void Deactivate()

@@ -4,15 +4,15 @@ using System.Collections.Generic;
 
 public class EnemyAutoFire : MonoBehaviour {
 
-	public EffectSettings[] enemyAmmo;
-	public List<EffectSettings> enemyAmmoList;
+	public EnemyWeaponFX[] enemyAmmo;
+	public List<EnemyWeaponFX> enemyAmmoList;
 	//public float firingTime = 1;
 	private int i = 0;
 	//public bool canFire = false;
 	public Animator EnemyAnimation;
 	public Transform ammoStart;
 
-	void StartAmmo (EffectSettings obj)
+	void StartAmmo (EnemyWeaponFX obj)
 	{
 		enemyAmmoList.Add(obj);
 		EnemyAnimation.SetBool("Fire", true);
@@ -20,7 +20,7 @@ public class EnemyAutoFire : MonoBehaviour {
 
 	void AddAllToList ()
 	{
-		foreach (EffectSettings _e in enemyAmmo) {
+		foreach (EnemyWeaponFX _e in enemyAmmo) {
 			enemyAmmoList.Add(_e);
 		}
 	}
@@ -40,9 +40,9 @@ public class EnemyAutoFire : MonoBehaviour {
 	}
 
 	void Awake () {
-		enemyAmmoList = new List<EffectSettings> ();
+		enemyAmmoList = new List<EnemyWeaponFX> ();
 		AddAllToList ();
-		foreach (EffectSettings _e in enemyAmmoList) {
+		foreach (EnemyWeaponFX _e in enemyAmmoList) {
 			_e.ResetAmmo += StartAmmo;
 		}
 	}
