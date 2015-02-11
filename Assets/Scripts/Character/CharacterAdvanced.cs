@@ -43,6 +43,7 @@ public class CharacterAdvanced : MonoBehaviour {
 						SendCharacterDirection(myArt.eulerAngles.y);
 
 					flipped = true;
+					StaticVars.currentDirection = StaticVars.Direction.LEFT;
 				}
 			}
 			
@@ -54,6 +55,7 @@ public class CharacterAdvanced : MonoBehaviour {
 						SendCharacterDirection(myArt.eulerAngles.y);
 
 					flipped = false;
+					StaticVars.currentDirection = StaticVars.Direction.RIGHT;
 				}
 			}
 

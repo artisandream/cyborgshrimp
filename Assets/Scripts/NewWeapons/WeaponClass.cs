@@ -6,6 +6,8 @@ using System;
 public class WeaponClass : MonoBehaviour {
 
 	public List<AmmoClass> avaliableAmmo;
+	public List<GameObject> Targets;
+
 	public static Action<WeaponClass> AddWeaponToList;
 	public Transform weaponArt;
 	public bool ifAvaliable = false;
@@ -16,6 +18,7 @@ public class WeaponClass : MonoBehaviour {
 	public float playScale = 0.8f;
 
 	private float weaponDirection = 0; 
+	private Vector3 targetPosition;
 
 	public float nextActivate = 2.0F;//the next time the ammo "fires" or is activated
 	private float activationTime = 0.0F;//the current time that is a contiuously changing var adding the time to the nextActive var
@@ -54,7 +57,14 @@ public class WeaponClass : MonoBehaviour {
 				activationTime = Time.time + nextActivate;//adds the nextActive var to time
 			if(avaliableAmmo.Count-1 >= currentAmmo) {
 				if(!avaliableAmmo[currentAmmo].gameObject.activeSelf) {
+					if(StaticVars.currentDirection == StaticVars.Direction.RIGHT) {
+						targetPosition.x = this.transform.position.x + 100;
+					} else {
+						targetPosition.x = this.transform.position.x - 100;
+					}
+					Targets[currentAmmo].transform.position = targetPosition;
 					avaliableAmmo[currentAmmo].transform.position = this.transform.position;
+					avaliableAmmo[currentAmmo].Target = Targets[currentAmmo].gameObject;
 					avaliableAmmo[currentAmmo].OnActivateAmmo();
 	//				avaliableAmmo[currentAmmo].OnActivateAmmo(weaponArt.position, weaponDirection, ammoSpeed);
 					currentAmmo++;

@@ -12,4 +12,11 @@ public class StaticVars : MonoBehaviour
 	public static int highScore;
 	public static List<ScoreClass> scoreClassList;
 	public static LevelEnum.LevelChoice currentLevel;
+
+	public enum Direction {
+		RIGHT,
+		LEFT
+	}
+
+	public static Direction currentDirection = Direction.RIGHT;
 }
