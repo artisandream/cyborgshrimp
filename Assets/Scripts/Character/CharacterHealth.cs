@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterHealth : MonoBehaviour {
 
-	void OnCollisionEnter ( )
+	void OnTriggerEnter ( )
 	{
 		Debug.Log ("HIT");
 	}

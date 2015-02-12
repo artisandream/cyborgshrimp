@@ -33,14 +33,21 @@ public class WeaponClass : MonoBehaviour {
 		this.GetComponent<BoxCollider>().enabled = false;
 	}
 
-	// Use this for initialization
-	void Start () {
+	void Awake () {
 		avaliableAmmo = new List<AmmoClass>();
+		
 		AmmoClass.AddAmmoToList += AddAmmo;
 		CharacterAdvanced.SendCharacterDirection += GetCharacterDirection;
+	}
+	// Use this for initialization
+	void Start () {
 
 		if(ifAvaliable)
 			AddToAvaliableWeapons ();
+	}
+
+	void StartLate () {
+		print ("Late");
 	}
 
 	void GetCharacterDirection (float _f) {

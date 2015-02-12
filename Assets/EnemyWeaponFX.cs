@@ -13,7 +13,6 @@ public class EnemyWeaponFX : EffectSettings {
 
 			if (ResetAmmo != null) {
 				ResetAmmo (this);
-			}
+		}
 	}
-
 }

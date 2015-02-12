@@ -30,7 +30,9 @@ public class EffectSettings : MonoBehaviour
   private bool deactivatedIsWait;
 
   public void OnCollisionHandler(CollisionInfo e)
+
   {
+
     for (int i = 0; i < lastActiveIndex; i++)
     {
       Invoke("SetGoActive", active_value[i]);

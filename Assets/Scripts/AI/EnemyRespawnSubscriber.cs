@@ -12,7 +12,7 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	public float nextActivate = 1.0F;// the next time an enemy can respawn
 	private Vector3 SpawnLocation;//the location that the enemy will appear after respawning
 	private bool canRespawn;
-	private List<WeaponClass> damageAmountList;
+	public List<WeaponClass> killerWeaponsList;
 
 //	private int i = 0;
 	
@@ -24,14 +24,19 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 		this.gameObject.SetActive(false);//turns off the gameObject
 	}
 
+	void newList (WeaponClass _w) {
+		Debug.Log ("IOSStoreProductView");
+	}
+
 	void Start() {
-		damageAmountList = new List<WeaponClass>();
+		killerWeaponsList = new List<WeaponClass>();
+		WeaponClass.AddWeaponToList += ChangeDamageNum;
 		healthReturn = health;//sets the return health to the users current health value
-		WeaponClass.AddWeaponToList += ChangeDamageNum;//subscribes to the SwitchWeapon event
 	}
 
 	public void ChangeDamageNum (WeaponClass _aS) {//this sets the damage to the enemy from the current weapon in the SwitchWeapon Script
-		damageAmountList.Add(_aS);
+		killerWeaponsList.Add(_aS);
+		Debug.Log ("AEEDD");
 	}
 
 	// Use this for initialization
@@ -46,7 +51,7 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	public void LowerHealth (Collider _c) {
 		string _t = _c.gameObject.tag;//_t is tag
 		Debug.Log (_t);
-		foreach (WeaponClass _aS in damageAmountList) {//_aS is a var for AmmoSpawner
+		foreach (WeaponClass _aS in killerWeaponsList) {//_aS is a var for AmmoSpawner
 			Debug.Log(_aS);
 			if(_t == _aS.thisWeaponSelection.ToString()) 
 				health -= _aS.ammoPower;
