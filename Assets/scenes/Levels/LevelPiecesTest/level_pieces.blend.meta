@@ -21,6 +21,17 @@ ModelImporter:
     100030: 8in8out04
     100032: 8in8out05
     100034: //RootNode
+    100036: 0in0out_004
+    100038: 0in8out
+    100040: 4down4out01
+    100042: 4down8out01
+    100044: 4in4down01
+    100046: 4in4up01
+    100048: 4in8out01_001
+    100050: 4up4out01
+    100052: 4up8out01
+    100054: 8in4down01
+    100056: 8in4up01
     400000: 0in4out
     400002: 4in4out01
     400004: 4in4out02
@@ -39,6 +50,17 @@ ModelImporter:
     400030: 8in8out04
     400032: 8in8out05
     400034: //RootNode
+    400036: 0in0out_004
+    400038: 0in8out
+    400040: 4down4out01
+    400042: 4down8out01
+    400044: 4in4down01
+    400046: 4in4up01
+    400048: 4in8out01_001
+    400050: 4up4out01
+    400052: 4up8out01
+    400054: 8in4down01
+    400056: 8in4up01
     2300000: 0in4out
     2300002: 4in4out01
     2300004: 4in4out02
@@ -56,6 +78,7 @@ ModelImporter:
     2300028: 8in8out03
     2300030: 8in8out04
     2300032: 8in8out05
+    2300034: 0in0out_004
     3300000: 0in4out
     3300002: 4in4out01
     3300004: 4in4out02
@@ -73,6 +96,7 @@ ModelImporter:
     3300028: 8in8out03
     3300030: 8in8out04
     3300032: 8in8out05
+    3300034: 0in0out_004
     4300000: 8in4out03
     4300002: 8in4out02
     4300004: 8in4out01
@@ -90,6 +114,17 @@ ModelImporter:
     4300028: 4in4out03
     4300030: 4in4out01
     4300032: 4in4out02
+    4300034: 4down4out01
+    4300036: 4up4out01
+    4300038: 4in4up01
+    4300040: 4in4down01
+    4300042: 4down8out01
+    4300044: 0in0out_004
+    4300046: 8in4up01
+    4300048: 4up8out01
+    4300050: 8in4down01
+    4300052: 0in8out
+    4300054: 4in8out01_001
     7400000: Default Take
     9500000: //RootNode
     13700000: 0in4out
@@ -109,6 +144,16 @@ ModelImporter:
     13700028: 8in8out03
     13700030: 8in8out04
     13700032: 8in8out05
+    13700034: 0in8out
+    13700036: 4down4out01
+    13700038: 4down8out01
+    13700040: 4in4down01
+    13700042: 4in4up01
+    13700044: 4in8out01_001
+    13700046: 4up4out01
+    13700048: 4up8out01
+    13700050: 8in4down01
+    13700052: 8in4up01
   materials:
     importMaterials: 1
     materialName: 0
