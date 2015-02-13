@@ -17,6 +17,8 @@ public class WeaponClass : MonoBehaviour {
 	public float powerUpScale = 0.14f;
 	public float playScale = 0.8f;
 
+	public int firingDistance = 100;
+
 	private float weaponDirection = 0; 
 	private Vector3 targetPosition;
 
@@ -39,15 +41,18 @@ public class WeaponClass : MonoBehaviour {
 		AmmoClass.AddAmmoToList += AddAmmo;
 		CharacterAdvanced.SendCharacterDirection += GetCharacterDirection;
 	}
-	// Use this for initialization
-	void Start () {
 
-		if(ifAvaliable)
+	IEnumerator StartLate ()
+	{
+		yield return new WaitForSeconds (0.1f);
+
+		if (ifAvaliable) {
 			AddToAvaliableWeapons ();
-	}
+		}
+	}	
 
-	void StartLate () {
-		print ("Late");
+	void Start () {
+		StartCoroutine (StartLate());
 	}
 
 	void GetCharacterDirection (float _f) {
@@ -65,15 +70,14 @@ public class WeaponClass : MonoBehaviour {
 			if(avaliableAmmo.Count-1 >= currentAmmo) {
 				if(!avaliableAmmo[currentAmmo].gameObject.activeSelf) {
 					if(StaticVars.currentDirection == StaticVars.Direction.RIGHT) {
-						targetPosition.x = this.transform.position.x + 100;
+						targetPosition.x = this.transform.position.x + firingDistance;
 					} else {
-						targetPosition.x = this.transform.position.x - 100;
+						targetPosition.x = this.transform.position.x - firingDistance;
 					}
 					Targets[currentAmmo].transform.position = targetPosition;
 					avaliableAmmo[currentAmmo].transform.position = this.transform.position;
 					avaliableAmmo[currentAmmo].Target = Targets[currentAmmo].gameObject;
 					avaliableAmmo[currentAmmo].OnActivateAmmo();
-	//				avaliableAmmo[currentAmmo].OnActivateAmmo(weaponArt.position, weaponDirection, ammoSpeed);
 					currentAmmo++;
 				}
 			} else {

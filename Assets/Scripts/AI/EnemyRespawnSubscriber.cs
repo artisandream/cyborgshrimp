@@ -24,19 +24,14 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 		this.gameObject.SetActive(false);//turns off the gameObject
 	}
 
-	void newList (WeaponClass _w) {
-		Debug.Log ("IOSStoreProductView");
+	public void AddKillerWeapons (WeaponClass _aS) {//this sets the damage to the enemy from the current weapon in the SwitchWeapon Script
+		killerWeaponsList.Add(_aS);
 	}
 
 	void Start() {
 		killerWeaponsList = new List<WeaponClass>();
-		WeaponClass.AddWeaponToList += ChangeDamageNum;
+		WeaponClass.AddWeaponToList += AddKillerWeapons;
 		healthReturn = health;//sets the return health to the users current health value
-	}
-
-	public void ChangeDamageNum (WeaponClass _aS) {//this sets the damage to the enemy from the current weapon in the SwitchWeapon Script
-		killerWeaponsList.Add(_aS);
-		Debug.Log ("AEEDD");
 	}
 
 	// Use this for initialization
