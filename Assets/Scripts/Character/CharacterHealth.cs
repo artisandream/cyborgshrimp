@@ -4,7 +4,7 @@ using System;
 
 public class CharacterHealth : MonoBehaviour {
 
-	public Action UpdateHealth;
+	public static Action UpdateHealth;
 
 	void Start () {
 		//EnemyWeaponFX.ResetAmmo += UpdateHealth;
@@ -13,10 +13,9 @@ public class CharacterHealth : MonoBehaviour {
 
 	void OnTriggerEnter ( )
 	{
+		Debug.Log ("Hit");
 		if(UpdateHealth != null)
 			UpdateHealth();
 	}
-
-
 
 }
