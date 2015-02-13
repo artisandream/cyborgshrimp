@@ -9,7 +9,6 @@ public class EnemyFiringStateMachine : MonoBehaviour {
 	{
 		ChangeState("Armed", false);
 		ChangeState("Fire", false);
-		print ("EndEF");
 	}
 
 	void Start() {

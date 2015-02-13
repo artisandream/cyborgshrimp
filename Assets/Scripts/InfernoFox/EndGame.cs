@@ -11,7 +11,8 @@ public class EndGame : MonoBehaviour
 
 	void EndThisGame ()
 	{
-		print ("Game Over");
+		if(TurnOffGame != null)
+			TurnOffGame();
 	}
 
 	void Start () {

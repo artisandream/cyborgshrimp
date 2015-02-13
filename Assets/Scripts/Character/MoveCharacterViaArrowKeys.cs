@@ -16,6 +16,15 @@ public class MoveCharacterViaArrowKeys : MonoBehaviour
 		}
 	}
 
+	void DisableScript ()
+	{
+		this.enabled = false;
+	}
+
+	void Start() {
+		EndGame.TurnOffGame += DisableScript;
+	}
+
 	void Update () 
 	{
 		if(Input.GetKey(KeyCode.LeftArrow)) 

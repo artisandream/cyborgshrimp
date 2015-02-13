@@ -6,7 +6,6 @@ public class TurnOffBoxColliderAtEnd : MonoBehaviour {
 	void TurnOfComponents ()
 	{
 		this.GetComponent<BoxCollider>().enabled = false;
-		print ("OFF");
 	}
 
 	// Use this for initialization
@@ -14,7 +13,6 @@ public class TurnOffBoxColliderAtEnd : MonoBehaviour {
 		EndGame.TurnOffGame += TurnOfComponents;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 	
 	}

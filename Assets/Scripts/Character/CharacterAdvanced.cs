@@ -16,10 +16,23 @@ public class CharacterAdvanced : MonoBehaviour {
 	public float jumpSpeed = 10;
 	public float gravity = 20;
 
+	void KillPlayer ()
+	{
+		myAnim.SetBool("Arm", false);
+		myAnim.SetBool("Fire", false);
+		myAnim.SetBool("Jump", false);
+		myAnim.SetFloat("Walk", 0);
+		myAnim.SetBool("Die", true);
+		myAnim.SetLayerWeight (1, 0);
+		EndGame.TurnOffGame -= KillPlayer;
+		this.enabled = false;
+	}
+
 	//Hello Class!
 	void Start () {
 		MoveCharacterViaButtons.MoveCharacter += ChangeInputFloat;
 		MoveCharacterViaArrowKeys.MoveCharacter += ChangeInputFloat;
+		EndGame.TurnOffGame += KillPlayer;
 	}
 
 	void ChangeInputFloat (float _f) {
