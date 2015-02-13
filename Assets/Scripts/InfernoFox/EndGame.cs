@@ -15,7 +15,7 @@ public class EndGame : MonoBehaviour
 	}
 
 	void Start () {
-		HealthUIPlacement.HealthOut += EndThisGame;
+		HealthUpdater.HealthOut += EndThisGame;
 	}
 	////Legacy
 	/// 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class HealthUIPlacement : MonoBehaviour {
+public class HealthUpdater : MonoBehaviour {
 
 	public Vector3 updateScale;
 	public static Action HealthOut;
@@ -11,7 +11,6 @@ public class HealthUIPlacement : MonoBehaviour {
 	{
 		if (StaticVars.player1Health > 0) {
 			StaticVars.player1Health -= 0.1f;
-			Debug.Log (StaticVars.player1Health);
 			updateScale.x = StaticVars.player1Health;
 			this.transform.localScale = updateScale;
 		} else {

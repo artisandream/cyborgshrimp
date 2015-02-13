@@ -6,9 +6,7 @@ public class EnemyAutoFire : MonoBehaviour {
 
 	public EnemyWeaponFX[] enemyAmmo;
 	public List<EnemyWeaponFX> enemyAmmoList;
-	//public float firingTime = 1;
 	private int i = 0;
-	//public bool canFire = false;
 	public Animator EnemyAnimation;
 	public Transform ammoStart;
 
@@ -28,13 +26,10 @@ public class EnemyAutoFire : MonoBehaviour {
 	void Fire ()
 	{
 		if (enemyAmmoList.Count > 0) {
-			//canFire = true;
-
 			enemyAmmoList [i].transform.position = ammoStart.transform.position;
 			enemyAmmoList [i].gameObject.SetActive (true);
 			enemyAmmoList.RemoveAt (0);
 		} else {
-			//canFire = false;
 			EnemyAnimation.SetBool("Fire", false);
 		}
 	}

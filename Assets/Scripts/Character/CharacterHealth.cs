@@ -9,13 +9,10 @@ public class CharacterHealth : MonoBehaviour {
 	void Start () {
 		//EnemyWeaponFX.ResetAmmo += UpdateHealth;
 	}
-
-
+	
 	void OnTriggerEnter ( )
 	{
-		Debug.Log ("Hit");
 		if(UpdateHealth != null)
 			UpdateHealth();
 	}
-
 }
