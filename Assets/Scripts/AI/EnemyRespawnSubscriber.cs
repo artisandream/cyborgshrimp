@@ -52,14 +52,10 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	
 	public void LowerHealth (Collider _c) {
 		string _t = _c.gameObject.tag;//_t is tag
-		Debug.Log (_t);
 		foreach (WeaponClass _aS in killerWeaponsList) {//_aS is a var for AmmoSpawner
 			Debug.Log(_aS);
 			if(_t == _aS.thisWeaponSelection.ToString()) 
 				health -= _aS.ammoPower;
-
-			Debug.Log(_aS.ammoPower);
-			Debug.Log(health);
 		}
 		if(health <= 0) {//tests for current health value
 			this.gameObject.SetActive(false);//deactivates this gameOjbect
