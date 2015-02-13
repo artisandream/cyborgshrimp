@@ -15,4 +15,14 @@ public class EnemyWeaponFX : EffectSettings {
 				ResetAmmo (this);
 		}
 	}
+
+	public IEnumerator StartLate () {
+		yield return new WaitForSeconds (0.01f);
+		this.gameObject.SetActive (false);
+	}
+
+	public virtual void Start () {
+		StartCoroutine (StartLate ());
+	}
+
 }

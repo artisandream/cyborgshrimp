@@ -20,8 +20,15 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 		this.gameObject.SetActive(false);//turns off the gameObject
 	}
 
-	void Awake () {
+	IEnumerator StartLate ()
+	{
+		yield return new WaitForSeconds (0.1f);
 		this.gameObject.SetActive(false);//turns off the gameObject
+	}
+
+	void Awake () {
+		this.gameObject.SetActive(true);//turns off the gameObject
+		StartCoroutine (StartLate ());
 	}
 
 	public void AddKillerWeapons (WeaponClass _aS) {//this sets the damage to the enemy from the current weapon in the SwitchWeapon Script

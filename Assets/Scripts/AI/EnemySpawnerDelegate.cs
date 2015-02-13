@@ -12,7 +12,11 @@ public class EnemySpawnerDelegate : MonoBehaviour {
 	private float activationTime = 0.0F;
 	public float nextActivate = 2.0F;
 	
-	void Update() {
+	void Start() {
+		OnActivateEnemy();
+	}
+
+	void OnTriggerStay() {
 		OnActivateEnemy();
 	}
 
