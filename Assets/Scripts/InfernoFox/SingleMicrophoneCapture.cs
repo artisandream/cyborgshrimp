@@ -7,7 +7,7 @@ public class SingleMicrophoneCapture : MonoBehaviour
 {
 	//A boolean that flags whether there's a connected microphone
 	private bool micConnected = false;
-	public UILabel recordLabel;
+	//public UILabel recordLabel;
 
 	//The maximum and minimum available recording frequencies
 	private int minFreq;
@@ -17,9 +17,9 @@ public class SingleMicrophoneCapture : MonoBehaviour
 	public AudioClip myFoxSound;
 	public AudioClip mySavedFileSound;
 
-	public UISlider audioSlider;
+	//public UISlider audioSlider;
 	private bool canUpdateSlider;
-	public UIButton myRecordButton;
+	//public UIButton myRecordButton;
 
 	void Start() 
 	{
@@ -68,8 +68,8 @@ public class SingleMicrophoneCapture : MonoBehaviour
 	IEnumerator RecordAndSave() {
 		//Disable the button
 		this.GetComponent<BoxCollider>().enabled = false;
-		myRecordButton.defaultColor = Color.green;
-		recordLabel.text = "Wait for It...";
+		//myRecordButton.defaultColor = Color.green;
+//		recordLabel.text = "Wait for It...";
 
 		//Stop the Background Music
 		BackgroundMusic.StopMusic(); // ****** Turn back on after testing *******
@@ -78,19 +78,19 @@ public class SingleMicrophoneCapture : MonoBehaviour
 		audio.clip = metronomeSound;
 		audio.Play ();
 		yield return new WaitForSeconds(2);
-		recordLabel.text = "Go! Go! Go!";
-		myRecordButton.defaultColor = Color.red;
+//		recordLabel.text = "Go! Go! Go!";
+//		myRecordButton.defaultColor = Color.red;
 		//yield return new WaitForSeconds(0.05f);
 		//Start Recording
-		audioSlider.value = 0;
+//		audioSlider.value = 0;
 		mySavedFileSound = Microphone.Start(null, true, 1, maxFreq);
 
 		//Add Start Progress Bar
 		canUpdateSlider = true;
 
 		yield return new WaitForSeconds(1);
-		recordLabel.text = "Record";
-		myRecordButton.defaultColor = Color.white;
+//		recordLabel.text = "Record";
+//		myRecordButton.defaultColor = Color.white;
 		//End Recording
 		Microphone.End(null); //Stop the audio recording
 
@@ -115,11 +115,11 @@ public class SingleMicrophoneCapture : MonoBehaviour
 
 	void FixedUpdate () {
 		if(canUpdateSlider) {
-			if(audioSlider.value <= 1) {
-				audioSlider.value += 0.033333333f;
-			}
-			if(audioSlider.value == 1)
-				canUpdateSlider = false;
+	//		if(audioSlider.value <= 1) {
+	//			audioSlider.value += 0.033333333f;
+	//		}
+	//		if(audioSlider.value == 1)
+	//			canUpdateSlider = false;
 		}
 	}
 }

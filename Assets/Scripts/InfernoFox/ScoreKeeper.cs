@@ -7,8 +7,8 @@ using System;
 public class ScoreKeeper : MonoBehaviour {
 
 	public int score = 0;
-	public UILabel nguiLabel;
-	public UILabel highScoreLabel;
+	//public UILabel nguiLabel;
+	//public UILabel highScoreLabel;
 	public SimpleSQL.SimpleSQLManager dbManager;
 	public List<ScoreClass> ScoreClassList;
 	public static Action StartGamecenter;
@@ -18,7 +18,7 @@ public class ScoreKeeper : MonoBehaviour {
 	public void RefreshList ()
 	{
 		foreach (ScoreClass _sc in ScoreClassList) {
-			highScoreLabel.text = _sc.Points.ToString ("d");
+		//	highScoreLabel.text = _sc.Points.ToString ("d");
 			if(SendToGameCenter != null)
 				SendToGameCenter(_sc.Points);
 		}
@@ -44,7 +44,7 @@ public class ScoreKeeper : MonoBehaviour {
 	void AddScore () 
 	{
 		score++;
-		nguiLabel.text = score.ToString("d");
+		//nguiLabel.text = score.ToString("d");
 		if(SendToAchievements != null)
 			SendToAchievements(score);
 	}

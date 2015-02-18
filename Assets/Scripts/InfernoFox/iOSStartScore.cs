@@ -6,7 +6,7 @@ using System;
 
 public class iOSStartScore : MonoBehaviour {
 	
-	public UILabel highScoreLabel;
+	//public UILabel highScoreLabel;
 	public SimpleSQL.SimpleSQLManager dbManager;
 	private string scoreName = "IFHighScore";
 	private List<ScoreClass> ScoreClassList;
@@ -38,7 +38,7 @@ public class iOSStartScore : MonoBehaviour {
 		GameCenterButton.OpenLeaderBoard += OpenGameCenterWindow;
 		ScoreClassList = new List<ScoreClass> (from ps in dbManager.Table<ScoreClass> () select ps);
 		foreach (ScoreClass _sc in ScoreClassList) {
-			highScoreLabel.text = _sc.Points.ToString("d");
+//			highScoreLabel.text = _sc.Points.ToString("d");
 			SendScoreToGameCenter (_sc.Points);
 			SendScoreToSocial (_sc);
 		}
@@ -62,10 +62,10 @@ public class iOSStartScore : MonoBehaviour {
 		foreach (ScoreClass _sc in ScoreClassList) {
 			if(int.Parse(data.leaderBoardScore) >= _sc.Points) { //if the GC board is greater
 				dbManager.Execute("UPDATE ScoreClass SET Points = ? WHERE PlayerID = ?", int.Parse(data.leaderBoardScore), 1);
-				highScoreLabel.text = data.leaderBoardScore;
+//				highScoreLabel.text = data.leaderBoardScore;
 			} else {
 				SendScoreToGameCenter(_sc.Points);//else report the higher score to GC
-				highScoreLabel.text = _sc.Points.ToString("d");
+//				highScoreLabel.text = _sc.Points.ToString("d");
 			}
 			SendScoreToSocial(_sc);
 		}

@@ -7,7 +7,7 @@ public class JumpAndFuelScript : MonoBehaviour
 	public static Action JumpPlayer;
 	public static Action TurnOffPlayerArt;
 
-	public UISlider gameSlider;
+	//public UISlider gameSlider;
 	
 	private Vector2 v2;
 	public float fuelUsage = .03f;
@@ -71,7 +71,7 @@ public class JumpAndFuelScript : MonoBehaviour
 			}
 
 			RocketFlames();
-			gameSlider.value = fuelLevel;
+			//gameSlider.value = fuelLevel;
 
 			if(reFuelAmmount >= reFuelAmountMin) {
 				reFuelAmmount -= decreaseReFuel;
@@ -87,17 +87,17 @@ public class JumpAndFuelScript : MonoBehaviour
 	
 	void RocketFlames (){
 		if (fuelLevel > fuelLevels[0]){
-			gameSlider.foregroundWidget.color = Color.green;
+			//gameSlider.foregroundWidget.color = Color.green;
 			rocketSmoke.emissionRate = 0;
 			rocketFire.emissionRate = (fuelLevel)*fireEmitionRate;
 		}
 		if (fuelLevel > fuelLevels[2] && fuelLevel <= fuelLevels[1]){
-			gameSlider.foregroundWidget.color = Color.yellow;
+			//gameSlider.foregroundWidget.color = Color.yellow;
 			rocketFire.emissionRate = (fuelLevel*0.25f)*fireEmitionRate;
 		}
 		if (fuelLevel < fuelLevels[2]){
 			rocketSmoke.emissionRate = SmokeEmitionRate;
-			gameSlider.foregroundWidget.color = Color.red;
+			//gameSlider.foregroundWidget.color = Color.red;
 			rocketFire.emissionRate = 0;
 		}	
 	}

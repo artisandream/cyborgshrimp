@@ -7,7 +7,7 @@ using System.Linq;
 
 public class AddData : MonoBehaviour 
 {
-	public UILabel scoreLabel;
+//	public UILabel scoreLabel;
 	public SimpleSQL.SimpleSQLManager dbManager;
 	private List<ScoreClass> ScoreClassList;
 
@@ -27,6 +27,6 @@ public class AddData : MonoBehaviour
 	private void DebugData ()
 	{
 		ScoreClassList = new List<ScoreClass> (from ps in dbManager.Table<ScoreClass> () select ps);
-		scoreLabel.text = ScoreClassList[0].Points.ToString("d");
+	//	scoreLabel.text = ScoreClassList[0].Points.ToString("d");
 	}
 }
