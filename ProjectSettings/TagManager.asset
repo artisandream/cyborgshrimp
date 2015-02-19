@@ -3,6 +3,23 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - PowerUp
+  - Enemy
+  - EnemyTrigger
+  - Weapon
+  - 
+  - 
+  - 
+  - BULLET
+  - MISSILE
+  - Missile
+  - Plasma
+  - Collection
+  - 
+  - Destroyer
+  - Fuel
+  - Point
+  - Strike
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -12,32 +29,52 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
-  User Layer 9: 
-  User Layer 10: 
-  User Layer 11: 
-  User Layer 12: 
-  User Layer 13: 
-  User Layer 14: 
-  User Layer 15: 
-  User Layer 16: 
-  User Layer 17: 
-  User Layer 18: 
-  User Layer 19: 
-  User Layer 20: 
-  User Layer 21: 
-  User Layer 22: 
-  User Layer 23: 
-  User Layer 24: 
-  User Layer 25: 
-  User Layer 26: 
-  User Layer 27: 
-  User Layer 28: 
+  User Layer 8: Enemy
+  User Layer 9: Player
+  User Layer 10: Weapon
+  User Layer 11: UI
+  User Layer 12: Ammo
+  User Layer 13: PowerUp
+  User Layer 14: Shields
+  User Layer 15: Controls
+  User Layer 16: Level
+  User Layer 17: Collection
+  User Layer 18: Collector
+  User Layer 19: EnemyDirector
+  User Layer 20: EnemyDistroyer
+  User Layer 21: EnemyAmmo
+  User Layer 22: RecycleEnabler
+  User Layer 23: StopReverse
+  User Layer 24: EnemySpawner
+  User Layer 25: FX
+  User Layer 26: ActivateSpawner
+  User Layer 27: PlayerNull
+  User Layer 28: EndGame
   User Layer 29: 
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: BackStuff
+    userID: 2
+    uniqueID: 1112529203
+    locked: 0
+  - name: Player
+    userID: 4
+    uniqueID: 1660818927
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: FrontStuff
+    userID: 1
+    uniqueID: 1372918755
+    locked: 0
+  - name: Enemies
+    userID: 3
+    uniqueID: 2813685873
+    locked: 0
+  - name: Ammo
+    userID: 5
+    uniqueID: 3358457919
     locked: 0
