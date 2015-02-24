@@ -23,6 +23,7 @@ public class EnemyNav : MonoBehaviour {
 
 	IEnumerator MoveEnemyToTarget ()
 	{
+		print ("GO");
 		myNMA.destination = myTarget.transform.position;
 		// set the destination of the enemy to follow the player
 		velocity = myNMA.velocity.x;
@@ -32,7 +33,7 @@ public class EnemyNav : MonoBehaviour {
 	}
 	//sets animation to swim or idle depending on the speed
 
-	void Update () {
-		//MoveEnemyToTarget (); 
+	public void EndSwim () {
+		eAnim.SetFloat ("Swim", 0);
 	}
 }

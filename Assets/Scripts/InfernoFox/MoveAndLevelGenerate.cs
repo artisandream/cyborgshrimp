@@ -15,7 +15,7 @@ public class MoveAndLevelGenerate : MonoBehaviour {
 	public Vector2 currentVector2;
 
 	public virtual void Start () {
-		MoveCharacterViaArrowKeys.MoveCharacter += UpdateSpeed;
+		//MoveCharacterViaArrowKeys.MoveCharacter += UpdateSpeed;
 		StaticVars.currentLevel = LevelEnum.LevelChoice.LEVEL_1;
 		//EndGame.TurnOffGame += TurnOff;
 		JumpAndFuelScript.JumpPlayer += IncreaseSpeed;
