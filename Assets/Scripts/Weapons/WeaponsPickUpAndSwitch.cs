@@ -61,9 +61,9 @@ public class WeaponsPickUpAndSwitch : MonoBehaviour {
 		}
 	}
 	
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.A)) {
-			OnMouseUp();//called the built in funcation on a key stroke
-		}
-	}
+//	void Update () {
+//		if(Input.GetKeyDown(KeyCode.A)) {
+//			OnMouseUp();//called the built in funcation on a key stroke
+//		}
+//	}
 }

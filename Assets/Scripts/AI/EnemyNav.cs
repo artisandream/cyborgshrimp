@@ -17,9 +17,22 @@ public class EnemyNav : MonoBehaviour {
 		Start();//calls start() again when the AI is reactivated
 	}
 
+	public void StartEnemyMove () {
+		StartCoroutine (MoveEnemyToTarget ());
+	}
+
+	IEnumerator MoveEnemyToTarget ()
+	{
+		myNMA.destination = myTarget.transform.position;
+		// set the destination of the enemy to follow the player
+		velocity = myNMA.velocity.x;
+		//gets the velocity of the current agent
+		eAnim.SetFloat ("Swim", velocity);
+		yield return null;
+	}
+	//sets animation to swim or idle depending on the speed
+
 	void Update () {
-		myNMA.destination = myTarget.transform.position; // set the destination of the enemy to follow the player
-		velocity = myNMA.velocity.x;//gets the velocity of the current agent
-		eAnim.SetFloat("Swim",velocity);//sets animation to swim or idle depending on the speed
+		//MoveEnemyToTarget (); 
 	}
 }

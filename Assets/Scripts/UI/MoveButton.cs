@@ -42,7 +42,7 @@ public class MoveButton : MonoBehaviour {
 		}
 	}
 
-	void Update () {
-		OnKeyEnter();
-	}
+//	void Update () {
+//		OnKeyEnter();
+//	}
 }

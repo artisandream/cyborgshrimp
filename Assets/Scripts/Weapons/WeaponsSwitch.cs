@@ -54,9 +54,9 @@ public class WeaponsSwitch : MonoBehaviour {
 		}
 	}
 
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.A)) {
-			OnMouseUp();
-		}
-	}
+//	void Update () {
+//		if(Input.GetKeyDown(KeyCode.A)) {
+//			OnMouseUp();
+//		}
+//	}
 }

@@ -8,6 +8,7 @@ public class ActivateEnemyAI : MonoBehaviour {
 	void OnTriggerEnter (Collider _c) {
 		//if(_c.tag == "Player") {
 			thisNMA.myTarget = _c.gameObject;//changes the navMeshAgent target to the player
+		thisNMA.StartEnemyMove ();
 		//}
 	}
 
