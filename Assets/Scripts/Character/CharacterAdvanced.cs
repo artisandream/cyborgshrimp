@@ -32,19 +32,47 @@ public class CharacterAdvanced : MonoBehaviour {
 	void Start () {
 		MoveCharacterViaButtons.MoveCharacter += ChangeInputFloat;
 		MoveCharacterViaArrowKeys.MoveCharacter += ChangeInputFloat;
+		MoveCharacterViaArrowKeys.JumpCharacter += Jump;
 		EndGame.TurnOffGame += KillPlayer;
+		StartCoroutine(AddGravity(0));
 	}
 
 	void ChangeInputFloat (float _f) {
 		hInput = _f;
+		StartCoroutine(MoveNow(_f));
 	}
-	void Update () 
-	{
 
-		if ((myController.collisionFlags & CollisionFlags.Sides) == 0) {
-			//myAnim.SetBool("Jump", false);
+	IEnumerator MoveNow (float _f) {
+		//while ((myController.collisionFlags & CollisionFlags.Sides) == 0) {
+			Debug.Log("move");
+			Move();
+			yield return null;
+		//}
+	}
+
+	IEnumerator AddGravity (float _f) {
+		while ((myController.collisionFlags & CollisionFlags.Sides) == 0) {
+			Debug.Log("move");
+			Move();
+			yield return null;
 		}
+	}
 
+	void Jump () {
+		StartCoroutine (AddJump ());
+	}
+
+	IEnumerator AddJump () {
+		//while ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
+			moveDirection.z = 1000;
+			Move();
+			yield return null;
+		//}
+	}
+	
+	void Move () 
+		
+	{
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
 			myAnim.SetBool("Jump", false);
 			moveDirection = new Vector3(hInput*speed, 0, 0);
@@ -54,7 +82,7 @@ public class CharacterAdvanced : MonoBehaviour {
 					myArt.Rotate(0,180,0);
 					if(SendCharacterDirection != null)
 						SendCharacterDirection(myArt.eulerAngles.y);
-
+					
 					flipped = true;
 					StaticVars.currentDirection = StaticVars.Direction.LEFT;
 				}
@@ -66,23 +94,68 @@ public class CharacterAdvanced : MonoBehaviour {
 					myArt.Rotate(0,180,0);
 					if(SendCharacterDirection != null)
 						SendCharacterDirection(myArt.eulerAngles.y);
-
+					
 					flipped = false;
 					StaticVars.currentDirection = StaticVars.Direction.RIGHT;
 				}
 			}
-
-
+			
+			
 			if(hInput == 0) {
 				myAnim.SetFloat(animName, hInput);
 			}
 			
-			if (Input.GetButton("Jump")) {
-				myAnim.SetBool("Jump", true);
-				moveDirection.z = jumpSpeed;
-			}	
+//			if (Input.GetButton("Jump")) {
+//				myAnim.SetBool("Jump", true);
+//				moveDirection.z = jumpSpeed;
+//			}	
 		} 
 		moveDirection.z -= gravity * Time.deltaTime;
 		myController.Move(moveDirection*Time.deltaTime);// move is a keyword (method really) that moves a charactor controller
 	}
+
+
+//	void Update () 
+//
+//	{
+//		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
+//			myAnim.SetBool("Jump", false);
+//			moveDirection = new Vector3(hInput*speed, 0, 0);
+//			if(hInput <= -0.2f ) {
+//				myAnim.SetFloat(animName, hInput);
+//				if(!flipped) {
+//					myArt.Rotate(0,180,0);
+//					if(SendCharacterDirection != null)
+//						SendCharacterDirection(myArt.eulerAngles.y);
+//
+//					flipped = true;
+//					StaticVars.currentDirection = StaticVars.Direction.LEFT;
+//				}
+//			}
+//			
+//			if(hInput >= 0.2f ) {
+//				myAnim.SetFloat(animName, hInput);
+//				if(flipped) {
+//					myArt.Rotate(0,180,0);
+//					if(SendCharacterDirection != null)
+//						SendCharacterDirection(myArt.eulerAngles.y);
+//
+//					flipped = false;
+//					StaticVars.currentDirection = StaticVars.Direction.RIGHT;
+//				}
+//			}
+//
+//
+//			if(hInput == 0) {
+//				myAnim.SetFloat(animName, hInput);
+//			}
+//			
+//			if (Input.GetButton("Jump")) {
+//				myAnim.SetBool("Jump", true);
+//				moveDirection.z = jumpSpeed;
+//			}	
+//		} 
+//		moveDirection.z -= gravity * Time.deltaTime;
+//		myController.Move(moveDirection*Time.deltaTime);// move is a keyword (method really) that moves a charactor controller
+//	}
 }
