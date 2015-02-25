@@ -25,10 +25,17 @@ public class MoveCharacterViaArrowKeys : MonoBehaviour
 		EndGame.TurnOffGame += DisableScript;
 	}
 
+	void FlipCharacter (StaticVars.Direction _direction)
+	{
+		throw new NotImplementedException ();
+	}
+
 	void Update () 
 	{
-		if(Input.GetKey(KeyCode.LeftArrow)) 
+		if (Input.GetKey (KeyCode.LeftArrow)) {
 			AddInputToCharacter (Input.GetAxis ("Horizontal"));
+			FlipCharacter (StaticVars.Direction.LEFT);
+		}
 		
 		if(Input.GetKey(KeyCode.RightArrow) )
 			AddInputToCharacter (Input.GetAxis ("Horizontal"));

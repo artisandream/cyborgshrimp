@@ -6902,7 +6902,7 @@ MonoBehaviour:
   myArt: {fileID: 662264639}
   myAnim: {fileID: 1579861594}
   speed: 1
-  jumpSpeed: 1
+  jumpForce: 0
   gravity: 1
 --- !u!143 &561917099
 CharacterController:
@@ -24000,6 +24000,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
       propertyPath: jumpSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25738,8 +25742,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1804048913}
-  - 114: {fileID: 1804048914}
   - 114: {fileID: 1804048915}
+  - 114: {fileID: 1804048916}
   m_Layer: 0
   m_Name: Game Control
   m_TagString: Untagged
@@ -25759,17 +25763,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &1804048914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1804048912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89e2ffc988c2144e2bd38eb9f8068670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1804048915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25781,6 +25774,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c5f86101b8b45d7aeea4ceb2e1f257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1804048916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804048912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf943a1578854d20aa90cda002f1b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 1
 --- !u!1 &1804655314
 GameObject:
   m_ObjectHideFlags: 0

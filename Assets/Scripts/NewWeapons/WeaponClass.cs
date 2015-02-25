@@ -19,7 +19,7 @@ public class WeaponClass : MonoBehaviour {
 
 	public int firingDistance = 100;
 
-	private float weaponDirection = 0; 
+//	private float weaponDirection = 0; 
 	private Vector3 targetPosition;
 
 	public float nextActivate = 2.0F;//the next time the ammo "fires" or is activated
@@ -39,7 +39,7 @@ public class WeaponClass : MonoBehaviour {
 		avaliableAmmo = new List<AmmoClass>();
 		
 		AmmoClass.AddAmmoToList += AddAmmo;
-		CharacterAdvanced.SendCharacterDirection += GetCharacterDirection;
+	//	CharacterAdvanced.SendCharacterDirection += GetCharacterDirection;
 	}
 
 	IEnumerator StartLate ()
@@ -55,9 +55,9 @@ public class WeaponClass : MonoBehaviour {
 		StartCoroutine (StartLate());
 	}
 
-	void GetCharacterDirection (float _f) {
-		weaponDirection = _f;
-	}
+//	void GetCharacterDirection (float _f) {
+//		weaponDirection = _f;
+//	}
 
 	void AddAmmo (AmmoClass _a) {
 		if(_a.thisWeaponSelection == thisWeaponSelection)
