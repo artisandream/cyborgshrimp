@@ -23998,6 +23998,10 @@ Prefab:
       propertyPath: m_ClearFlags
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
+      propertyPath: jumpSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
   m_RootGameObject: {fileID: 561917094}

@@ -8,7 +8,6 @@ using System;
 public class MoveCharacterViaArrowKeys : MonoBehaviour 
 {
 	public static Action<float> MoveCharacter;
-	public static Action JumpCharacter;
 
 	static void AddInputToCharacter (float _k)
 	{
@@ -36,13 +35,5 @@ public class MoveCharacterViaArrowKeys : MonoBehaviour
 
 		if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
 		   AddInputToCharacter(0);
-
-		if (Input.GetButton ("Jump")) {
-			if(JumpCharacter != null)
-				JumpCharacter();
-		
-			print("Jump");
-		}
-			//				myAnim.SetBool("Jump", true);
 	}
 }

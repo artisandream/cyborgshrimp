@@ -23,7 +23,7 @@ public class EnemyNav : MonoBehaviour {
 
 	IEnumerator MoveEnemyToTarget ()
 	{
-		print ("GO");
+//		print ("GO");
 		myNMA.destination = myTarget.transform.position;
 		// set the destination of the enemy to follow the player
 		velocity = myNMA.velocity.x;
