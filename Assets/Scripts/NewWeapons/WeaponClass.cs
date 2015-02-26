@@ -7,6 +7,7 @@ public class WeaponClass : MonoBehaviour {
 
 	public List<AmmoClass> avaliableAmmo;
 	public List<GameObject> Targets;
+	public Transform ammoBar;
 
 	public static Action<WeaponClass> AddWeaponToList;
 	public Transform weaponArt;
@@ -14,6 +15,9 @@ public class WeaponClass : MonoBehaviour {
 	public int currentAmmo = 0;
 	public int ammoSpeed = 10;
 	public int ammoPower = 1;
+	public int AvaliableAmmountToFire = 10;
+	private int startAvaliableAmmoToFire;
+	private float ammoBarScaleInX;
 	public float powerUpScale = 0.14f;
 	public float playScale = 0.8f;
 
@@ -39,6 +43,7 @@ public class WeaponClass : MonoBehaviour {
 		avaliableAmmo = new List<AmmoClass>();
 		
 		AmmoClass.AddAmmoToList += AddAmmo;
+		startAvaliableAmmoToFire = AvaliableAmmountToFire;
 	//	CharacterAdvanced.SendCharacterDirection += GetCharacterDirection;
 	}
 
@@ -65,25 +70,38 @@ public class WeaponClass : MonoBehaviour {
 	}
 
 	public void FireAmmo (Vector3 _firingDirection) {
-		if(Time.time > activationTime) {//checks if time is greater than the activation time var
+		if(Time.time > activationTime && AvaliableAmmountToFire > 0) {//checks if time is greater than the activation time var
 				activationTime = Time.time + nextActivate;//adds the nextActive var to time
 			if(avaliableAmmo.Count-1 >= currentAmmo) {
 				if(!avaliableAmmo[currentAmmo].gameObject.activeSelf) {
-					if(StaticVars.currentDirection == StaticVars.Direction.RIGHT) {
+
+					switch(StaticVars.currentDirection) {
+					case StaticVars.Direction.RIGHT:
 						targetPosition.x = this.transform.position.x + firingDistance;
-					} else {
+						break;
+
+					case StaticVars.Direction.LEFT:
 						targetPosition.x = this.transform.position.x - firingDistance;
+						break;
 					}
+
 					Targets[currentAmmo].transform.position = targetPosition;
 					avaliableAmmo[currentAmmo].transform.position = this.transform.position;
 					avaliableAmmo[currentAmmo].Target = Targets[currentAmmo].gameObject;
 					avaliableAmmo[currentAmmo].OnActivateAmmo();
+					AvaliableAmmountToFire--;
+					UpdateAmmoBar ();
 					currentAmmo++;
 				}
 			} else {
 				currentAmmo = 0;
 			}
 		}
+	}
+
+	void UpdateAmmoBar () {
+		ammoBarScaleInX = AvaliableAmmountToFire / startAvaliableAmmoToFire;
+		print (ammoBarScaleInX);
 	}
 
 	void OnTriggerEnter () {
