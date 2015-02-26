@@ -28,19 +28,12 @@ public class CharacterAdvanced : MonoBehaviour {
 		this.enabled = false;
 	}
 
-	void PreMove (float _f)
-	{
-		StartCoroutine (StartMove (_f));
-	}
-
 	//Hello Class!
 	void Start () {
 		MoveCharacterViaButtons.MoveCharacter += ChangeInputFloat;
 		MoveViaKeys.MoveKeyEvt += ChangeInputFloat;
-		MoveViaKeys.MoveKeyEvt += PreMove;
 		MoveViaKeys.JumpKeyEvt += JumpCharacter;
 		EndGame.TurnOffGame += KillPlayer;
-		PreMove (0);
 	}
 
 	void ChangeInputFloat (float _f) {
@@ -67,33 +60,10 @@ public class CharacterAdvanced : MonoBehaviour {
 		myAnim.SetBool ("Jump", true);
 		jumpForce = _jump;
 		StartCoroutine (StopJumpForce ());
-		//StartCoroutine (StartMove (0));
 	}
-
-	IEnumerator StartMove (float _f) {
-		while (myController.velocity.x == 0) {
-			MoveThis();
-			yield return null;
-		}
-		yield return StartCoroutine (EndMove (0));
-	}
-
-	IEnumerator EndMove (float _f) {
-		while (myController.velocity.x > 0.01f || myController.velocity.x <= -0.01f ) {
-			MoveThis();
-			yield return null;
-		}
-//		while (myController.velocity.z > 0.01f || myController.velocity.z <= -0.01f) {
-//			//MoveThis();
-//		}
-		yield return new WaitForSeconds (0.01f);
-		print ("Ended");
-	}
-
-	void MoveThis () 
+	
+	void Update () 
 	{
-		print ("Called");
-//		print(myController.velocity);
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
 			myAnim.SetBool("Jump", false);
 			moveDirection = new Vector3(hInput*speed, 0, 0);
