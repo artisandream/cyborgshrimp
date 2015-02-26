@@ -7,17 +7,16 @@ public class WeaponClass : MonoBehaviour {
 
 	public List<AmmoClass> avaliableAmmo;
 	public List<GameObject> Targets;
-	public Transform ammoBar;
-
 	public static Action<WeaponClass> AddWeaponToList;
 	public Transform weaponArt;
 	public bool ifAvaliable = false;
 	public int currentAmmo = 0;
 	public int ammoSpeed = 10;
 	public int ammoPower = 1;
-	public int AvaliableAmmountToFire = 10;
-	private int startAvaliableAmmoToFire;
-	private float ammoBarScaleInX;
+	public float AvaliableAmmountToFire = 10;
+	private float startAvaliableAmmoToFire;
+	public RectTransform ammoBar;
+	public Vector3 ammoBarScale;
 	public float powerUpScale = 0.14f;
 	public float playScale = 0.8f;
 
@@ -44,6 +43,7 @@ public class WeaponClass : MonoBehaviour {
 		
 		AmmoClass.AddAmmoToList += AddAmmo;
 		startAvaliableAmmoToFire = AvaliableAmmountToFire;
+		print (startAvaliableAmmoToFire);
 	//	CharacterAdvanced.SendCharacterDirection += GetCharacterDirection;
 	}
 
@@ -100,8 +100,8 @@ public class WeaponClass : MonoBehaviour {
 	}
 
 	void UpdateAmmoBar () {
-		ammoBarScaleInX = AvaliableAmmountToFire / startAvaliableAmmoToFire;
-		print (ammoBarScaleInX);
+		ammoBarScale.x = (AvaliableAmmountToFire / startAvaliableAmmoToFire);
+		ammoBar.localScale = ammoBarScale;
 	}
 
 	void OnTriggerEnter () {
