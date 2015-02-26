@@ -31,6 +31,7 @@ public class CharacterAdvanced : MonoBehaviour {
 	//Hello Class!
 	void Start () {
 		MoveCharacterViaButtons.MoveCharacter += ChangeInputFloat;
+		MoveCharacterViaButtons.JumpKeyEvt += JumpCharacter;
 		MoveViaKeys.MoveKeyEvt += ChangeInputFloat;
 		MoveViaKeys.JumpKeyEvt += JumpCharacter;
 		EndGame.TurnOffGame += KillPlayer;
