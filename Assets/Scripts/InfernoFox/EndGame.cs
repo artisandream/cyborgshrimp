@@ -18,14 +18,4 @@ public class EndGame : MonoBehaviour
 	void Start () {
 		HealthUpdater.HealthOut += EndThisGame;
 	}
-	////Legacy
-	/// 
-//	void OnTriggerEnter2D (Collider2D _c)
-//	{    
-//		if(TurnOffGame != null)
-//			TurnOffGame();
-//		
-//		if(PlayZap != null)
-//			PlayZap(this.gameObject.tag);		
-//	}
 }
