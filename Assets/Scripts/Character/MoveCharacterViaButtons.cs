@@ -7,15 +7,17 @@ using System;
 
 public class MoveCharacterViaButtons : MonoBehaviour 
 {
+
 	public float direction = 1;
 	public static Action<float> MoveCharacter;
 
-	void OnMouseDown () {
+	public void OnMouseDown () {
 		if(MoveCharacter != null )
 			MoveCharacter(direction);
+		print ("Button");
 	}
 
-	void OnMouseUp () {
+	public void OnMouseUp () {
 		if(MoveCharacter != null )
 			MoveCharacter(0);
 	}
