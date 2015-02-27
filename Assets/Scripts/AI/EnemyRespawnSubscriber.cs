@@ -53,7 +53,6 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	public void LowerHealth (Collider _c) {
 		string _t = _c.gameObject.tag;//_t is tag
 		foreach (WeaponClass _aS in killerWeaponsList) {//_aS is a var for AmmoSpawner
-			Debug.Log(_aS);
 			if(_t == _aS.thisWeaponSelection.ToString()) 
 				health -= _aS.ammoPower;
 		}
