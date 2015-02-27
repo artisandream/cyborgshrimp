@@ -6,16 +6,22 @@ using System;
 public class WeaponList : MonoBehaviour {
 
 	public List<WeaponClass> avaliableWeapons;
+	public List<WeaponBar> WeaponBars;
 	public static Action<int> ActivateWeaponSwitch;
 	public int currentWeaponNum = 0;
 	public Vector3 weaponLocation;
 
 	// Use this for initialization
 	void Start () {
+		WeaponBars = new List<WeaponBar> ();
 		avaliableWeapons = new List<WeaponClass>();
 		WeaponClass.AddWeaponToList += AddWeapons;
 		SwitchCurrentWeapon.SwitchWeapon += SwitchThisWeapon;
 		FireThisWeapon.FireCurrentWeapon += FireWeapon;
+	}
+
+	void AddWeaponBars (WeaponBar _b) {
+		WeaponBars.Add (_b);
 	}
 
 	void AddWeapons (WeaponClass _w) {

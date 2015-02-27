@@ -106,6 +106,6 @@ public class WeaponClass : MonoBehaviour {
 
 	void OnTriggerEnter () {
 		ifAvaliable = true;
-		AddToAvaliableWeapons();
+			AddToAvaliableWeapons();
 	}
 }
