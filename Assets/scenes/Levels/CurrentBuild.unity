@@ -4448,7 +4448,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467038299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5500002, y: 0, z: .460000008}
+  m_LocalPosition: {x: 10.2700005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1691305389}
@@ -7231,7 +7231,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -8, y: -184.5}
+  m_AnchoredPosition: {x: -8, y: -142.199997}
   m_SizeDelta: {x: 530, y: 13}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &620379516
@@ -15395,7 +15395,7 @@ GameObject:
   - 114: {fileID: 1130625708}
   - 114: {fileID: 1130625707}
   m_Layer: 5
-  m_Name: FireButton3
+  m_Name: FireButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15413,10 +15413,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1719802239}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 447, y: 144}
+  m_AnchoredPosition: {x: 308, y: 266}
   m_SizeDelta: {x: 165, y: 164}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1130625707
@@ -15919,7 +15919,7 @@ GameObject:
   - 114: {fileID: 1259663903}
   - 114: {fileID: 1259663902}
   m_Layer: 5
-  m_Name: FireButton2
+  m_Name: FireButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15937,10 +15937,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1719802239}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 308, y: 266}
+  m_AnchoredPosition: {x: 477, y: 144}
   m_SizeDelta: {x: 165, y: 164}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1259663902
@@ -20298,7 +20298,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -8.0000248, y: -142.199997}
+  m_AnchoredPosition: {x: -8.0000248, y: -184.5}
   m_SizeDelta: {x: 530, y: 13}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1468953956
@@ -25065,8 +25065,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 449917173}
-  - {fileID: 1259663901}
   - {fileID: 1130625706}
+  - {fileID: 1259663901}
   m_Father: {fileID: 1494120984}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
