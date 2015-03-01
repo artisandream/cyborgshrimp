@@ -11,6 +11,8 @@ public class WeaponList : MonoBehaviour {
 	public List<FireWeaponChoice> FireButtons;
 	public Color[] WeaponColor;
 	public static Action<int> ActivateWeaponSwitch;
+	public static Action<WeaponType.weaponSelection> WeaponType;
+	public Vector3 resetWeaponRotation;
 	private int adderNum;
 	public int currentWeaponNum = 0;
 	public Vector3 weaponLocation;
@@ -20,12 +22,11 @@ public class WeaponList : MonoBehaviour {
 		currentWeaponNum = _i;
 	}
 
-	// Use this for initialization
 	void Start () {
+		resetWeaponRotation.x = 270;
 		WeaponBars = new List<WeaponBar> ();
 		WeaponBar.AddWeaponBar += AddWeaponBars;
 		FireWeaponChoice.AddFire += AddWeaponButtons;
-		print ("list");
 		avaliableWeapons = new List<WeaponClass>();
 		WeaponClass.AddWeaponToList += AddWeapons;
 		SwitchCurrentWeapon.SwitchWeapon += SwitchThisWeapon;
@@ -60,10 +61,13 @@ public class WeaponList : MonoBehaviour {
 		if(ActivateWeaponSwitch != null)
 			ActivateWeaponSwitch(avaliableWeapons.Count);
 
-		//_w.weaponArt.localScale = new Vector3(_w.playScale, _w.playScale, _w.playScale);
+		if (WeaponType != null)
+			WeaponType (_w.thisWeaponSelection);
+
 		AddBarToWeaponClass (_w);
 		_w.gameObject.transform.parent = this.gameObject.transform;
 		_w.gameObject.transform.localPosition = weaponLocation;
+		_w.gameObject.transform.localRotation = Quaternion.Euler(resetWeaponRotation);
 
 	}
 

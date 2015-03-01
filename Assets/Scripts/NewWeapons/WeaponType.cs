@@ -4,8 +4,10 @@ using System.Collections;
 public class WeaponType : MonoBehaviour {
 
 	public enum weaponSelection {
-		BULLET,
+		RAYGUN,
 		MISSILE,
-		PLASMA
+		PLASMA,
+		SONICBAT,
+		ELECTROSPEAR
 	}
 }

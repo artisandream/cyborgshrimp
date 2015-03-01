@@ -2,11 +2,11 @@ fileFormatVersion: 2
 guid: 2591aeded66a2394dba77fe9632e2d35
 TextureImporter:
   fileIDToRecycleName:
-    21300000: weapons_2D_0
-    21300002: weapons_2D_1
+    21300000: MissleLauncher
+    21300002: PlasmaGun
     21300004: Blaster
-    21300006: weapons_2D_3
-    21300008: weapons_2D_4
+    21300006: SonicBat
+    21300008: Spear
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +48,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: weapons_2D_0
+    - name: MissleLauncher
       rect:
         serializedVersion: 2
         x: 0
@@ -58,7 +58,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .930745602, y: .441375494}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: weapons_2D_1
+    - name: PlasmaGun
       rect:
         serializedVersion: 2
         x: 0
@@ -78,7 +78,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .949626625, y: .770667791}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: weapons_2D_3
+    - name: SonicBat
       rect:
         serializedVersion: 2
         x: 793
@@ -86,9 +86,9 @@ TextureImporter:
         width: 1203
         height: 196
       alignment: 9
-      pivot: {x: .941150546, y: .513207555}
+      pivot: {x: .172182262, y: .498639792}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: weapons_2D_4
+    - name: Spear
       rect:
         serializedVersion: 2
         x: 4
@@ -96,7 +96,7 @@ TextureImporter:
         width: 2032
         height: 302
       alignment: 9
-      pivot: {x: .828696132, y: .834315002}
+      pivot: {x: .551892638, y: .815406621}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
