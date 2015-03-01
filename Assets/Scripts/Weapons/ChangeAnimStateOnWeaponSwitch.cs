@@ -15,13 +15,32 @@ public class ChangeAnimStateOnWeaponSwitch : MonoBehaviour {
 		}
 	}
 
+	IEnumerator ResetFireAnim ()
+	{
+		yield return new WaitForSeconds (0.001f);
+		characterAnim.SetBool ("Fire", false);
+	}
+
+	void Fire ()
+	{
+		characterAnim.SetBool ("Fire", true);
+		StartCoroutine (ResetFireAnim ());
+	}
+
+	void RunFireAnim (int _i)
+	{
+		Fire ();
+	}
+
+	void RunFireAnim ()
+	{
+		Fire ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		WeaponList.WeaponType += ChangeAnimState;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		FireThisWeapon.FireCurrentWeapon += RunFireAnim;
+		FireWeaponChoice.FireCurrentWeapon += RunFireAnim;
 	}
 }
