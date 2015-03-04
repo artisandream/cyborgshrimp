@@ -27,6 +27,14 @@ Material:
         second: 3
       data:
         first:
+          name: _MaxFadeStart
+        second: 400
+      data:
+        first:
+          name: _MaxFadeEnd
+        second: 873.400024
+      data:
+        first:
           name: _Speed
         second: -15
       data:
@@ -41,14 +49,6 @@ Material:
         first:
           name: _WiggleDist
         second: 6.38999987
-      data:
-        first:
-          name: _MaxFadeStart
-        second: 400
-      data:
-        first:
-          name: _MaxFadeEnd
-        second: 873.400024
       data:
         first:
           name: _Wiggle

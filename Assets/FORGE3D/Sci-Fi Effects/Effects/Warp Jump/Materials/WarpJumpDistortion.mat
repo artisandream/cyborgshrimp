@@ -50,12 +50,12 @@ Material:
         second: 1
       data:
         first:
-          name: _Offset
-        second: 0
-      data:
-        first:
           name: _Dist
         second: 8.84000015
+      data:
+        first:
+          name: _Offset
+        second: 0
     m_Colors:
       data:
         first:

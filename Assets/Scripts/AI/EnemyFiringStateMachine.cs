@@ -19,13 +19,7 @@ public class EnemyFiringStateMachine : MonoBehaviour {
 		ChangeState("Armed", true); //Custom function changes the animators state
 		ChangeState("Fire", true);
 	}
-	
-//	void OnTriggerStay (Collider _c) {
-//		if (_c.gameObject.tag == "Player") { 
-//			ChangeState("Armed", true); 
-//		}
-//	} 
-	
+
 	void OnTriggerExit(Collider _c) {
 			EndFiring();
 	}

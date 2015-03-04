@@ -14,8 +14,6 @@ public class EnemyController : MonoBehaviour {
 	private bool canRespawn;
 	public List<WeaponClass> killerWeaponsList;
 
-//	private int i = 0;
-	
 	void OnBecameInvisible () {
 		this.gameObject.SetActive(false);//turns off the gameObject
 	}
@@ -52,7 +50,6 @@ public class EnemyController : MonoBehaviour {
 	
 	public void LowerHealth (Collider _c) {
 		string _t = _c.gameObject.tag;//_t is tag
-		print (_t);
 		foreach (WeaponClass _aS in killerWeaponsList) {//_aS is a var for AmmoSpawner
 			if(_t == _aS.thisWeaponSelection.ToString()) 
 				health -= _aS.ammoPower;

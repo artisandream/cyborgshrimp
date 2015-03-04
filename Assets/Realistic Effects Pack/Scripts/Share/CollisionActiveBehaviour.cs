@@ -23,7 +23,7 @@ public class CollisionActiveBehaviour : MonoBehaviour
     if (IsLookAt) effectSettings.CollisionEnter += effectSettings_CollisionEnter;
 	}
 
-  public virtual void effectSettings_CollisionEnter(object sender, CollisionInfo e)
+  void effectSettings_CollisionEnter(object sender, CollisionInfo e)
   {
     transform.LookAt(effectSettings.transform.position + e.Hit.normal);
   }

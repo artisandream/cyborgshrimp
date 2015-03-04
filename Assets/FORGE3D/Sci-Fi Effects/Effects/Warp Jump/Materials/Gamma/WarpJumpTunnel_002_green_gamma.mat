@@ -27,12 +27,12 @@ Material:
         second: 3
       data:
         first:
-          name: _Alpha
-        second: 1
-      data:
-        first:
           name: _Mult
         second: 3.3499999
+      data:
+        first:
+          name: _Alpha
+        second: 1
       data:
         first:
           name: _Twist

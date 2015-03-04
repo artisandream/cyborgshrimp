@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class EffectSettings : MonoBehaviour
 {
-	
   public float ColliderRadius = 0.2f;
   public float EffectRadius = 0;
   public GameObject Target;
@@ -30,9 +30,7 @@ public class EffectSettings : MonoBehaviour
   private bool deactivatedIsWait;
 
   public void OnCollisionHandler(CollisionInfo e)
-
   {
-
     for (int i = 0; i < lastActiveIndex; i++)
     {
       Invoke("SetGoActive", active_value[i]);
@@ -55,10 +53,6 @@ public class EffectSettings : MonoBehaviour
     var handler = EffectDeactivated;
     if (handler != null)
       handler(this, EventArgs.Empty);
-
-//	if (ResetAmmo != null) {
-//		ResetAmmo (this);
-//	}
   }
 
   public void Deactivate()

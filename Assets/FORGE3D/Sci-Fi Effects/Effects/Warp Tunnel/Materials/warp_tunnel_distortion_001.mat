@@ -23,12 +23,20 @@ Material:
     m_Floats:
       data:
         first:
+          name: _Shininess
+        second: .699999988
+      data:
+        first:
           name: _InvFade
         second: 3
       data:
         first:
-          name: _Shininess
-        second: .699999988
+          name: _MaxFadeStart
+        second: 0
+      data:
+        first:
+          name: _MaxFadeEnd
+        second: 372.709991
       data:
         first:
           name: _Speed
@@ -47,28 +55,20 @@ Material:
         second: 6.38999987
       data:
         first:
-          name: _Offset
-        second: .519999981
-      data:
-        first:
-          name: _Dist
-        second: 24.7999992
-      data:
-        first:
-          name: _MaxFadeStart
-        second: 0
-      data:
-        first:
-          name: _MaxFadeEnd
-        second: 372.709991
-      data:
-        first:
           name: _Wiggle
         second: 105.760002
       data:
         first:
           name: _WiggleMult
         second: 1
+      data:
+        first:
+          name: _Dist
+        second: 24.7999992
+      data:
+        first:
+          name: _Offset
+        second: .519999981
     m_Colors:
       data:
         first:
@@ -76,11 +76,11 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _TintColor
+          name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _SpecColor
+          name: _TintColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
