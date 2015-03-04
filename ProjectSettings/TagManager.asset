@@ -3,23 +3,26 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - PowerUp
-  - Enemy
-  - EnemyTrigger
-  - Weapon
-  - 
-  - 
-  - 
-  - BULLET
+  - RAYGUN
   - MISSILE
-  - Missile
-  - Plasma
-  - Collection
+  - PLASMA
+  - SONICBAT
+  - ELECTROSPEAR
   - 
-  - Destroyer
-  - Fuel
-  - Point
-  - Strike
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Enemy
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -29,28 +32,28 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: Enemy
-  User Layer 9: Player
-  User Layer 10: Weapon
-  User Layer 11: UI
-  User Layer 12: Ammo
-  User Layer 13: PowerUp
-  User Layer 14: Shields
-  User Layer 15: Controls
-  User Layer 16: Level
-  User Layer 17: Collection
-  User Layer 18: Collector
-  User Layer 19: EnemyDirector
-  User Layer 20: EnemyDistroyer
-  User Layer 21: EnemyAmmo
-  User Layer 22: RecycleEnabler
-  User Layer 23: StopReverse
-  User Layer 24: EnemySpawner
-  User Layer 25: FX
-  User Layer 26: ActivateSpawner
-  User Layer 27: PlayerNull
-  User Layer 28: EndGame
-  User Layer 29: 
+  User Layer 8: Level
+  User Layer 9: 
+  User Layer 10: 
+  User Layer 11: 
+  User Layer 12: Player
+  User Layer 13: PlayerKillZone
+  User Layer 14: PlayerAmmo
+  User Layer 15: 
+  User Layer 16: 
+  User Layer 17: 
+  User Layer 18: Enemy
+  User Layer 19: EnemyKillZone
+  User Layer 20: EnemyAmmo
+  User Layer 21: EnemyPlayerContact
+  User Layer 22: 
+  User Layer 23: 
+  User Layer 24: PowerUp
+  User Layer 25: 
+  User Layer 26: 
+  User Layer 27: 
+  User Layer 28: Spawner
+  User Layer 29: SpawnerActivator
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:

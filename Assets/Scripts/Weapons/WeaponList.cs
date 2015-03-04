@@ -52,8 +52,6 @@ public class WeaponList : MonoBehaviour {
 		FireButtons [adderNum].choiceNum = adderNum;
 		FireButtons [adderNum].GetComponent<Image> ().color = WeaponColor [adderNum];
 		FireButtons [adderNum].GetComponent<Image> ().enabled = true;
-
-		print (FireButtons [adderNum].choiceNum);
 	}
 
 	void AddWeapons (WeaponClass _w) {

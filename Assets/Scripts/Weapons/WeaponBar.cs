@@ -13,13 +13,10 @@ public class WeaponBar : MonoBehaviour {
 		thisRectTransform = this.GetComponent<RectTransform> ();
 		if (AddWeaponBar != null)
 			AddWeaponBar (this);
-
-		print ("WB");
 	}
 
 	public void UpdateAmmoBar (float _f) {
 		ammoBarScale.x = _f;
 		thisRectTransform.localScale = ammoBarScale;
-		print (_f);
 	}
 }

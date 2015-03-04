@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class EnemyRespawnSubscriber : MonoBehaviour {
+public class EnemyController : MonoBehaviour {
 
 	public int health = 3;//the enemy health
 	public int healthReturn = 3;//the value that the enemy should return to if upon respawning
@@ -52,6 +52,7 @@ public class EnemyRespawnSubscriber : MonoBehaviour {
 	
 	public void LowerHealth (Collider _c) {
 		string _t = _c.gameObject.tag;//_t is tag
+		print (_t);
 		foreach (WeaponClass _aS in killerWeaponsList) {//_aS is a var for AmmoSpawner
 			if(_t == _aS.thisWeaponSelection.ToString()) 
 				health -= _aS.ammoPower;

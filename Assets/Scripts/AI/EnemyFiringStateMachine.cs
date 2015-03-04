@@ -15,11 +15,9 @@ public class EnemyFiringStateMachine : MonoBehaviour {
 		EndGame.TurnOffGame += EndFiring;
 	}
 
-	void OnTriggerEnter(Collider _c) {//runs when colliding with a trigger component of a game object
-		if (_c.gameObject.tag == "Player") { //Game objects can have custom tags that can be tested for as strings
-			ChangeState("Armed", true); //Custom function changes the animators state
-			ChangeState("Fire", true);
-		} 
+	void OnTriggerEnter() {//runs when colliding with a trigger component of a game object
+		ChangeState("Armed", true); //Custom function changes the animators state
+		ChangeState("Fire", true);
 	}
 	
 //	void OnTriggerStay (Collider _c) {
@@ -29,9 +27,7 @@ public class EnemyFiringStateMachine : MonoBehaviour {
 //	} 
 	
 	void OnTriggerExit(Collider _c) {
-		if (_c.gameObject.tag == "Player") { 
 			EndFiring();
-		} 
 	}
 	
 	public void ChangeState (string _a, bool _b) {
