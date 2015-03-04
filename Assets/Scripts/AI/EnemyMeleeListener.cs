@@ -14,7 +14,7 @@ public class EnemyMeleeListener : MonoBehaviour {
 		thisParticles.Stop();
 	}
 
-	void AddDamage ()
+	void AddDamage (float _f)
 	{
 		randomPos.x = Random.Range (randomDistance * -1, randomDistance);
 		randomPos.y = Random.Range (0, randomDistance) + heightOffset;  
@@ -23,7 +23,7 @@ public class EnemyMeleeListener : MonoBehaviour {
 		StartCoroutine (EndParticalPlay ());
 	}
 	
-	EnemyMeleeListener () {
+	EnemyMeleeListener (float _f) {
 		EnemyMelee.MeleeEvent += AddDamage;
 	}
 }

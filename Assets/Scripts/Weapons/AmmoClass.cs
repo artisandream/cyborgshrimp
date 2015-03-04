@@ -5,7 +5,6 @@ using System;
 public class AmmoClass : EnemyWeaponFX {
 
 	public static Action<AmmoClass> AddAmmoToList;
-	private float ammoPower;
 
 	public WeaponType.weaponSelection thisWeaponSelection;
 

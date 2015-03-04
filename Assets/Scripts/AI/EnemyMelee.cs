@@ -3,12 +3,13 @@ using System.Collections;
 
 public class EnemyMelee : MonoBehaviour {
 
-	public delegate void MeleeDel ();
+	public delegate void MeleeDel (float _f);
 	public static MeleeDel MeleeEvent;
+	public float killPower = 0.1f;
 
 	void OnMelee () {
 		if (MeleeEvent != null) {
-			MeleeEvent();
+			MeleeEvent(killPower);
 		}
 	}
 }

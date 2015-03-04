@@ -7,6 +7,8 @@ public class EnemyWeaponFX : EffectSettings {
 
 	public Action<EnemyWeaponFX> ResetAmmo;
 
+	//public float ammoPower = 0.1f;
+
 	public override void OnEffectDeactivatedHandler ()
 	{
 		base.OnEffectDeactivatedHandler ();
@@ -24,5 +26,5 @@ public class EnemyWeaponFX : EffectSettings {
 	public virtual void Start () {
 		StartCoroutine (StartLate ());
 	}
-
+	
 }

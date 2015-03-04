@@ -7,14 +7,14 @@ public class HealthUpdater : MonoBehaviour {
 	public Vector3 updateScale;
 	public static Action HealthOut;
 
-	void UpdateHealth ()
+	void UpdateHealth (float _ammoPower)
 	{
 		if (StaticVars.player1Health > 0) {
-			StaticVars.player1Health -= 0.1f;
+			StaticVars.player1Health -= _ammoPower;
 			updateScale.x = StaticVars.player1Health;
 			this.transform.localScale = updateScale;
 		} else {
-			CharacterHealth.UpdateHealth -= UpdateHealth;
+			//CharacterHealth.UpdateHealth -= UpdateHealth;
 
 			if(HealthOut != null)
 				HealthOut();
@@ -22,7 +22,9 @@ public class HealthUpdater : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		CharacterHealth.UpdateHealth += UpdateHealth;
+		//CharacterHealth.UpdateHealth += UpdateHealth;
+		CharacterHealthKiller.UpdateHealth += UpdateHealth;
+		EnemyMelee.MeleeEvent += UpdateHealth;
 		updateScale.x = 1;
 		updateScale.y = 1;
 		updateScale.z = 1;
