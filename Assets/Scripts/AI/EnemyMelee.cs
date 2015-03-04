@@ -8,6 +8,7 @@ public class EnemyMelee : MonoBehaviour {
 	public float killPower = 0.1f;
 
 	void OnMelee () {
+		print ("melee");
 		if (MeleeEvent != null) {
 			MeleeEvent(killPower);
 		}
