@@ -8,6 +8,7 @@ public class WeaponClass : MonoBehaviour {
 	public List<AmmoClass> avaliableAmmo;
 	public Action<float> ChangeAmmoBar;
 	public List<GameObject> Targets;
+	public int numberOfTargets = 3;
 	public static Action<WeaponClass> AddWeaponToList;
 	public bool ifAvaliable = false;
 	public int currentAmmoNum = 0;
@@ -35,9 +36,17 @@ public class WeaponClass : MonoBehaviour {
 		this.GetComponent<BoxCollider>().enabled = false;
 	}
 
+	void AddToTargetList (GameObject obj)
+	{
+		for (int i = 1 ; i <= numberOfTargets ; i++) {
+			Targets.Add (obj);
+		}
+	}
+
 	void Awake () {
 		avaliableAmmo = new List<AmmoClass>();
 		AmmoClass.AddAmmoToList += AddAmmo;
+		AddAsWeaponsTarget.AddToTargetList += AddToTargetList;
 		startAvaliableAmmoToFire = AvaliableAmmountToFire;
 	}
 

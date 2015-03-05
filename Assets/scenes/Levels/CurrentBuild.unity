@@ -1295,6 +1295,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 12020625}
+  - 114: {fileID: 12020626}
   m_Layer: 14
   m_Name: AmmoTarget4
   m_TagString: Untagged
@@ -1314,6 +1315,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 983513088}
   m_RootOrder: 3
+--- !u!114 &12020626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 12020624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f159d8d67e04e74b7b3dbafa67ecd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &12797061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,6 +2694,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 89688642}
+  - 114: {fileID: 89688643}
   m_Layer: 14
   m_Name: AmmoTarget2
   m_TagString: Untagged
@@ -2701,6 +2714,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 983513088}
   m_RootOrder: 1
+--- !u!114 &89688643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89688641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f159d8d67e04e74b7b3dbafa67ecd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &118433873
 Prefab:
   m_ObjectHideFlags: 0
@@ -11527,17 +11551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avaliableAmmo: []
-  Targets:
-  - {fileID: 1756143985}
-  - {fileID: 89688641}
-  - {fileID: 1343921884}
-  - {fileID: 1756143985}
-  - {fileID: 89688641}
-  - {fileID: 1343921884}
-  - {fileID: 1756143985}
-  - {fileID: 89688641}
-  - {fileID: 1343921884}
-  - {fileID: 1756143985}
+  Targets: []
+  numberOfTargets: 3
   ifAvaliable: 0
   currentAmmoNum: 0
   ammoSpeed: 10
@@ -50604,6 +50619,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1343921885}
+  - 114: {fileID: 1343921886}
   m_Layer: 14
   m_Name: AmmoTarget3
   m_TagString: Untagged
@@ -50623,6 +50639,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 983513088}
   m_RootOrder: 2
+--- !u!114 &1343921886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343921884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f159d8d67e04e74b7b3dbafa67ecd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366447963
 GameObject:
   m_ObjectHideFlags: 0
@@ -58371,10 +58398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avaliableAmmo: []
-  Targets:
-  - {fileID: 1756143985}
-  - {fileID: 89688641}
-  - {fileID: 1343921884}
+  Targets: []
+  numberOfTargets: 3
   ifAvaliable: 0
   currentAmmoNum: 0
   ammoSpeed: 10
@@ -58382,7 +58407,7 @@ MonoBehaviour:
   AvaliableAmmountToFire: 10
   powerUpScale: .140000001
   playScale: .800000012
-  firingDistance: 1
+  firingDistance: 10
   centerFiringPosition: {fileID: 157014403}
   nextActivate: .100000001
   thisWeaponSelection: 4
@@ -61265,6 +61290,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1756143986}
+  - 114: {fileID: 1756143987}
   m_Layer: 14
   m_Name: AmmoTarget1
   m_TagString: Untagged
@@ -61284,6 +61310,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 983513088}
   m_RootOrder: 0
+--- !u!114 &1756143987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756143985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f159d8d67e04e74b7b3dbafa67ecd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1794930429
 GameObject:
   m_ObjectHideFlags: 0
@@ -61292,6 +61329,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1794930430}
+  - 114: {fileID: 1794930431}
   m_Layer: 14
   m_Name: AmmoTarget5
   m_TagString: Untagged
@@ -61311,6 +61349,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 983513088}
   m_RootOrder: 4
+--- !u!114 &1794930431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794930429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f159d8d67e04e74b7b3dbafa67ecd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1796469442
 MonoBehaviour:
   m_ObjectHideFlags: 0
