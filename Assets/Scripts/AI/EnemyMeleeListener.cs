@@ -26,7 +26,6 @@ public class EnemyMeleeListener : MonoBehaviour {
 
 
 	void Start () {
-		print("STart");
 		EnemyMelee.MeleeEvent += AddDamage;
 	}
 }

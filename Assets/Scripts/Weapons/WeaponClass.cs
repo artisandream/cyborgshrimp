@@ -57,7 +57,6 @@ public class WeaponClass : MonoBehaviour {
 	void AddAmmo (AmmoClass _a) {
 		if (_a.thisWeaponSelection == thisWeaponSelection) {
 			avaliableAmmo.Add (_a);
-			//_a.Target = this.gameObject;
 		}
 	}
 

@@ -10,6 +10,9 @@ public class AmmoClass : EnemyWeaponFX {
 
 	public override void Start () {
 		base.Start ();
+
+		this.gameObject.tag = thisWeaponSelection.ToString();
+
 		if(AddAmmoToList != null)
 			AddAmmoToList(this);
 	}

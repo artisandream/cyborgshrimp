@@ -18,8 +18,7 @@ public class EnemyController : MonoBehaviour {
 		this.gameObject.SetActive(false);//turns off the gameObject
 	}
 
-	IEnumerator StartLate ()
-	{
+	IEnumerator StartLate () {
 		yield return new WaitForSeconds (0.1f);
 		this.gameObject.SetActive(false);//turns off the gameObject
 	}
