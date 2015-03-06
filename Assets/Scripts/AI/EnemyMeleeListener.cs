@@ -21,7 +21,6 @@ public class EnemyMeleeListener : MonoBehaviour {
 		this.transform.localPosition = randomPos;
 		thisParticles.Play();
 		StartCoroutine (EndParticalPlay ());
-		print ("Hit");
 	}
 
 

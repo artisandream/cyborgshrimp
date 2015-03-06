@@ -31,7 +31,7 @@ public class WeaponClass : MonoBehaviour {
 	
 	public WeaponType.weaponSelection thisWeaponSelection;
 
-	void AddToAvaliableWeapons ()
+	public void AddToAvaliableWeapons ()
 	{
 		if (AddWeaponToList != null) 
 			AddWeaponToList (this);
@@ -72,7 +72,7 @@ public class WeaponClass : MonoBehaviour {
 		}
 	}
 
-	public void FireAmmo (Vector3 _firingDirection) {
+	public virtual void FireAmmo (Vector3 _firingDirection) {
 		if(Time.time > activationTime && AvaliableAmmountToFire > 0) {//checks if time is greater than the activation time var
 				activationTime = Time.time + nextActivate;//adds the nextActive var to time
 			if(avaliableAmmo.Count-1 >= currentAmmoNum) {
@@ -107,7 +107,7 @@ public class WeaponClass : MonoBehaviour {
 			ChangeAmmoBar (AvaliableAmmountToFire / startAvaliableAmmoToFire);
 	}
 
-	void OnTriggerEnter () {
+	public virtual void OnTriggerEnter () {
 		ifAvaliable = true;
 		AddToAvaliableWeapons();
 	}

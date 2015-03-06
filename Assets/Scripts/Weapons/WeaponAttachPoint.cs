@@ -14,7 +14,6 @@ public class WeaponAttachPoint : MonoBehaviour {
 	public static Action<WeaponAttachPoint> AttachAction;
 
 	void Start () {
-		print ("run");
 		if (AttachAction != null)
 			AttachAction (this);
 	}

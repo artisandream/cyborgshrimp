@@ -9,7 +9,7 @@ public class AddData : MonoBehaviour
 {
 //	public UILabel scoreLabel;
 	public SimpleSQL.SimpleSQLManager dbManager;
-	private List<ScoreClass> ScoreClassList;
+	//private List<ScoreClass> ScoreClassList;
 
 	void Start () {
 		DebugData();
@@ -26,7 +26,7 @@ public class AddData : MonoBehaviour
 	
 	private void DebugData ()
 	{
-		ScoreClassList = new List<ScoreClass> (from ps in dbManager.Table<ScoreClass> () select ps);
+	//	ScoreClassList = new List<ScoreClass> (from ps in dbManager.Table<ScoreClass> () select ps);
 	//	scoreLabel.text = ScoreClassList[0].Points.ToString("d");
 	}
 }

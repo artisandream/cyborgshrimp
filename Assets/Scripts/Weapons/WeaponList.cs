@@ -25,7 +25,6 @@ public class WeaponList : MonoBehaviour {
 	}
 
 	void Start () {
-		print ("lsit");
 		WeaponAttachPoint.AttachAction += addAttachPoints;
 		resetWeaponRotation.x = 270;
 		WeaponBars = new List<WeaponBar> ();
