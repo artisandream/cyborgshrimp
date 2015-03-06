@@ -13,7 +13,7 @@ public class ChangeAnimStateOnWeaponSwitch : MonoBehaviour {
 			break;
 
 		case WeaponType.weaponSelection.ELECTROSPEAR:
-			characterAnim.SetLayerWeight(1, 1);
+			characterAnim.SetLayerWeight(2, 1);
 			break;
 
 		}

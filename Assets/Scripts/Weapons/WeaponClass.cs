@@ -19,8 +19,11 @@ public class WeaponClass : MonoBehaviour {
 	public float powerUpScale = 0.14f;
 	public float playScale = 0.8f;
 	public int firingDistance = 100;
+	public float setRotation = 0;
 	private Vector3 targetPosition;
 	public Transform centerFiringPosition;
+
+	public WeaponAttachPoint.AttachType KindOfWeapon;
 
 
 	public float nextActivate = 2.0F;//the next time the ammo "fires" or is activated

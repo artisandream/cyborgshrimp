@@ -13,6 +13,8 @@ public class WeaponList : MonoBehaviour {
 	public static Action<int> ActivateWeaponSwitch;
 	public static Action<WeaponType.weaponSelection> WeaponType;
 	public Vector3 resetWeaponRotation;
+	public Transform meleeAttachPoint;
+	public Transform RangeAttachPoint;
 	private int adderNum;
 	public int currentWeaponNum = 0;
 	public Vector3 weaponLocation;
@@ -23,6 +25,8 @@ public class WeaponList : MonoBehaviour {
 	}
 
 	void Start () {
+		print ("lsit");
+		WeaponAttachPoint.AttachAction += addAttachPoints;
 		resetWeaponRotation.x = 270;
 		WeaponBars = new List<WeaponBar> ();
 		WeaponBar.AddWeaponBar += AddWeaponBars;
@@ -37,6 +41,19 @@ public class WeaponList : MonoBehaviour {
 
 	void AddWeaponBars (WeaponBar _b) {
 		WeaponBars.Add (_b);
+	}
+
+	void addAttachPoints (WeaponAttachPoint obj)
+	{
+		switch (obj.thisAttachType) {
+		case WeaponAttachPoint.AttachType.Melee:
+			meleeAttachPoint = obj.transform;
+			break;
+
+		case WeaponAttachPoint.AttachType.Range:
+			RangeAttachPoint = obj.transform;
+			break;
+		}
 	}
 
 	void AddWeaponButtons (FireWeaponChoice _f)
@@ -55,6 +72,7 @@ public class WeaponList : MonoBehaviour {
 	}
 
 	void AddWeapons (WeaponClass _w) {
+		resetWeaponRotation.y = _w.setRotation;
 		avaliableWeapons.Add(_w);
 		if(ActivateWeaponSwitch != null)
 			ActivateWeaponSwitch(avaliableWeapons.Count);
@@ -63,7 +81,17 @@ public class WeaponList : MonoBehaviour {
 			WeaponType (_w.thisWeaponSelection);
 
 		AddBarToWeaponClass (_w);
-		_w.gameObject.transform.parent = this.gameObject.transform;
+
+		switch (_w.KindOfWeapon) {
+		case WeaponAttachPoint.AttachType.Melee:
+			_w.gameObject.transform.parent = meleeAttachPoint;
+			break;
+			
+		case WeaponAttachPoint.AttachType.Range:
+			_w.gameObject.transform.parent = RangeAttachPoint;
+			break;
+		}
+
 		_w.gameObject.transform.localPosition = weaponLocation;
 		_w.gameObject.transform.localRotation = Quaternion.Euler(resetWeaponRotation);
 
