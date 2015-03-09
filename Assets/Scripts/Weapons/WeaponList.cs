@@ -24,7 +24,7 @@ public class WeaponList : MonoBehaviour {
 		currentWeaponNum = _i;
 	}
 
-	void Start () {
+	public void Start () {
 		WeaponAttachPoint.AttachAction += addAttachPoints;
 		resetWeaponRotation.x = 270;
 		WeaponBars = new List<WeaponBar> ();

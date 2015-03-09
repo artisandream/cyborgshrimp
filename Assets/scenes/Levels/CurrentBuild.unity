@@ -5890,12 +5890,10 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoPower: 4
   AvaliableAmmountToFire: 10
-  startAvaliableAmmoToFire: 0
   powerUpScale: .140000001
   playScale: .800000012
   firingDistance: 100
   setRotation: 0
-  targetPosition: {x: 0, y: 0, z: 0}
   centerFiringPosition: {fileID: 1117897844}
   KindOfWeapon: 1
   nextActivate: .100000001
@@ -5911,7 +5909,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -28855,12 +28853,10 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoPower: 6
   AvaliableAmmountToFire: 10
-  startAvaliableAmmoToFire: 0
   powerUpScale: .140000001
   playScale: .800000012
   firingDistance: 100
   setRotation: 0
-  targetPosition: {x: 0, y: 0, z: 0}
   centerFiringPosition: {fileID: 157014403}
   KindOfWeapon: 0
   nextActivate: 2
