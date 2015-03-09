@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyHealthDestroyer : MonoBehaviour {
+public class EnemyHealthDestroyer : MonoBehaviour
+{
 
-	public EnemyController Enemy;
+		public EnemyController Enemy;
 
-	void OnTriggerEnter (Collider _c) {
-		Enemy.LowerHealth (_c);
-		print ("HIT");
-	}
+		void OnTriggerEnter (Collider _c)
+		{
+				Enemy.LowerHealth (_c);
+		}
 }

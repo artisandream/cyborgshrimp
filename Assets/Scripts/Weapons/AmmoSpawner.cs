@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AmmoSpawner : MonoBehaviour {
+public class AmmoSpawner : MonoBehaviour
+{
 
 	//public delegate AmmoSpawner AmmoSpawnerDelegate (AmmoSpawner _aS);//this will pass info about this to a weapon switch on pickup
 	//public static event AmmoSpawnerDelegate AmmoSpawnerEvent;//adds subcribers of the weaponSwitch
@@ -17,21 +18,23 @@ public class AmmoSpawner : MonoBehaviour {
 	private float activationTime = 0.0F;//the current time that is a contiuously changing var adding the time to the nextActive var
 	private int i = 0;// sets the iterator
 
-	void Start () {
+	void Start ()
+	{
 		ammoTag = this.gameObject.tag;
 	}
 
-	public void OnActivateAmmo (Vector3 _fireLocation, Vector3 _fireDirection, float _rotationAngle) {
-		if(ammoAmount > 0) {
-			if(i < myAmmo.Length) {// checks the iterator i against the count in the array
-				if(Time.time > activationTime) {//checks if time is greater than the activation time var
+	public void OnActivateAmmo (Vector3 _fireLocation, Vector3 _fireDirection, float _rotationAngle)
+	{
+		if (ammoAmount > 0) {
+			if (i < myAmmo.Length) {// checks the iterator i against the count in the array
+				if (Time.time > activationTime) {//checks if time is greater than the activation time var
 					activationTime = Time.time + nextActivate;//adds the nextActive var to time
-					myAmmo[i].AmmoArt.transform.localEulerAngles = new Vector3(0,_rotationAngle,0);
-					myAmmo[i].ammoRigid.velocity = Vector3.zero;//stops all motion of a rigid body
-					myAmmo[i].ammoGO.transform.position = _fireLocation;//resets the ammo gameobjects position
-					myAmmo[i].ammoAnim.SetBool("Restart", true);//sets the animators restart custom perameter
-					myAmmo[i].ammoGO.SetActive(true);
-					myAmmo[i].ammoRigid.AddRelativeForce(_fireDirection*ammoSpeed, ForceMode.Impulse);//adds force to the ammos rigidBody
+					myAmmo [i].AmmoArt.transform.localEulerAngles = new Vector3 (0, _rotationAngle, 0);
+					myAmmo [i].ammoRigid.velocity = Vector3.zero;//stops all motion of a rigid body
+					myAmmo [i].ammoGO.transform.position = _fireLocation;//resets the ammo gameobjects position
+					myAmmo [i].ammoAnim.SetBool ("Restart", true);//sets the animators restart custom perameter
+					myAmmo [i].ammoGO.SetActive (true);
+					myAmmo [i].ammoRigid.AddRelativeForce (_fireDirection * ammoSpeed, ForceMode.Impulse);//adds force to the ammos rigidBody
 					i++;//iterates to the next ammo
 					ammoAmount--;
 				}
