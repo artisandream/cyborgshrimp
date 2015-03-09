@@ -7,7 +7,16 @@ public class CharacterAdvanced : MonoBehaviour {
 	//public static Action<float> SendCharacterDirection;
 	public CharacterController myController; //this is the charactor component.
 	public Transform myArt;
-	public Animator myAnim;
+
+	public delegate void AnimatorBool (string _animPeram, bool _peramBool);
+	public static event AnimatorBool ChangeAnimBool;
+
+	public delegate void AnimatorFloat (string _animPeram, float _peramFLoat);
+	public static event AnimatorFloat ChangeAnimFloat;
+
+	public delegate void AnimatorLayer (int _layerNum, float _layerSetting);
+	public static event AnimatorLayer ChangeAnimLayer;
+
 	private float hInput;
 	private string animName = "Walk";
 	public float speed = 0.5f;
@@ -18,12 +27,22 @@ public class CharacterAdvanced : MonoBehaviour {
 
 	void KillPlayer ()
 	{
-		myAnim.SetBool("Arm", false);
-		myAnim.SetBool("Fire", false);
-		myAnim.SetBool("Jump", false);
-		myAnim.SetFloat("Walk", 0);
-		myAnim.SetBool("Die", true);
-		myAnim.SetLayerWeight (1, 0);
+		if(ChangeAnimBool != null) {
+			ChangeAnimBool("Arm", false);
+			ChangeAnimBool("Arm", false);
+			ChangeAnimBool("Arm", false);
+			ChangeAnimFloat("Walk", 0);
+			ChangeAnimBool("Arm", false);
+			ChangeAnimLayer (1, 0);
+			ChangeAnimLayer (2, 0);
+		}
+
+//		PlayerAnimator.SetBool("Arm", false);
+//		PlayerAnimator.SetBool("Fire", false);
+//		PlayerAnimator.SetBool("Jump", false);
+//		PlayerAnimator.SetFloat("Walk", 0);
+//		PlayerAnimator.SetBool("Die", true);
+//		PlayerAnimator.SetLayerWeight (1, 0);
 		EndGame.TurnOffGame -= KillPlayer;
 		this.enabled = false;
 	}
@@ -43,7 +62,7 @@ public class CharacterAdvanced : MonoBehaviour {
 
 	void MoveAndChangeDirection (bool b, bool b2)
 	{
-		myAnim.SetFloat(animName, hInput);
+		ChangeAnimFloat(animName, hInput);
 		if(flipped == b) {
 			myArt.Rotate(0,180,0);
 			flipped = b2;
@@ -58,7 +77,7 @@ public class CharacterAdvanced : MonoBehaviour {
 
 	void JumpCharacter (float _jump)
 	{
-		myAnim.SetBool ("Jump", true);
+		ChangeAnimBool ("Jump", true);
 		jumpForce = _jump;
 		StartCoroutine (StopJumpForce ());
 	}
@@ -66,7 +85,7 @@ public class CharacterAdvanced : MonoBehaviour {
 	void Update () 
 	{
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
-			myAnim.SetBool("Jump", false);
+			ChangeAnimBool("Jump", false);
 			moveDirection = new Vector3(hInput*speed, 0, 0);
 			
 			switch(StaticVars.currentDirection) {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChangeAnimStateOnWeaponSwitch : MonoBehaviour {
+public class PlayerAnimStates : MonoBehaviour {
 
 	public Animator characterAnim;
 
