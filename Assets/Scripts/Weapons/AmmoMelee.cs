@@ -3,16 +3,18 @@ using System.Collections;
 
 public class AmmoMelee : MonoBehaviour
 {
+	public ParticleSystem FX;
+	public float waitTime = 0.1f;
 
-	// Use this for initialization
-	void Start ()
+	IEnumerator EndFX ()
 	{
-	
+		yield return new WaitForSeconds(waitTime);
+		FX.Stop();
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+	void OnMeleeFX ()
 	{
-	
+		FX.Play ();
+		StartCoroutine (EndFX ());
 	}
 }

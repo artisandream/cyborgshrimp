@@ -49,22 +49,6 @@ Material:
         second: 2000
       data:
         first:
-          name: _EdgeMaskFalloff
-        second: 11.2799997
-      data:
-        first:
-          name: _EdgeMaskPower
-        second: 1
-      data:
-        first:
-          name: _MinFadeStart
-        second: -72.9000015
-      data:
-        first:
-          name: _MinFadeEnd
-        second: 75.3899994
-      data:
-        first:
           name: _DischargeTileX
         second: 5.61999989
       data:
@@ -121,12 +105,28 @@ Material:
         second: 1
       data:
         first:
+          name: _EdgeMaskFalloff
+        second: 11.2799997
+      data:
+        first:
+          name: _EdgeMaskPower
+        second: 1
+      data:
+        first:
           name: _FadeStart
         second: 40
       data:
         first:
           name: _FadeEnd
         second: 50
+      data:
+        first:
+          name: _MinFadeStart
+        second: -72.9000015
+      data:
+        first:
+          name: _MinFadeEnd
+        second: 75.3899994
     m_Colors:
       data:
         first:

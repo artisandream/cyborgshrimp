@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 
-public class WeaponList : MonoBehaviour {
+public class WeaponList : MonoBehaviour
+{
 
 	public List<WeaponClass> avaliableWeapons;
 	public List<WeaponBar> WeaponBars;
@@ -24,13 +25,14 @@ public class WeaponList : MonoBehaviour {
 		currentWeaponNum = _i;
 	}
 
-	public void Start () {
+	public void Start ()
+	{
 		WeaponAttachPoint.AttachAction += addAttachPoints;
 		resetWeaponRotation.x = 270;
 		WeaponBars = new List<WeaponBar> ();
 		WeaponBar.AddWeaponBar += AddWeaponBars;
 		FireWeaponChoice.AddFire += AddWeaponButtons;
-		avaliableWeapons = new List<WeaponClass>();
+		avaliableWeapons = new List<WeaponClass> ();
 		WeaponClass.AddWeaponToList += AddWeapons;
 		SwitchCurrentWeapon.SwitchWeapon += SwitchThisWeapon;
 		FireWeaponChoice.FireCurrentWeapon += CurrentWeaponNum;
@@ -38,7 +40,8 @@ public class WeaponList : MonoBehaviour {
 		FireThisWeapon.FireCurrentWeapon += FireWeapon;
 	}
 
-	void AddWeaponBars (WeaponBar _b) {
+	void AddWeaponBars (WeaponBar _b)
+	{
 		WeaponBars.Add (_b);
 	}
 
@@ -60,9 +63,10 @@ public class WeaponList : MonoBehaviour {
 		FireButtons.Add (_f);
 	}
 
-	void AddBarToWeaponClass (WeaponClass _w) {
+	void AddBarToWeaponClass (WeaponClass _w)
+	{
 		adderNum = avaliableWeapons.Count - 1;
-		avaliableWeapons [adderNum].ChangeAmmoBar += WeaponBars[adderNum].UpdateAmmoBar;
+		avaliableWeapons [adderNum].ChangeAmmoBar += WeaponBars [adderNum].UpdateAmmoBar;
 		WeaponBars [adderNum].GetComponent<Image> ().color = WeaponColor [adderNum];
 
 		FireButtons [adderNum].choiceNum = adderNum;
@@ -70,11 +74,12 @@ public class WeaponList : MonoBehaviour {
 		FireButtons [adderNum].GetComponent<Image> ().enabled = true;
 	}
 
-	void AddWeapons (WeaponClass _w) {
+	void AddWeapons (WeaponClass _w)
+	{
 		resetWeaponRotation.y = _w.setRotation;
-		avaliableWeapons.Add(_w);
-		if(ActivateWeaponSwitch != null)
-			ActivateWeaponSwitch(avaliableWeapons.Count);
+		avaliableWeapons.Add (_w);
+		if (ActivateWeaponSwitch != null)
+			ActivateWeaponSwitch (avaliableWeapons.Count);
 
 		if (WeaponType != null)
 			WeaponType (_w.thisWeaponSelection);
@@ -92,12 +97,13 @@ public class WeaponList : MonoBehaviour {
 		}
 
 		_w.gameObject.transform.localPosition = weaponLocation;
-		_w.gameObject.transform.localRotation = Quaternion.Euler(resetWeaponRotation);
+		_w.gameObject.transform.localRotation = Quaternion.Euler (resetWeaponRotation);
 
 	}
 
-	void SwitchThisWeapon () {
-		if(avaliableWeapons.Count-1 > currentWeaponNum) {
+	void SwitchThisWeapon ()
+	{
+		if (avaliableWeapons.Count - 1 > currentWeaponNum) {
 			currentWeaponNum++;
 		} else {
 			currentWeaponNum = 0;
@@ -110,11 +116,13 @@ public class WeaponList : MonoBehaviour {
 			avaliableWeapons [currentWeaponNum].FireAmmo (Vector3.right);
 	}
 
-	void FireWeapon (int _i) {
+	void FireWeapon (int _i)
+	{
 		Fire ();
-	} 
+	}
 
-	void FireWeapon () {
+	void FireWeapon ()
+	{
 		Fire ();
 	} 
 }
