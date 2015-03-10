@@ -6032,7 +6032,7 @@ MonoBehaviour:
   setRotation: 0
   centerFiringPosition: {fileID: 1117897844}
   KindOfWeapon: 1
-  nextActivate: 10
+  nextActivate: 1
   activationTime: 0
   thisWeaponSelection: 0
 --- !u!54 &290404659
