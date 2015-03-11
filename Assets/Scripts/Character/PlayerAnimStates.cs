@@ -6,30 +6,31 @@ public class PlayerAnimStates : MonoBehaviour
 
 	public Animator characterAnim;
 
-	void ChangeToFiringState (WeaponType.weaponSelection _weaponSelection)
+	void ChangeToFiringState ()
 	{
-		switch (_weaponSelection) {
-		case WeaponType.weaponSelection.RAYGUN:
-			characterAnim.SetLayerWeight (1, 1);
-			break;
-
-		case WeaponType.weaponSelection.ELECTROSPEAR:
-			characterAnim.SetLayerWeight (2, 1);
-			break;
-
-		}
+		characterAnim.SetLayerWeight (1, 1);
+//		switch (_weaponSelection) {
+//		case WeaponType.weaponSelection.RAYGUN:
+//			characterAnim.SetLayerWeight (1, 1);
+//			break;
+//
+//		case WeaponType.weaponSelection.ELECTROSPEAR:
+//			characterAnim.SetLayerWeight (2, 1);
+//			break;
+//
+//		}
 	}
 
-	IEnumerator ResetFireAnim ()
+	IEnumerator ResetFireAnim (WeaponType.weaponSelection _ws)
 	{
 		yield return new WaitForSeconds (0.001f);
-		characterAnim.SetBool ("Fire", false);
+		characterAnim.SetBool (_ws.ToString(), false);
 	}
 
-	void RunFireAnim ()
+	void RunFireAnim (WeaponType.weaponSelection _ws)
 	{
-		characterAnim.SetBool ("Fire", true);
-		StartCoroutine (ResetFireAnim ());
+		characterAnim.SetBool (_ws.ToString(), true);
+		StartCoroutine (ResetFireAnim (_ws));
 		print("called");
 	}
 
@@ -51,8 +52,7 @@ public class PlayerAnimStates : MonoBehaviour
 		ChangeAnimFloat ("Walk", 0);
 		characterAnim.SetBool ("Arm", false);
 		characterAnim.SetLayerWeight (1, 0);
-		characterAnim.SetLayerWeight (2, 0);
-
+		characterAnim.SetBool ("Die", true);
 		EndGame.TurnOffGame -= KillPlayer;
 		this.enabled = false;
 	}

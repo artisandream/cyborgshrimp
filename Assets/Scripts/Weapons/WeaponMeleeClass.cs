@@ -50,7 +50,7 @@ public class WeaponMeleeClass : WeaponClass
 			StartCoroutine (EndFX ());
 
 			if (CallFireAnim != null)
-				CallFireAnim ();
+				CallFireAnim (thisWeaponSelection);
 
 			StartCoroutine (DisableCollider ());
 			activationTime = Time.time + nextActivate;//adds the nextActive var to time

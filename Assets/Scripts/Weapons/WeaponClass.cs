@@ -11,7 +11,7 @@ public class WeaponClass : MonoBehaviour
 	public List<GameObject> Targets;
 	public int numberOfTargets = 3;
 	public static Action<WeaponClass> AddWeaponToList;
-	public static Action CallFireAnim;
+	public static Action<WeaponType.weaponSelection> CallFireAnim;
 	public bool ifAvaliable = false;
 	public int currentAmmoNum = 0;
 	public int ammoSpeed = 10;
@@ -92,7 +92,7 @@ public class WeaponClass : MonoBehaviour
 					}
 
 					if (CallFireAnim != null)
-						CallFireAnim ();
+						CallFireAnim (thisWeaponSelection);
 
 					Targets [currentAmmoNum].transform.position = targetPosition;
 					avaliableAmmo [currentAmmoNum].transform.position = centerFiringPosition.position;

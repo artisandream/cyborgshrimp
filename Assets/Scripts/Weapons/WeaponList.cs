@@ -12,7 +12,7 @@ public class WeaponList : MonoBehaviour
 	public List<FireWeaponChoice> FireButtons;
 	public Color[] WeaponColor;
 	public static Action<int> ActivateWeaponSwitch;
-	public static Action<WeaponType.weaponSelection> WeaponType;
+	public static Action WeaponType;
 	public Vector3 resetWeaponRotation;
 	public Transform meleeAttachPoint;
 	public Transform RangeAttachPoint;
@@ -82,7 +82,7 @@ public class WeaponList : MonoBehaviour
 			ActivateWeaponSwitch (avaliableWeapons.Count);
 
 		if (WeaponType != null)
-			WeaponType (_w.thisWeaponSelection);
+			WeaponType ();
 
 		AddBarToWeaponClass (_w);
 
