@@ -113,7 +113,7 @@ public class WeaponList : MonoBehaviour
 	void Fire ()
 	{
 		if (avaliableWeapons.Count > 0)
-			avaliableWeapons [currentWeaponNum].FireAmmo (Vector3.right);
+			avaliableWeapons [currentWeaponNum].FireAmmo ();
 	}
 
 	void FireWeapon (int _i)

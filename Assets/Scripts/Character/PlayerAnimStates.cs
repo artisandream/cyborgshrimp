@@ -1,24 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class PlayerAnimStates : MonoBehaviour
 {
 
 	public Animator characterAnim;
+	public static Action<WeaponType.weaponSelection> ReturnFire;
+	public WeaponType.weaponSelection currentWeaponType;
 
 	void ChangeToFiringState ()
 	{
 		characterAnim.SetLayerWeight (1, 1);
-//		switch (_weaponSelection) {
-//		case WeaponType.weaponSelection.RAYGUN:
-//			characterAnim.SetLayerWeight (1, 1);
-//			break;
-//
-//		case WeaponType.weaponSelection.ELECTROSPEAR:
-//			characterAnim.SetLayerWeight (2, 1);
-//			break;
-//
-//		}
+	}
+
+	public void CallReturnFire () {
+		if(ReturnFire != null)
+			ReturnFire(currentWeaponType);
 	}
 
 	IEnumerator ResetFireAnim (WeaponType.weaponSelection _ws)
@@ -30,8 +28,8 @@ public class PlayerAnimStates : MonoBehaviour
 	void RunFireAnim (WeaponType.weaponSelection _ws)
 	{
 		characterAnim.SetBool (_ws.ToString(), true);
+		currentWeaponType = _ws;
 		StartCoroutine (ResetFireAnim (_ws));
-		print("called");
 	}
 
 	void ChangeAnimBool (string _animPeram, bool _peramBool)

@@ -35,6 +35,7 @@ public class WeaponClass : MonoBehaviour
 		if (AddWeaponToList != null) 
 			AddWeaponToList (this);
 
+		PlayerAnimStates.ReturnFire += ReturnFire;
 		this.GetComponent<BoxCollider> ().enabled = false;
 	}
 
@@ -74,33 +75,41 @@ public class WeaponClass : MonoBehaviour
 		}
 	}
 
-	public virtual void FireAmmo (Vector3 _firingDirection)
+	public void ReturnFire (WeaponType.weaponSelection _ws)
+	{
+		print (thisWeaponSelection);
+		if(_ws == thisWeaponSelection) {
+			print (_ws);
+			switch (StaticVars.currentDirection) {
+			case StaticVars.Direction.RIGHT:
+				targetPosition.x = this.transform.position.x + firingDistance;
+				break;
+			case StaticVars.Direction.LEFT:
+				targetPosition.x = this.transform.position.x - firingDistance;
+				break;
+			}
+			Targets [currentAmmoNum].transform.position = targetPosition;
+			print (avaliableAmmo.Count);
+			avaliableAmmo [currentAmmoNum].transform.position = centerFiringPosition.position;
+			avaliableAmmo [currentAmmoNum].Target = Targets [currentAmmoNum].gameObject;
+			avaliableAmmo [currentAmmoNum].OnActivateAmmo ();
+			AvaliableAmmountToFire--;
+			UpdateAmmoBar ();
+			currentAmmoNum++;
+		}
+	}
+
+	public virtual void FireAmmo ()
 	{
 		if (Time.time > activationTime && AvaliableAmmountToFire > 0) {//checks if time is greater than the activation time var
 			if (avaliableAmmo.Count - 1 >= currentAmmoNum) {
 
 				if (!avaliableAmmo [currentAmmoNum].gameObject.activeSelf) {
 
-					switch (StaticVars.currentDirection) {
-					case StaticVars.Direction.RIGHT:
-						targetPosition.x = this.transform.position.x + firingDistance;
-						break;
-
-					case StaticVars.Direction.LEFT:
-						targetPosition.x = this.transform.position.x - firingDistance;
-						break;
-					}
-
-					if (CallFireAnim != null)
+					if (CallFireAnim != null) {
 						CallFireAnim (thisWeaponSelection);
-
-					Targets [currentAmmoNum].transform.position = targetPosition;
-					avaliableAmmo [currentAmmoNum].transform.position = centerFiringPosition.position;
-					avaliableAmmo [currentAmmoNum].Target = Targets [currentAmmoNum].gameObject;
-					avaliableAmmo [currentAmmoNum].OnActivateAmmo ();
-					AvaliableAmmountToFire--;
-					UpdateAmmoBar ();
-					currentAmmoNum++;
+					}
+					//ReturnFire (currentAmmoNum);
 				}
 			} else {
 				currentAmmoNum = 0;

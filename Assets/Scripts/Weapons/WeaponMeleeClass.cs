@@ -43,7 +43,7 @@ public class WeaponMeleeClass : WeaponClass
 		thisCollider.enabled = false;
 	}
 
-	public override void FireAmmo (Vector3 _firingDirection)
+	public override void FireAmmo ()
 	{
 		if (Time.time > activationTime) {//checks if time is greater than the activation time var
 			thisCollider.enabled = true;

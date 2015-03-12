@@ -24,6 +24,12 @@ TagManager:
   - 
   - Enemy
   - 
+  - Plasma
+  - 
+  - Fire
+  - 
+  - BULLET
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -60,6 +66,10 @@ TagManager:
   - name: BackStuff
     userID: 2
     uniqueID: 1112529203
+    locked: 0
+  - name: PlayerBack
+    userID: 6
+    uniqueID: 1179921563
     locked: 0
   - name: Player
     userID: 4
