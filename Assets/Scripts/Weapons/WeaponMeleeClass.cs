@@ -37,7 +37,7 @@ public class WeaponMeleeClass : WeaponClass
 		SetLayerPrepForMelee ();
 	}
 
-	IEnumerator DisableCollider ()
+	public virtual IEnumerator DisableCollider ()
 	{
 		yield return new WaitForSeconds (1f);
 		thisCollider.enabled = false;
@@ -47,7 +47,7 @@ public class WeaponMeleeClass : WeaponClass
 	{
 		if (Time.time > activationTime) {//checks if time is greater than the activation time var
 			thisCollider.enabled = true;
-			StartCoroutine (EndFX ());
+			StartCoroutine (RunFX ());
 
 			if (CallFireAnim != null)
 				CallFireAnim (thisWeaponSelection);
@@ -60,7 +60,7 @@ public class WeaponMeleeClass : WeaponClass
 	public ParticleSystem FX;
 	public float waitTime = 0.1f;
 	
-	IEnumerator EndFX ()
+	public virtual IEnumerator RunFX ()
 	{
 		yield return new WaitForSeconds (waitTime);
 		FX.Emit (emmissionAmount);

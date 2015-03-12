@@ -60,7 +60,6 @@ public class EnemyController : MonoBehaviour
 		string _t = _c.gameObject.tag;//_t is tag
 		foreach (WeaponClass _aS in killerWeaponsList) {//_aS is a var for AmmoSpawner
 			if (_t == _aS.thisWeaponSelection.ToString ()) {
-				print (_aS.ammoPower);
 				health -= _aS.ammoPower;
 			}
 		}

@@ -9,5 +9,6 @@ public class EnemyHealthDestroyer : MonoBehaviour
 		void OnTriggerEnter (Collider _c)
 		{
 				Enemy.LowerHealth (_c);
+		print ("Hit");
 		}
 }

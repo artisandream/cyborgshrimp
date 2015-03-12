@@ -76,7 +76,7 @@ TextureImporter:
         width: 601
         height: 319
       alignment: 9
-      pivot: {x: .949626625, y: .770667791}
+      pivot: {x: .925873458, y: .770667791}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SonicBat
       rect:
@@ -96,7 +96,7 @@ TextureImporter:
         width: 2032
         height: 302
       alignment: 9
-      pivot: {x: .551892638, y: .815406621}
+      pivot: {x: .647439063, y: .824860632}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

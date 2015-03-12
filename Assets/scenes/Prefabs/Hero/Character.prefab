@@ -666,7 +666,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: .680000007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400022}
@@ -677,8 +677,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
-  m_LocalRotation: {x: 0, y: 0, z: .451310456, w: -.892367005}
-  m_LocalPosition: {x: -2.58262873, y: -3.56361103, z: 0}
+  m_LocalRotation: {x: -2.25576198e-08, y: 1.73313133e-08, z: .053405907, w: -.998572946}
+  m_LocalPosition: {x: -2.58263397, y: -3.56377769, z: -4.78284079e-12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450530}
@@ -1255,6 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterAnim: {fileID: 9500000}
+  currentWeaponType: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -5431,7 +5432,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1660818927
+  m_SortingLayerID: 1179921563
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300012, guid: 123a833d2638d464b99542fe3984638e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5585,7 +5586,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1660818927
+  m_SortingLayerID: 1179921563
   m_SortingOrder: -5
   m_Sprite: {fileID: 21300024, guid: 123a833d2638d464b99542fe3984638e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5739,7 +5740,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1660818927
+  m_SortingLayerID: 1179921563
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300026, guid: 123a833d2638d464b99542fe3984638e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

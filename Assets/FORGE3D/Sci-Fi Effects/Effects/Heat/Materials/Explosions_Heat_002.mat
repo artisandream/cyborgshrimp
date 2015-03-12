@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Explosions_Heat_002
-  m_Shader: {fileID: 4800000, guid: 1cf673528f3503b4e98f6c16ff5b3ce5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 96a3f181331826446bdc9e7f6d784a48, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -27,7 +27,60 @@ Material:
           m_Texture: {fileID: 2800000, guid: 989d5284c72a49540bf9ef6a6409a7fa, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CoronaNoise
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LoopTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MaskTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BurnoutMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WipeEm
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WipeOp
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: .078125
       data:
         first:
           name: _InvFade
@@ -40,6 +93,78 @@ Material:
         first:
           name: _Dist
         second: 50
+      data:
+        first:
+          name: _DiffusePower
+        second: 1
+      data:
+        first:
+          name: _SpecularAdd
+        second: 0
+      data:
+        first:
+          name: _SpecularMult
+        second: 0
+      data:
+        first:
+          name: _SpecularA
+        second: 0
+      data:
+        first:
+          name: _SpecularB
+        second: 1
+      data:
+        first:
+          name: _SpecularRatio
+        second: 5.27686119
+      data:
+        first:
+          name: _FresnelPower
+        second: 0
+      data:
+        first:
+          name: _FresnelMult
+        second: 0
+      data:
+        first:
+          name: _EdgeMaskFalloff
+        second: 0
+      data:
+        first:
+          name: _EdgeMaskPower
+        second: 0
+      data:
+        first:
+          name: _MinFadeStart
+        second: 0
+      data:
+        first:
+          name: _MinFadeEnd
+        second: 0
+      data:
+        first:
+          name: _MaxFadeStart
+        second: 0
+      data:
+        first:
+          name: _MaxFadeEnd
+        second: 0
+      data:
+        first:
+          name: _Cut
+        second: 1
+      data:
+        first:
+          name: _FresnelExp
+        second: 0
+      data:
+        first:
+          name: _BurnOut
+        second: 0
+      data:
+        first:
+          name: _BurnUVOffset
+        second: 0
     m_Colors:
       data:
         first:
@@ -47,5 +172,21 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _SpecColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
           name: _TintColor
-        second: {r: .99999994, g: .99999994, b: .99999994, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _CoronaColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _FresnelColor
+        second: {r: 4, g: .699999988, b: .00400000019, a: 1}
+      data:
+        first:
+          name: _BurnColor
+        second: {r: 4, g: .699999988, b: .00400000019, a: 1}

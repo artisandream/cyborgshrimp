@@ -14,14 +14,11 @@ public class WeaponClass : MonoBehaviour
 	public static Action<WeaponType.weaponSelection> CallFireAnim;
 	public bool ifAvaliable = false;
 	public int currentAmmoNum = 0;
-	public int ammoSpeed = 10;
 	public int ammoPower = 1;
 	public float AvaliableAmmountToFire = 10;
-	private float startAvaliableAmmoToFire;
-	public float powerUpScale = 0.14f;
-	public float playScale = 0.8f;
-	public int firingDistance = 100;
 	public float setRotation = 0;
+	private float startAvaliableAmmoToFire;
+	public int firingDistance = 10;
 	private Vector3 targetPosition;
 	public Transform centerFiringPosition;
 	public WeaponAttachPoint.AttachType KindOfWeapon;
@@ -75,11 +72,10 @@ public class WeaponClass : MonoBehaviour
 		}
 	}
 
-	public void ReturnFire (WeaponType.weaponSelection _ws)
+	public virtual void ReturnFire (WeaponType.weaponSelection _ws)
 	{
-		print (thisWeaponSelection);
 		if(_ws == thisWeaponSelection) {
-			print (_ws);
+			targetPosition.z = this.transform.position.z;
 			switch (StaticVars.currentDirection) {
 			case StaticVars.Direction.RIGHT:
 				targetPosition.x = this.transform.position.x + firingDistance;
@@ -103,13 +99,8 @@ public class WeaponClass : MonoBehaviour
 	{
 		if (Time.time > activationTime && AvaliableAmmountToFire > 0) {//checks if time is greater than the activation time var
 			if (avaliableAmmo.Count - 1 >= currentAmmoNum) {
-
-				if (!avaliableAmmo [currentAmmoNum].gameObject.activeSelf) {
-
-					if (CallFireAnim != null) {
-						CallFireAnim (thisWeaponSelection);
-					}
-					//ReturnFire (currentAmmoNum);
+				if (!avaliableAmmo [currentAmmoNum].gameObject.activeSelf && CallFireAnim != null) {
+					CallFireAnim (thisWeaponSelection);
 				}
 			} else {
 				currentAmmoNum = 0;
@@ -118,7 +109,7 @@ public class WeaponClass : MonoBehaviour
 		}
 	}
 
-	void UpdateAmmoBar ()
+	public void UpdateAmmoBar ()
 	{
 		if (ChangeAmmoBar != null)
 			ChangeAmmoBar (AvaliableAmmountToFire / startAvaliableAmmoToFire);
