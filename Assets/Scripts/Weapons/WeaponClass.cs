@@ -21,6 +21,7 @@ public class WeaponClass : MonoBehaviour
 	public int firingDistance = 10;
 	private Vector3 targetPosition;
 	public Transform centerFiringPosition;
+	public GameObject muzzleFlash;
 	public WeaponAttachPoint.AttachType KindOfWeapon;
 	public float nextActivate = 2.0F;//the next time the ammo "fires" or is activated
 	public float activationTime = 0.0F;//the current time that is a contiuously changing var adding the time to the nextActive var
@@ -100,6 +101,7 @@ public class WeaponClass : MonoBehaviour
 			if (avaliableAmmo.Count - 1 >= currentAmmoNum) {
 				if (!avaliableAmmo [currentAmmoNum].gameObject.activeSelf && CallFireAnim != null) {
 					CallFireAnim (thisWeaponSelection);
+					muzzleFlash.SetActive(true);
 				}
 			} else {
 				currentAmmoNum = 0;
