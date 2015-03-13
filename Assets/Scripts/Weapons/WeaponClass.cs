@@ -85,7 +85,6 @@ public class WeaponClass : MonoBehaviour
 				break;
 			}
 			Targets [currentAmmoNum].transform.position = targetPosition;
-			print (avaliableAmmo.Count);
 			avaliableAmmo [currentAmmoNum].transform.position = centerFiringPosition.position;
 			avaliableAmmo [currentAmmoNum].Target = Targets [currentAmmoNum].gameObject;
 			avaliableAmmo [currentAmmoNum].OnActivateAmmo ();

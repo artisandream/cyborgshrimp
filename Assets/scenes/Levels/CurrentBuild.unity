@@ -1527,6 +1527,10 @@ Prefab:
       propertyPath: Target
       value: 
       objectReference: {fileID: 670409867}
+    - target: {fileID: 122802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
   m_RootGameObject: {fileID: 1197921532}
@@ -8791,7 +8795,7 @@ GameObject:
   - 114: {fileID: 441281041}
   m_Layer: 14
   m_Name: PlasmaBlueFire
-  m_TagString: RAYGUN
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13613,7 +13617,7 @@ GameObject:
   - 135: {fileID: 624140069}
   m_Layer: 14
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16072,6 +16076,14 @@ Prefab:
     - target: {fileID: 122790, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 122802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
+      objectReference: {fileID: 0}
+    - target: {fileID: 122800, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
@@ -22990,6 +23002,14 @@ Prefab:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 122802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
+      objectReference: {fileID: 0}
+    - target: {fileID: 122800, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
   m_RootGameObject: {fileID: 1928076365}
@@ -24792,7 +24812,7 @@ GameObject:
   - 135: {fileID: 934277566}
   m_Layer: 14
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34872,7 +34892,7 @@ GameObject:
   - 114: {fileID: 1197921534}
   m_Layer: 14
   m_Name: PlasmaBlueFire
-  m_TagString: RAYGUN
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46293,7 +46313,7 @@ GameObject:
   - 114: {fileID: 1653652138}
   m_Layer: 14
   m_Name: PlasmaBlueFire
-  m_TagString: RAYGUN
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46739,7 +46759,7 @@ GameObject:
   - 135: {fileID: 1684212731}
   m_Layer: 14
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49456,7 +49476,7 @@ GameObject:
   - 114: {fileID: 1928076367}
   m_Layer: 14
   m_Name: PlasmaBlueFire
-  m_TagString: RAYGUN
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50051,6 +50071,14 @@ Prefab:
     - target: {fileID: 122802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 122802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
+      objectReference: {fileID: 0}
+    - target: {fileID: 122800, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
+      propertyPath: m_TagString
+      value: PLASMA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
