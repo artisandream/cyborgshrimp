@@ -22,7 +22,7 @@ public class DisplayGUI : MonoBehaviour {
 	void EndThisGame ()
 	{
 		EndGame.TurnOffGame -= EndThisGame;
-		endExplosion.renderer.sortingLayerName = "Foreground";
+		endExplosion.GetComponent<Renderer>().sortingLayerName = "Foreground";
 		endExplosion.Play();
 		StartCoroutine(RunGUI());
 	}

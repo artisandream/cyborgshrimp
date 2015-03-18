@@ -33,27 +33,27 @@ public class PowerUpStateMachine {
 	}
 	
 	void IdleState (GameObject _go) {
-		if (!_go.animation.isPlaying) {
-			_go.animation.Play("idle");
+		if (!_go.GetComponent<Animation>().isPlaying) {
+			_go.GetComponent<Animation>().Play("idle");
 		}
 	}
 	
 	void CollectingState (GameObject _go) {
-			_go.animation.Play("collecting");
+			_go.GetComponent<Animation>().Play("collecting");
 			myCurrentState = PowerUpStateMachine.States.COLLECTED;
 	}
 	
 	void CollectedState (GameObject _go) {
-		if (!_go.animation.isPlaying) {
-			_go.animation.Play("collected");
+		if (!_go.GetComponent<Animation>().isPlaying) {
+			_go.GetComponent<Animation>().Play("collected");
 			myCurrentState = PowerUpStateMachine.States.FINISHED;
 		} 
 	}
 	
 	void FinishedState (GameObject _go) {
-		if (!_go.animation.isPlaying) {
+		if (!_go.GetComponent<Animation>().isPlaying) {
 			foreach (Transform child in _go.transform) {
-				child.renderer.enabled = false;
+				child.GetComponent<Renderer>().enabled = false;
 			}
 		}
 	}	

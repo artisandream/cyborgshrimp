@@ -82,7 +82,7 @@ public class IOSNotificationController : EventDispatcher  {
 	
 	
 	#if UNITY_IPHONE
-	public void RegisterForRemoteNotifications(RemoteNotificationType notificationTypes) {
+	public void RegisterForRemoteNotifications(UnityEngine.iOS.NotificationType notificationTypes) {
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
 
 			NotificationServices.RegisterForRemoteNotificationTypes(notificationTypes);

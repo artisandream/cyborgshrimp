@@ -7,7 +7,7 @@ public class SoundEffectsGasCan : MonoBehaviour {
 	public AudioClip gasCanSound;
 
 	void Start(){
-		audio.clip = gasCanSound;
+		GetComponent<AudioSource>().clip = gasCanSound;
 	}
 
 	void Awake(){
@@ -20,7 +20,7 @@ public class SoundEffectsGasCan : MonoBehaviour {
 	}
 	
 	void PlayGasCanSound () {
-		audio.Play ();
+		GetComponent<AudioSource>().Play ();
 	}
 
 	void TurnOffGasCanSound () {

@@ -7,7 +7,7 @@ public class SoundSelector : MonoBehaviour {
 
 	void OnClick ( ) {
 		SoundEffects.myFoxSound = userSelectedSound;
-		audio.clip = userSelectedSound;
-		audio.Play();
+		GetComponent<AudioSource>().clip = userSelectedSound;
+		GetComponent<AudioSource>().Play();
 	}
 }

@@ -75,8 +75,8 @@ public class SingleMicrophoneCapture : MonoBehaviour
 		BackgroundMusic.StopMusic(); // ****** Turn back on after testing *******
 
 		//Mentronome
-		audio.clip = metronomeSound;
-		audio.Play ();
+		GetComponent<AudioSource>().clip = metronomeSound;
+		GetComponent<AudioSource>().Play ();
 		yield return new WaitForSeconds(2);
 //		recordLabel.text = "Go! Go! Go!";
 //		myRecordButton.defaultColor = Color.red;
@@ -95,8 +95,8 @@ public class SingleMicrophoneCapture : MonoBehaviour
 		Microphone.End(null); //Stop the audio recording
 
 		//Playback Recording
-	    audio.clip = mySavedFileSound;
-		audio.Play(); 
+	    GetComponent<AudioSource>().clip = mySavedFileSound;
+		GetComponent<AudioSource>().Play(); 
 
 		//Move Sound into MySound Button
 		SoundSelectorMyFoxSound.userRecordedClip = mySavedFileSound;

@@ -8,7 +8,7 @@ public class TractorConnection : MonoBehaviour {
 	public Rigidbody newRigidBody;
 
 	void OnTriggerEnter (Collider _collider) {
-		Debug.Log (_collider.rigidbody);
+		Debug.Log (_collider.GetComponent<Rigidbody>());
 		thisSpringJoint.connectedBody = newRigidBody;
 	}
 
@@ -18,6 +18,6 @@ public class TractorConnection : MonoBehaviour {
 	}
 
 	void Update () {
-		rigidbody.AddForce (0, 0, -10);
+		GetComponent<Rigidbody>().AddForce (0, 0, -10);
 	}
 }

@@ -10,7 +10,7 @@ public class MoveViaKeys : MonoBehaviour {
 
 	public float jumpForce = 10;
 
-	MoveViaKeys () {
+	void Start () {
 		EndGame.TurnOffGame += DisableScript;
 	}
 

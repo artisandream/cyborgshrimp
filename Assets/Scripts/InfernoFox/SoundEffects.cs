@@ -27,12 +27,12 @@ public class SoundEffects : MonoBehaviour {
 
 		if (boomSoundStarted == false){
 			if(_WhatDidTheFoxHit == "Strike"){
-				audio.clip = boomSound[1];
+				GetComponent<AudioSource>().clip = boomSound[1];
 			}
 			else{
-				audio.clip = boomSound[0];
+				GetComponent<AudioSource>().clip = boomSound[0];
 			}
-			audio.Play ();
+			GetComponent<AudioSource>().Play ();
 			boomSoundStarted = true;
 		}
 	}
@@ -44,8 +44,8 @@ public class SoundEffects : MonoBehaviour {
 				myFoxSound = initialFoxSound;
 			}
 
-			audio.clip = myFoxSound;
-			audio.Play ();
+			GetComponent<AudioSource>().clip = myFoxSound;
+			GetComponent<AudioSource>().Play ();
 		}
 	}
 }

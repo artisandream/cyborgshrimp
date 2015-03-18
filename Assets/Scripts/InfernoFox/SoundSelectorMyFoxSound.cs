@@ -9,7 +9,7 @@ public class SoundSelectorMyFoxSound : MonoBehaviour {
 
 		SoundEffects.myFoxSound = userRecordedClip;
 
-		audio.clip = userRecordedClip;
-		audio.Play ();
+		GetComponent<AudioSource>().clip = userRecordedClip;
+		GetComponent<AudioSource>().Play ();
 	}
 }

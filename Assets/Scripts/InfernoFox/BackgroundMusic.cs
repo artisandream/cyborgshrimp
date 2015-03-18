@@ -18,32 +18,32 @@ public class BackgroundMusic : MonoBehaviour {
 
 		if (instance != null && instance != this) 
 		{
-			audio.Stop();
-			if(instance.audio.clip != audio.clip)
+			GetComponent<AudioSource>().Stop();
+			if(instance.GetComponent<AudioSource>().clip != GetComponent<AudioSource>().clip)
 			{
-				instance.audio.clip = audio.clip;
-				instance.audio.volume = audio.volume;
-				instance.audio.Play();
+				instance.GetComponent<AudioSource>().clip = GetComponent<AudioSource>().clip;
+				instance.GetComponent<AudioSource>().volume = GetComponent<AudioSource>().volume;
+				instance.GetComponent<AudioSource>().Play();
 			}
 			
 			Destroy(this.gameObject);
 			return;
 		} 
 		instance = this;
-		audio.Play ();
+		GetComponent<AudioSource>().Play ();
 		DontDestroyOnLoad(this.gameObject);
 	}
 
 	public static void StopMusic(){
 		
-		instance.audio.Stop();
+		instance.GetComponent<AudioSource>().Stop();
 		musicToggle = "Stop";
 		
 	}
 	
 	public static void StartMusic(){
 		if(userSetMusicTo == "on"){
-			instance.audio.Play();
+			instance.GetComponent<AudioSource>().Play();
 			musicToggle = "Start";
 		}
 	}
