@@ -3,17 +3,17 @@ using System.Collections;
 
 public class ActivateEnemyAI : MonoBehaviour {
 	
-	public EnemyNav thisNMA;//instance of EnemyNav script on another game Object
+	public EnemyController EnemyNavMeshAgent;//instance of EnemyNav script on another game Object
 
 	void OnTriggerStay (Collider _c) {
 		//if(_c.tag == "Player") {
-		thisNMA.myTarget = _c.gameObject;//changes the navMeshAgent target to the player
-		thisNMA.StartEnemyMove ();
+		EnemyNavMeshAgent.myTarget = _c.gameObject;//changes the navMeshAgent target to the player
+		EnemyNavMeshAgent.StartEnemyMove ();
 		//}
 	}
 
 	void OnTriggerExit ( ) {
-		thisNMA.myTarget = this.gameObject;//changes the navMeshAgent target to itself
-		thisNMA.EndSwim ();
+		EnemyNavMeshAgent.myTarget = this.gameObject;//changes the navMeshAgent target to itself
+		EnemyNavMeshAgent.EndSwim ();
 	}
 }

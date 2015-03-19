@@ -2,92 +2,69 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
+  serializedVersion: 2
   tags:
   - RAYGUN
   - MISSILE
   - PLASMA
   - SONICBAT
   - ELECTROSPEAR
+  - Enemy
+  - Plasma
+  - Fire
+  - BULLET
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Level
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerKillZone
+  - PlayerAmmo
   - 
   - 
   - 
   - Enemy
+  - EnemyKillZone
+  - EnemyAmmo
+  - EnemyPlayerContact
+  - EnemyStarter
   - 
-  - Plasma
+  - PowerUp
   - 
-  - Fire
   - 
-  - BULLET
   - 
-  Builtin Layer 0: Default
-  Builtin Layer 1: TransparentFX
-  Builtin Layer 2: Ignore Raycast
-  Builtin Layer 3: 
-  Builtin Layer 4: Water
-  Builtin Layer 5: UI
-  Builtin Layer 6: 
-  Builtin Layer 7: 
-  User Layer 8: Level
-  User Layer 9: 
-  User Layer 10: 
-  User Layer 11: 
-  User Layer 12: Player
-  User Layer 13: PlayerKillZone
-  User Layer 14: PlayerAmmo
-  User Layer 15: 
-  User Layer 16: 
-  User Layer 17: 
-  User Layer 18: Enemy
-  User Layer 19: EnemyKillZone
-  User Layer 20: EnemyAmmo
-  User Layer 21: EnemyPlayerContact
-  User Layer 22: 
-  User Layer 23: 
-  User Layer 24: PowerUp
-  User Layer 25: 
-  User Layer 26: 
-  User Layer 27: 
-  User Layer 28: Spawner
-  User Layer 29: SpawnerActivator
-  User Layer 30: 
-  User Layer 31: 
+  - Spawner
+  - SpawnerActivator
+  - 
+  - 
   m_SortingLayers:
   - name: BackStuff
-    userID: 2
     uniqueID: 1112529203
     locked: 0
   - name: PlayerBack
-    userID: 6
     uniqueID: 1179921563
     locked: 0
   - name: Player
-    userID: 4
     uniqueID: 1660818927
     locked: 0
-  - name: Default
-    userID: 0
-    uniqueID: 0
-    locked: 0
   - name: FrontStuff
-    userID: 1
     uniqueID: 1372918755
     locked: 0
   - name: Enemies
-    userID: 3
     uniqueID: 2813685873
     locked: 0
   - name: Ammo
-    userID: 5
     uniqueID: 3358457919
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

@@ -6,10 +6,9 @@ PhysicsManager:
   m_Gravity: {x: 0, y: 1, z: -9.81000042}
   m_DefaultMaterial: {fileID: 0}
   m_BounceThreshold: 2
-  m_SleepVelocity: .150000006
-  m_SleepAngularVelocity: .140000001
-  m_MaxAngularVelocity: 7
-  m_MinPenetrationForPenalty: .00999999978
+  m_SleepThreshold: .00499999989
+  m_DefaultContactOffset: .00999999978
   m_SolverIterationCount: 6
   m_RaycastsHitTriggers: 1
-  m_LayerCollisionMatrix: c80000c0c80000c0c80000c0ffffffffc80000c0c80000c0ffffffffffffffffc85015c8c86ca0f0c80200e0c80200e0c80121e1c80210c0c80308c0c80000e0c81142eac80005e0c80102c0c84000c8c82100c0c81200c0c80001e0c80200e0c81000c4c80001e0c80000e1c80109e0c80200e0c89ec3deffffffffffffffff
+  m_EnableAdaptiveForce: 0
+  m_LayerCollisionMatrix: c80000c0c80000c0c80000c0ffffffffc80000c0c80000c0ffffffffffffffffc85015c8c86ca0f0c80200e0c80200e0c80121e1c80210c0c80308c0c80000e0c81142eac80005e0c80142c0c84040c8c82100c0c81200c0c8000dc0c80200e0c81000c4c80001e0c80000e1c80109e0c80200e0c89e83deffffffffffffffff

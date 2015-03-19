@@ -5,15 +5,65 @@ using System.Collections.Generic;
 public class EnemyController : MonoBehaviour
 {
 
+	public Animator eAnim;//drop an Animator component here
+	public NavMeshAgent myNMA; //accesses the navmesh component of an enemy
+	[HideInInspector]//hides the public var just below from the Unity Editor
+	public GameObject myTarget; // the location of the player the enemies case
+	private float velocity;//the current velocity of the enemy in x
 	public int health = 3;//the enemy health
 	public int healthReturn = 3;//the value that the enemy should return to if upon respawning
-
 	public int randomSpawningTime = 10;
 	private float activationTime = 0.0F;//test this against the current time to activate a respawn
 	public float nextActivate = 1.0F;// the next time an enemy can respawn
 	private Vector3 SpawnLocation;//the location that the enemy will appear after respawning
 	private bool canRespawn;
 	public List<WeaponClass> killerWeaponsList;
+
+	public delegate void RunStartOnce ();
+	public event RunStartOnce RunOnceEvent;
+
+	void Start () {// Update is called once per frame
+		myTarget = myNMA.gameObject;//Sets the target to itself
+		healthReturn = health;//sets the return health to the users current health value
+		RunOnceEvent += RunOnce;
+	}
+
+	void RunOnce ()
+	{
+		killerWeaponsList = new List<WeaponClass> ();
+		WeaponClass.AddWeaponToList += AddKillerWeapons;
+		RunOnceEvent -= RunOnce;
+	}
+	
+	void OnEnable () {
+		Start();//calls start() again when the AI is reactivated
+		EnemySpawnerDelegate.ActivateEnemyEvent -= Reactivate;//unsubscripts the Reactivate function the the EnemySpawnerDelegate event
+	}
+
+	void OnDisable ()
+	{
+		EnemySpawnerDelegate.ActivateEnemyEvent += Reactivate;//subscripts the Reactivate function the the EnemySpawnerDelegate event
+	}
+
+	public void StartEnemyMove () {
+		StartCoroutine (MoveEnemyToTarget ());
+	}
+	
+	IEnumerator MoveEnemyToTarget ()
+	{
+		//		print ("GO");
+		myNMA.destination = myTarget.transform.position;
+		// set the destination of the enemy to follow the player
+		velocity = myNMA.velocity.x;
+		//gets the velocity of the current agent
+		eAnim.SetFloat ("Swim", velocity);
+		yield return null;
+	}
+	//sets animation to swim or idle depending on the speed
+	
+	public void EndSwim () {
+		eAnim.SetFloat ("Swim", 0);
+	}
 
 	void OnBecameInvisible ()
 	{
@@ -37,24 +87,6 @@ public class EnemyController : MonoBehaviour
 		killerWeaponsList.Add (_aS);
 	}
 
-	void Start ()
-	{
-		killerWeaponsList = new List<WeaponClass> ();
-		WeaponClass.AddWeaponToList += AddKillerWeapons;
-		healthReturn = health;//sets the return health to the users current health value
-	}
-
-	// Use this for initialization
-	void OnDisable ()
-	{
-		EnemySpawnerDelegate.ActivateEnemyEvent += Reactivate;//subscripts the Reactivate function the the EnemySpawnerDelegate event
-	}
-	
-	void OnEnable ()
-	{
-		EnemySpawnerDelegate.ActivateEnemyEvent -= Reactivate;//unsubscripts the Reactivate function the the EnemySpawnerDelegate event
-	}
-	
 	public void LowerHealth (Collider _c)
 	{
 		string _t = _c.gameObject.tag;//_t is tag
@@ -64,7 +96,8 @@ public class EnemyController : MonoBehaviour
 			}
 		}
 		if (health <= 0) {//tests for current health value
-			this.gameObject.SetActive (false);//deactivates this gameOjbect
+
+			//this.gameObject.SetActive (false);//deactivates this gameOjbect
 		}
 	}
 
@@ -77,5 +110,11 @@ public class EnemyController : MonoBehaviour
 			activationTime = Time.time + nextActivate + Random.Range (0, randomSpawningTime);//sets the next time it can be activated
 		}
 		return _v;//returns a Vector3
+	}
+
+	void OnTriggerEnter (Collider _c)
+	{
+		LowerHealth (_c);
+		print ("Hit");
 	}
 }
