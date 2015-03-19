@@ -3,30 +3,30 @@ using System.Collections;
 
 public class EnemyTargetDirector : MonoBehaviour
 {
+	public float smoothing = 1.0F;
 
-		//public Transform startMarker;
-		public Transform endMarker;
-		public float speed = 1.0F;
-		//private float startTime;
-		private float journeyLength;
+	void StartToNextPosition(Transform _playerTarget)
+	{
+		StartCoroutine(SetNewPosition(_playerTarget));
+	}
 
-		void SetNewPosition (Transform _playerTarget)
-		{
-				endMarker = _playerTarget;
+	void OnDisable()
+	{
+		EnemyRetargetCall.UpdateEnemyTargetEvent -= StartToNextPosition;
+	}
+
+	void OnEnable()
+	{
+		EnemyRetargetCall.UpdateEnemyTargetEvent += StartToNextPosition;
+	}
+
+	IEnumerator SetNewPosition(Transform _playerTarget)
+	{
+		while (Vector3.Distance(transform.position, _playerTarget.position) > 0.1f) {
+			var step = smoothing * Time.deltaTime;
+			transform.position = Vector3.Lerp(transform.position, _playerTarget.position, step);
+			yield return null;
+						
 		}
-
-		void Start ()
-		{
-				EnemyRetargetCall.UpdateEnemyTargetEvent += SetNewPosition;
-				//	startTime = Time.time;
-				//journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
-		}
-
-		void Update ()
-		{
-				//while (this.transform.position != endMarker.position) {
-						transform.position = Vector3.Lerp (this.transform.position, endMarker.position, speed * Time.deltaTime);
-						print ("moving");
-				//}
-		}
+	}
 }

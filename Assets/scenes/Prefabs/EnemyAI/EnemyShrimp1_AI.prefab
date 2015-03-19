@@ -415,6 +415,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 495264}
+  - 114: {fileID: 11495886}
   m_Layer: 0
   m_Name: EnemyTarget
   m_TagString: Untagged
@@ -509,7 +510,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &199182
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -519,7 +520,7 @@ GameObject:
   - 199: {fileID: 19982500}
   - 114: {fileID: 11408672}
   m_Layer: 0
-  m_Name: Explosion_003
+  m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,6 +770,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400028}
+  - {fileID: 462494}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400038
@@ -855,14 +857,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199182}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: .70710659, y: 2.68220901e-07, z: -1.1920929e-07, w: .707106948}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.89999998, y: 1.89999998, z: 1.89999998}
+  m_LocalScale: {x: .142153874, y: .142153934, z: .142153904}
   m_Children:
   - {fileID: 418634}
   - {fileID: 494744}
-  m_Father: {fileID: 488536}
-  m_RootOrder: 4
+  m_Father: {fileID: 400036}
+  m_RootOrder: 1
 --- !u!4 &488530
 Transform:
   m_ObjectHideFlags: 1
@@ -901,7 +903,6 @@ Transform:
   - {fileID: 488534}
   - {fileID: 488530}
   - {fileID: 495264}
-  - {fileID: 462494}
   m_Father: {fileID: 400050}
   m_RootOrder: 1
 --- !u!4 &488538
@@ -935,7 +936,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53, y: -4.30000019, z: -0}
+  m_LocalPosition: {x: -26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 488536}
@@ -962,7 +963,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100036}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: .800000012, y: 1, z: .730000019}
@@ -1031,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c10b8608f75649d3a6668709ffcdc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eAnim: {fileID: 9500000}
+  EnemyAnims: {fileID: 9500000}
   myNMA: {fileID: 19500000}
   myTarget: {fileID: 0}
   health: 10
@@ -1039,6 +1040,8 @@ MonoBehaviour:
   randomSpawningTime: 10
   nextActivate: 1
   killerWeaponsList: []
+  art: {fileID: 100050}
+  explosion: {fileID: 199182}
 --- !u!114 &11402428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1150,6 +1153,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyArtControl: {fileID: 400050}
+--- !u!114 &11495886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc4a40588c644a93b9d75cd7f63e997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothing: .00999999978
 --- !u!195 &19500000
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -1168,7 +1183,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: .5
   m_BaseOffset: .25
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 0
 --- !u!198 &19809752
 ParticleSystem:

@@ -1544,6 +1544,17 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100058, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
   m_PrefabInternal: {fileID: 835772297}
+--- !u!114 &670409868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 670409867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b163dfe9bfc834e71ac78ed2a73c4a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &717065815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,6 +2034,10 @@ Prefab:
     - target: {fileID: 11400000, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
       propertyPath: jumpForce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400058, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed4b3f4613faf46d58af2eec0104d675, type: 2}
@@ -2656,7 +2671,7 @@ CanvasRenderer:
 --- !u!1 &1139101770
 GameObject:
   m_PrefabParentObject: {fileID: 173110, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-  m_PrefabInternal: {fileID: 1527493103}
+  m_PrefabInternal: {fileID: 1783392546}
 --- !u!4 &1197921533
 Transform:
   m_PrefabParentObject: {fileID: 422802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
@@ -3512,52 +3527,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!1001 &1527493103
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -5.0999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -.100000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11433538, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-      propertyPath: enemyAmmo.Array.data[0]
-      value: 
-      objectReference: {fileID: 218120890}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1653652137
 Transform:
   m_PrefabParentObject: {fileID: 422802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
@@ -3913,6 +3882,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebfa4eef21a1748399602b8845fe6afc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1783392546
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.0999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433538, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: enemyAmmo.Array.data[0]
+      value: 
+      objectReference: {fileID: 218120890}
+    - target: {fileID: 11495886, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: smoothing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809752, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: lengthInSec
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1804048912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,7 +4112,7 @@ Prefab:
       objectReference: {fileID: 228815254}
     - target: {fileID: 11428582, guid: 3dd04b03f5a2c4dd990e310bfec1f18c, type: 2}
       propertyPath: ammoPower
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd04b03f5a2c4dd990e310bfec1f18c, type: 2}
