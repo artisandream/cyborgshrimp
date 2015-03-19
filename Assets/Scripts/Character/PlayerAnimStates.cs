@@ -32,6 +32,18 @@ public class PlayerAnimStates : MonoBehaviour
 		StartCoroutine (ResetFireAnim (_ws));
 	}
 
+	IEnumerator ResetFireBlank()
+	{
+		yield return new WaitForSeconds(0.1f);
+		characterAnim.SetBool ("Blank", false);
+	}
+
+	void RunBlankAnim()
+	{
+		characterAnim.SetBool ("Blank", true);
+		StartCoroutine(ResetFireBlank());
+	}
+
 	void ChangeAnimBool (string _animPeram, bool _peramBool)
 	{
 		characterAnim.SetBool (_animPeram, _peramBool);
@@ -62,6 +74,7 @@ public class PlayerAnimStates : MonoBehaviour
 		CharacterAdvanced.ChangeAnimBool += ChangeAnimBool;
 		CharacterAdvanced.ChangeAnimFloat += ChangeAnimFloat;
 		WeaponClass.CallFireAnim += RunFireAnim;
+		WeaponClass.CallBlankAnim += RunBlankAnim;
 		WeaponMeleeClass.CallFireAnim += RunFireAnim;
 	}
 }

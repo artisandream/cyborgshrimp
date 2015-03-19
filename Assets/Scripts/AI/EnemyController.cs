@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
 
 	public Animator EnemyAnims;//drop an Animator component here
-	public NavMeshAgent myNMA; //accesses the navmesh component of an enemy
+	public NavMeshAgent navMeshAgent; //accesses the navmesh component of an enemy
 	[HideInInspector]//hides the public var just below from the Unity Editor
 	public GameObject myTarget; // the location of the player the enemies case
 	private float velocity;//the current velocity of the enemy in x
@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
 	}
 
 	void Start () {// Update is called once per frame
+		navMeshAgent = this.GetComponent<NavMeshAgent>();
 		if(RunOnceEvent !=null)
 			RunOnceEvent();
 	}
@@ -41,7 +42,7 @@ public class EnemyController : MonoBehaviour
 	}
 	
 	void OnEnable () {
-		myTarget = myNMA.gameObject;//Sets the target to itself
+		myTarget = navMeshAgent.gameObject;//Sets the target to itself
 		healthReturn = health;//sets the return health to the users current health value
 		EnemySpawnerDelegate.ActivateEnemyEvent -= Reactivate;//unsubscripts the Reactivate function the the EnemySpawnerDelegate event
 	}
@@ -58,9 +59,9 @@ public class EnemyController : MonoBehaviour
 	IEnumerator MoveEnemyToTarget ()
 	{
 		//		print ("GO");
-		myNMA.destination = myTarget.transform.position;
+		navMeshAgent.destination = myTarget.transform.position;
 		// set the destination of the enemy to follow the player
-		velocity = myNMA.velocity.x;
+		velocity = navMeshAgent.velocity.x;
 		//gets the velocity of the current agent
 		EnemyAnims.SetFloat ("Swim", velocity);
 		yield return null;

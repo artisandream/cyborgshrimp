@@ -36,7 +36,7 @@ TagManager:
   - EnemyKillZone
   - EnemyAmmo
   - EnemyPlayerContact
-  - EnemyStarter
+  - 
   - 
   - PowerUp
   - 
@@ -53,10 +53,19 @@ TagManager:
   - name: PlayerBack
     uniqueID: 1179921563
     locked: 0
+  - name: RangeWeapons
+    uniqueID: 1229136533
+    locked: 0
   - name: Player
     uniqueID: 1660818927
     locked: 0
-  - name: FrontStuff
+  - name: PlayerFront
+    uniqueID: 3006856565
+    locked: 0
+  - name: MeleeWeapons
+    uniqueID: 4121893557
+    locked: 0
+  - name: Forground
     uniqueID: 1372918755
     locked: 0
   - name: Enemies

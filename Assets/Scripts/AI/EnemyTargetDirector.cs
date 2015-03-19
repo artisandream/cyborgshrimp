@@ -26,7 +26,6 @@ public class EnemyTargetDirector : MonoBehaviour
 			var step = smoothing * Time.deltaTime;
 			transform.position = Vector3.Lerp(transform.position, _playerTarget.position, step);
 			yield return null;
-						
 		}
 	}
 }

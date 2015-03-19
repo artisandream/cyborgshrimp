@@ -11,9 +11,16 @@ public class EnemyRetargetCall : MonoBehaviour {
 		ChangeTarget ();
 	}
 
+	IEnumerator IntTarget()
+	{
+		yield return new WaitForSeconds(0.1f);
+		ChangeTarget();
+	}
+
 	void Start () {
 		MoveViaKeys.MoveKeyEvt += StartTarget;
 		MoveViaKeys.JumpKeyEvt += StartTarget;
+		//StartCoroutine(IntTarget());
 	}
 	
 	void ChangeTarget () {
