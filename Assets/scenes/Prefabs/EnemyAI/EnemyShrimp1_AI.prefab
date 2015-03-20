@@ -299,6 +299,8 @@ GameObject:
   - 114: {fileID: 11400012}
   - 54: {fileID: 5452180}
   - 65: {fileID: 6565158}
+  - 65: {fileID: 6576568}
+  - 65: {fileID: 6563060}
   m_Layer: 19
   m_Name: EnemyShrimp1_AI
   m_TagString: Untagged
@@ -382,7 +384,7 @@ GameObject:
   - 114: {fileID: 11402428}
   - 114: {fileID: 11420518}
   - 114: {fileID: 11433538}
-  m_Layer: 22
+  m_Layer: 18
   m_Name: ShrimpOneArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +417,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 495264}
   - 114: {fileID: 11495886}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: EnemyTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,6 +434,7 @@ GameObject:
   - 4: {fileID: 488530}
   - 65: {fileID: 6588532}
   - 114: {fileID: 11488528}
+  - 65: {fileID: 6521914}
   m_Layer: 21
   m_Name: MeleeTrigger
   m_TagString: Enemy
@@ -953,8 +956,32 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &6521914
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.17000008, y: 5.28999996, z: 3.66000009}
+  m_Center: {x: -6.03999996, y: -4.23999977, z: 0}
+--- !u!65 &6563060
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .189999998, y: 3, z: .460000008}
+  m_Center: {x: -.209999993, y: 0, z: .159999996}
 --- !u!65 &6565158
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -965,8 +992,20 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .800000012, y: 1, z: .730000019}
-  m_Center: {x: .159999996, y: 0, z: 0}
+  m_Size: {x: .340000004, y: 3, z: .899999976}
+  m_Center: {x: .189999998, y: 0, z: 0}
+--- !u!65 &6576568
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .189999998, y: 3, z: .899999976}
+  m_Center: {x: .560000002, y: 0, z: -.0299999993}
 --- !u!65 &6588532
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -977,8 +1016,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.1800003, y: 16.6000004, z: 7.98000002}
-  m_Center: {x: -2.5999999, y: 1.08000004, z: -.0799999982}
+  m_Size: {x: 11.4899998, y: 12.7299995, z: 10}
+  m_Center: {x: 2.13000011, y: .100000001, z: -.0799999982}
 --- !u!65 &6588536
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -989,8 +1028,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.25999999, z: 5.5}
-  m_Center: {x: 0, y: .709999979, z: 4.80000019}
+  m_Size: {x: 1.64999998, y: 1.80999994, z: 5.5}
+  m_Center: {x: 0, y: .159999996, z: 4.3499999}
 --- !u!65 &6588538
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1171,13 +1210,13 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100036}
   m_Enabled: 1
-  m_Radius: .419999987
+  m_Radius: .389999986
   m_Speed: 2
-  m_Acceleration: 8
+  m_Acceleration: 10
   avoidancePriority: 0
   m_AngularSpeed: 0
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
+  m_StoppingDistance: .850000024
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: .5
@@ -4780,7 +4819,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1481281423
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300018, guid: 735487239b55ca145a92afaa030ea733, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200034

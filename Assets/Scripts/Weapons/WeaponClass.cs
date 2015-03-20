@@ -22,19 +22,27 @@ public class WeaponClass : MonoBehaviour
 	public int firingDistance = 10;
 	private Vector3 targetPosition;
 	public Transform centerFiringPosition;
-	public GameObject muzzleFlash;
+	public GameObject AddedFX;
 	public WeaponAttachPoint.AttachType KindOfWeapon;
 	public float nextActivate = 2.0F;//the next time the ammo "fires" or is activated
 	public float activationTime = 0.0F;//the current time that is a contiuously changing var adding the time to the nextActive var
 	
 	public WeaponType.weaponSelection thisWeaponSelection;
 
-	public void AddToAvaliableWeapons()
+	void EndFX(WeaponType.weaponSelection _ws)
+	{
+		if (_ws == thisWeaponSelection) {
+			AddedFX.SetActive(false);
+		}
+	}
+
+	public virtual void AddToAvaliableWeapons()
 	{
 		if (AddWeaponToList != null) 
 			AddWeaponToList(this);
 
 		PlayerAnimStates.ReturnFire += ReturnFire;
+		PlayerAnimStates.EndReturnFire += EndFX;
 		this.GetComponent<BoxCollider>().enabled = false;
 	}
 
@@ -77,18 +85,17 @@ public class WeaponClass : MonoBehaviour
 	IEnumerator TurnOffMuzzleFlash()
 	{
 		yield return new WaitForSeconds(0.1f);
-		muzzleFlash.SetActive(false);
+		AddedFX.SetActive(false);
 	}
 	
 	void StartMuzzleFlash()
 	{
-		muzzleFlash.SetActive(true);
-		StartCoroutine(TurnOffMuzzleFlash());
+		AddedFX.SetActive(true);
 	}
 
 	public virtual void ReturnFire(WeaponType.weaponSelection _ws)
 	{
-		if (muzzleFlash != null) 
+		if (AddedFX != null) 
 			StartMuzzleFlash();
 
 		if (_ws == thisWeaponSelection) {

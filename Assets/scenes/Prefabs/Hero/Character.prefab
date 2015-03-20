@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400058}
   - 114: {fileID: 11433542}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: EnemyTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450530}
   - 114: {fileID: 11450536}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MeleeAttach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450532}
   - 114: {fileID: 11450538}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RangeAttach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - 4: {fileID: 450534}
   - 198: {fileID: 19850534}
   - 199: {fileID: 19950534}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: solo_gun_spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   - 4: {fileID: 450536}
   - 198: {fileID: 19850536}
   - 199: {fileID: 19950536}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: solo_gun_smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - 4: {fileID: 450538}
   - 198: {fileID: 19850538}
   - 199: {fileID: 19950538}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: solo_gun_flames_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   - 198: {fileID: 19850540}
   - 199: {fileID: 19950540}
   - 114: {fileID: 11450540}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: solo_gun_flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1111,6 +1111,7 @@ MonoBehaviour:
   meleeAttachPoint: {fileID: 0}
   RangeAttachPoint: {fileID: 0}
   currentWeaponNum: 0
+  currentlyPickedWeaponNum: 0
   weaponLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &11433542
 MonoBehaviour:

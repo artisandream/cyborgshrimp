@@ -3,22 +3,16 @@ using System.Collections;
 
 public class WeaponForgeClass : WeaponClass
 {
-	public GameObject laserBeam;
-	public float waitTime = 0.25f;
 
-	IEnumerator EndLaserFX()
-	{
-		yield return new WaitForSeconds(waitTime);
-		laserBeam.SetActive(false);
-	}
+	public float waitTime = 0.25f;
 	
 	public override void ReturnFire(WeaponType.weaponSelection _ws)
 	{
 		if (_ws == thisWeaponSelection) {
-			laserBeam.SetActive(true);
+			AddedFX.SetActive(true);
 			AvaliableAmmountToFire--;
 			UpdateAmmoBar();
-			StartCoroutine(EndLaserFX());
+			//StartCoroutine(EndLaserFX());
 		}
 	}
 

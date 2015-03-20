@@ -7,6 +7,7 @@ public class PlayerAnimStates : MonoBehaviour
 
 	public Animator characterAnim;
 	public static Action<WeaponType.weaponSelection> ReturnFire;
+	public static Action<WeaponType.weaponSelection> EndReturnFire;
 	public WeaponType.weaponSelection currentWeaponType;
 
 	void ChangeToFiringState ()
@@ -17,6 +18,11 @@ public class PlayerAnimStates : MonoBehaviour
 	public void CallReturnFire () {
 		if(ReturnFire != null)
 			ReturnFire(currentWeaponType);
+	}
+
+	public void CallEndReturnFire () {
+		if(EndReturnFire != null)
+			EndReturnFire(currentWeaponType);
 	}
 
 	IEnumerator ResetFireAnim (WeaponType.weaponSelection _ws)
