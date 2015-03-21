@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShieldsPlayerControl : MonoBehaviour {
 	
-	//public Animator shieldsAnimator;
+	public Animator shieldsAnimator;
 	public GameObject[] shieldObjects;
 	public BoxCollider killZone;
 	public float shieldRunTime = 5f;
@@ -20,7 +20,7 @@ public class ShieldsPlayerControl : MonoBehaviour {
 	IEnumerator DeactivateShields ()
 	{
 		yield return new WaitForSeconds(shieldRunTime);
-		//shieldsAnimator.SetBool("Open", false);
+		shieldsAnimator.SetBool("Open", false);
 		StartCoroutine(EndShields());
 	}
 
@@ -30,13 +30,13 @@ public class ShieldsPlayerControl : MonoBehaviour {
 			_go.SetActive(true);
 		}
 		killZone.enabled = (false);
-		//shieldsAnimator.SetBool("Open", true);
+		shieldsAnimator.SetBool("Open", true);
 		StartCoroutine(DeactivateShields());
 	}
 
 	// Use this for initialization
 	void Start () {
-//		shieldsAnimator = GetComponent<Animator>();
+		shieldsAnimator = GetComponent<Animator>();
 		PowerUpBase.UpdateLevelEvent += StartSields;
 	}
 }

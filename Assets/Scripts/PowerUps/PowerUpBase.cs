@@ -17,8 +17,8 @@ public class PowerUpBase : MonoBehaviour {
 	}
 
 	void OnTriggerEnter () {
+		GetComponent<BoxCollider>().enabled = false;
 		powerUpAnimator.SetBool("Open", true);
-
 		if(UpdateLevelEvent != null) {
 			UpdateLevelEvent(powerUpdate);
 		}
