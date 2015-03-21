@@ -7,10 +7,6 @@ public class EnemyActivateMeleeOnTrigger : MonoBehaviour {
 
 	public Animator eAnim;
 	
-	void Start () {
-		eAnim = this.GetComponent<Animator>();
-	}
-	
 	void OnTriggerEnter (Collider _c) {
 		if(_c.tag == "Player") {
 			eAnim.SetBool ("Melee", true);
