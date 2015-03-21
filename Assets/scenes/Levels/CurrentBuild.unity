@@ -4804,6 +4804,52 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1001 &1541145778
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1823094794}
+    m_Modifications:
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1644016368
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: b506b7d2d9ec6984197c6e3e920944f4, type: 2}
+  m_PrefabInternal: {fileID: 1541145778}
 --- !u!4 &1653652137
 Transform:
   m_PrefabParentObject: {fileID: 422802, guid: ec2b10cad1e4a47b889911878e09fc14, type: 2}
@@ -5260,6 +5306,10 @@ Prefab:
       propertyPath: enemyAmmo.Array.data[0]
       value: 
       objectReference: {fileID: 218120890}
+    - target: {fileID: 11495886, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
+      propertyPath: startPosition.x
+      value: -26
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c27c3362be6564da5a17a17943c55bbd, type: 2}
   m_IsPrefabParent: 0
@@ -5375,6 +5425,7 @@ Transform:
   - {fileID: 186867140}
   - {fileID: 1888117851}
   - {fileID: 1759568664}
+  - {fileID: 1644016368}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1001 &1865547159
@@ -5538,10 +5589,6 @@ Prefab:
       propertyPath: Targets.Array.data[4]
       value: 
       objectReference: {fileID: 228815254}
-    - target: {fileID: 11428582, guid: 3dd04b03f5a2c4dd990e310bfec1f18c, type: 2}
-      propertyPath: ammoPower
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd04b03f5a2c4dd990e310bfec1f18c, type: 2}
   m_IsPrefabParent: 0

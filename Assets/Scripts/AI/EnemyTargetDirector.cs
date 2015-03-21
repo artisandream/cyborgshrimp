@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyTargetDirector : MonoBehaviour
 {
 	public float smoothing = 1.0F;
+	public Vector3 startPosition;
 
 	void StartToNextPosition(Transform _playerTarget)
 	{
@@ -18,6 +19,7 @@ public class EnemyTargetDirector : MonoBehaviour
 	void OnEnable()
 	{
 		EnemyRetargetCall.UpdateEnemyTargetEvent += StartToNextPosition;
+		transform.localPosition = startPosition;
 	}
 
 	IEnumerator SetNewPosition(Transform _playerTarget)

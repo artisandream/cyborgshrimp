@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 524544
+    m_Bits: 524288
   fxType: 7
   OneShot: 0
   BeamFrames: []
@@ -291,7 +291,7 @@ MonoBehaviour:
   numberOfTargets: 3
   ifAvaliable: 0
   currentAmmoNum: 0
-  ammoPower: 4
+  ammoPower: 1
   AvaliableAmmountToFire: 10
   setRotation: 0
   firingDistance: 100
