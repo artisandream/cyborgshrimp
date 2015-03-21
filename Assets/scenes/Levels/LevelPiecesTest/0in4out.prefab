@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100002
 GameObject:
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e591cd00e6714c7f80baf652ecf1ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisNMA: {fileID: 11400014}
+  EnemyNavMeshAgent: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1693,11 +1693,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c10b8608f75649d3a6668709ffcdc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyAnims: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+  myTarget: {fileID: 0}
   health: 10
   healthReturn: 10
   randomSpawningTime: 10
   nextActivate: 1
   killerWeaponsList: []
+  art: {fileID: 0}
+  explosion: {fileID: 0}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1

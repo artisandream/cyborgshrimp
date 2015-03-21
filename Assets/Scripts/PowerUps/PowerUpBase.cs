@@ -23,5 +23,4 @@ public class PowerUpBase : MonoBehaviour {
 			UpdateLevelEvent(powerUpdate);
 		}
 	}
-
 }

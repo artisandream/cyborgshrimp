@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100002
 GameObject:
@@ -1015,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c64a1a624c541238a05d2a239419b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnAnim: {fileID: 0}
   randomSpawningTime: 10
   nextActivate: 2
 --- !u!114 &11400002
