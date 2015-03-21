@@ -105,7 +105,7 @@ GameObject:
   - 135: {fileID: 13522790}
   m_Layer: 14
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: PLASMA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.205394343, y: 1.16244459, z: -10.5353785}
+  m_LocalPosition: {x: -.205394, y: 1.16244495, z: -10.5353785}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422800}
@@ -427,7 +427,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   MoveSpeed: 4
   MoveDistance: 20
-  IsHomingMove: 1
+  IsHomingMove: 0
   IsVisible: 1
   DeactivateAfterCollision: 1
   DeactivateTimeDelay: 1

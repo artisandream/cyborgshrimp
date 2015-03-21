@@ -18,7 +18,7 @@ public class MoveAndLevelGenerate : MonoBehaviour {
 		//MoveCharacterViaArrowKeys.MoveCharacter += UpdateSpeed;
 		StaticVars.currentLevel = LevelEnum.LevelChoice.LEVEL_1;
 		//EndGame.TurnOffGame += TurnOff;
-		JumpAndFuelScript.JumpPlayer += IncreaseSpeed;
+		//JumpAndFuelScript.JumpPlayer += IncreaseSpeed;
 		EnableRecycle.EnableLevelEvent += AddToEnableList;
 		//ReportAchievements.ChangeLevelAction += ChangeLevel;
 	}
@@ -32,7 +32,7 @@ public class MoveAndLevelGenerate : MonoBehaviour {
 
 	public virtual void OnDestroy () {
 		//EndGame.TurnOffGame -= TurnOff;
-		JumpAndFuelScript.JumpPlayer -= IncreaseSpeed;
+		//JumpAndFuelScript.JumpPlayer -= IncreaseSpeed;
 	}
 	
 

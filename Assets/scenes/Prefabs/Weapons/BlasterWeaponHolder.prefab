@@ -79,9 +79,10 @@ GameObject:
   - 4: {fileID: 428584}
   - 120: {fileID: 12028580}
   - 114: {fileID: 11428580}
-  m_Layer: 0
+  - 65: {fileID: 6590904}
+  m_Layer: 14
   m_Name: plasma_beam_red
-  m_TagString: Untagged
+  m_TagString: RAYGUN
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,6 +234,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .579999983, y: .479999989, z: .389999986}
   m_Center: {x: .129999995, y: 0, z: .119999997}
+--- !u!65 &6590904
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 10, z: 20.8799992}
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!114 &11428580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 524544
   fxType: 7
   OneShot: 0
   BeamFrames: []

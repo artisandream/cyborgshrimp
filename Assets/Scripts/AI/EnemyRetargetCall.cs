@@ -1,30 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyRetargetCall : MonoBehaviour {
+public class EnemyRetargetCall : MonoBehaviour
+{
 
-	public delegate void UpdateEnemyTarget (Transform _playerTarget);
-	public static event UpdateEnemyTarget UpdateEnemyTargetEvent;
+		public delegate void UpdateEnemyTarget (Transform _playerTarget);
 
-	void StartTarget (float _speed)
-	{
-		ChangeTarget ();
-	}
+		public static event UpdateEnemyTarget UpdateEnemyTargetEvent;
 
-	IEnumerator IntTarget()
-	{
-		yield return new WaitForSeconds(0.1f);
-		ChangeTarget();
-	}
+		void StartTarget (float _speed)
+		{
+				ChangeTarget ();
+		}
 
-	void Start () {
-		MoveViaKeys.MoveKeyEvt += StartTarget;
-		MoveViaKeys.JumpKeyEvt += StartTarget;
-		//StartCoroutine(IntTarget());
-	}
+		IEnumerator IntTarget ()
+		{
+				yield return new WaitForSeconds (0.1f);
+				ChangeTarget ();
+		}
+
+		void Start ()
+		{
+				MoveViaKeys.MoveKeyEvt += StartTarget;
+				MoveViaKeys.JumpKeyEvt += StartTarget;
+				StartCoroutine (IntTarget ());
+		}
 	
-	void ChangeTarget () {
-		if(UpdateEnemyTargetEvent != null)
-			UpdateEnemyTargetEvent(transform);
-	}
+		void ChangeTarget ()
+		{
+				if (UpdateEnemyTargetEvent != null) {
+						UpdateEnemyTargetEvent (transform);
+				}
+		}
 }

@@ -56,7 +56,7 @@ public class JumpAndFuelScript : MonoBehaviour
 
 	void Update() {
 		if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) {
-			JumpCharacter();
+			//JumpCharacter();
 		}
 	}
 
@@ -64,7 +64,7 @@ public class JumpAndFuelScript : MonoBehaviour
 	{
 		if(canJump) {
 			if(JumpPlayer != null)
-				JumpPlayer();
+				//JumpPlayer();
 
 			if (fuelLevel > 0) {
 				fuelLevel -= fuelUsage;

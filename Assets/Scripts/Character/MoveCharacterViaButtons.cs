@@ -29,7 +29,8 @@ public class MoveCharacterViaButtons : MonoBehaviour
 	}
 
 	public void OnJump () {
-		if(JumpKeyEvt != null)
+		if(JumpKeyEvt != null){
 			JumpKeyEvt (jumpForce);
+		}
 	}
 }

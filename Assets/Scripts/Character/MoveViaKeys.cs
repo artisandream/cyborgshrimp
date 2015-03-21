@@ -38,7 +38,8 @@ public class MoveViaKeys : MonoBehaviour {
 		if ((Input.GetKeyUp (KeyCode.LeftArrow) || Input.GetKeyUp (KeyCode.RightArrow)) && MoveKeyEvt != null)
 			MoveKeyEvt (0);
 
-		if (Input.GetButton ("Jump") && JumpKeyEvt != null)
+		if (Input.GetButton ("Jump") && JumpKeyEvt != null) {
 			JumpKeyEvt (jumpForce);
+		}
 	}
 }

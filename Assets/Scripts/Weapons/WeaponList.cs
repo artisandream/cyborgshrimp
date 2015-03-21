@@ -38,7 +38,7 @@ public class WeaponList : MonoBehaviour
 		SwitchCurrentWeapon.SwitchWeapon += SwitchThisWeapon;
 		FireWeaponChoice.FireCurrentWeapon += CurrentWeaponNum;
 		FireWeaponChoice.FireCurrentWeapon += FireWeapon;
-		FireThisWeapon.FireCurrentWeapon += FireWeapon;
+		//FireThisWeapon.FireCurrentWeapon += FireWeapon;
 	}
 
 	void AddWeaponBars(WeaponBar _b)

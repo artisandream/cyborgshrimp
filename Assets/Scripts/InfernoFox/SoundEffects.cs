@@ -15,12 +15,12 @@ public class SoundEffects : MonoBehaviour {
 
 	void OnEnable (){
 		EndGame.PlayZap += PlayExplosionSound;
-		JumpAndFuelScript.JumpPlayer += PlayJumpSound;
+		//JumpAndFuelScript.JumpPlayer += PlayJumpSound;
 	}
 
 	void OnDestory (){
-		EndGame.PlayZap -= PlayExplosionSound;
-		JumpAndFuelScript.JumpPlayer -= PlayJumpSound;
+		//EndGame.PlayZap -= PlayExplosionSound;
+		//JumpAndFuelScript.JumpPlayer -= PlayJumpSound;
 	}
 
 	public void PlayExplosionSound (string _WhatDidTheFoxHit) {

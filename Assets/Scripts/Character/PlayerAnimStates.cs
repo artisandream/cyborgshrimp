@@ -16,13 +16,15 @@ public class PlayerAnimStates : MonoBehaviour
 	}
 
 	public void CallReturnFire () {
-		if(ReturnFire != null)
+		if(ReturnFire != null) {
 			ReturnFire(currentWeaponType);
+		}
 	}
 
 	public void CallEndReturnFire () {
-		if(EndReturnFire != null)
+		if(EndReturnFire != null) {
 			EndReturnFire(currentWeaponType);
+		}
 	}
 
 	IEnumerator ResetFireAnim (WeaponType.weaponSelection _ws)
@@ -81,6 +83,6 @@ public class PlayerAnimStates : MonoBehaviour
 		CharacterAdvanced.ChangeAnimFloat += ChangeAnimFloat;
 		WeaponClass.CallFireAnim += RunFireAnim;
 		WeaponClass.CallBlankAnim += RunBlankAnim;
-		WeaponMeleeClass.CallFireAnim += RunFireAnim;
+		//WeaponMeleeClass.CallFireAnim += RunFireAnim;
 	}
 }

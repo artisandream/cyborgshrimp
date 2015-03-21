@@ -11,11 +11,11 @@ public class PlayerControl : MonoBehaviour {
 
 	void Start() {
 		v2.y = 1;
-		JumpAndFuelScript.JumpPlayer += JumpPlayer;
+		//JumpAndFuelScript.JumpPlayer += JumpPlayer;
 	}
 
 	void OnDestroy () {
-		JumpAndFuelScript.JumpPlayer -= JumpPlayer;
+		//JumpAndFuelScript.JumpPlayer -= JumpPlayer;
 	}
 
 	void DeactivateArt () {

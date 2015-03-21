@@ -103,12 +103,14 @@ public class EnemyController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.2f);
 		EnemyAnims.SetLayerWeight(2, 0);
+		EnemyAnims.SetBool("Damage", false);
 	}
 
 	void PlayDamageAnim()
 	{
 		var i = Random.Range(0.5f, 1);
 		EnemyAnims.SetLayerWeight(2, i);
+		EnemyAnims.SetBool("Damage", true);
 		StartCoroutine(EndDamage());
 	}
 
@@ -148,7 +150,6 @@ public class EnemyController : MonoBehaviour
 	void OnTriggerEnter(Collider _c)
 	{
 		if (_c.gameObject.layer == 14) {
-			print(_c.gameObject.name);
 			LowerHealth(_c);
 		}
 	}
