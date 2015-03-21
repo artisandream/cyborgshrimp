@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 1
+  startPosition: {x: -26, y: 0, z: 0}
 --- !u!195 &19500000
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -1206,7 +1207,7 @@ NavMeshAgent:
   m_Height: .5
   m_BaseOffset: .25
   m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!198 &19809752
 ParticleSystem:
   m_ObjectHideFlags: 1

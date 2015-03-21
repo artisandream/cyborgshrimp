@@ -36,11 +36,24 @@ public class WeaponClass : MonoBehaviour
 		}
 	}
 
+	void AddBackToAvaliableAmmo (float _supplyLevels)
+	{
+		print (_supplyLevels);
+		AvaliableAmmountToFire += _supplyLevels;
+		print (AvaliableAmmountToFire);
+		if(AvaliableAmmountToFire > startAvaliableAmmoToFire) {
+			AvaliableAmmountToFire = startAvaliableAmmoToFire;
+			print (AvaliableAmmountToFire);
+		}
+		UpdateAmmoBar();
+	}
+
 	public virtual void AddToAvaliableWeapons()
 	{
 		if (AddWeaponToList != null) 
 			AddWeaponToList(this);
 
+		PowerUpBase.UpdateLevelEvent += AddBackToAvaliableAmmo;
 		PlayerAnimStates.ReturnFire += ReturnFire;
 		PlayerAnimStates.EndReturnFire += EndFX;
 		this.GetComponent<BoxCollider>().enabled = false;

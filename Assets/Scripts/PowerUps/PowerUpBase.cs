@@ -20,6 +20,7 @@ public class PowerUpBase : MonoBehaviour {
 		GetComponent<BoxCollider>().enabled = false;
 		powerUpAnimator.SetBool("Open", true);
 		if(UpdateLevelEvent != null) {
+			print("POWER");
 			UpdateLevelEvent(powerUpdate);
 		}
 	}
