@@ -7,9 +7,11 @@ public class CharacterHealthKiller : MonoBehaviour {
 	public static Action<float> UpdateHealth;
 	public float ammoPower = 0.1f;
 	
-	void OnTriggerEnter ()
+	void OnTriggerEnter (Collider _collider)
 	{
-		if(UpdateHealth != null)
-			UpdateHealth(ammoPower);
+		if(_collider.tag == "Player") {
+			if(UpdateHealth != null)
+				UpdateHealth(ammoPower);
+		}
 	}
 }

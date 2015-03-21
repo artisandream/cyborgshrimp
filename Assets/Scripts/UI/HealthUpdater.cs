@@ -24,7 +24,7 @@ public class HealthUpdater : MonoBehaviour {
 	void Start () {
 		//CharacterHealth.UpdateHealth += UpdateHealth;
 		CharacterHealthKiller.UpdateHealth += UpdateHealth;
-		EnemyMelee.MeleeEvent += UpdateHealth;
+		EnemyMeleeOnAnimator.MeleeEvent += UpdateHealth;
 		updateScale.x = 1;
 		updateScale.y = 1;
 		updateScale.z = 1;

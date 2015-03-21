@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMeleeListener : MonoBehaviour {
-	
+public class EnemyMelee_PlayerFXCall : MonoBehaviour {
+
+	//this is attached to FX on the player to shw a Melee hit
+
 	public ParticleSystem thisParticles;
 	public Vector3 randomPos;
 	public float randomDistance = 4;
@@ -22,9 +24,8 @@ public class EnemyMeleeListener : MonoBehaviour {
 		thisParticles.Play();
 		StartCoroutine (EndParticalPlay ());
 	}
-
-
+	
 	void Start () {
-		EnemyMelee.MeleeEvent += AddDamage;
+		EnemyMeleeOnAnimator.MeleeEvent += AddDamage;
 	}
 }

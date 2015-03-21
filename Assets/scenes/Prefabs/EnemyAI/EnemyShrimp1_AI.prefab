@@ -297,7 +297,6 @@ GameObject:
   - 4: {fileID: 400036}
   - 195: {fileID: 19500000}
   - 114: {fileID: 11400012}
-  - 54: {fileID: 5452180}
   - 65: {fileID: 6565158}
   - 65: {fileID: 6576568}
   - 65: {fileID: 6563060}
@@ -435,7 +434,7 @@ GameObject:
   - 65: {fileID: 6588532}
   - 114: {fileID: 11488528}
   - 65: {fileID: 6521914}
-  m_Layer: 21
+  m_Layer: 20
   m_Name: MeleeTrigger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -943,21 +942,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 488536}
   m_RootOrder: 3
---- !u!54 &5452180
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100036}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!65 &6521914
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -980,7 +964,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .189999998, y: 3, z: .460000008}
+  m_Size: {x: .189999998, y: 3, z: 1}
   m_Center: {x: -.209999993, y: 0, z: .159999996}
 --- !u!65 &6565158
 BoxCollider:
@@ -992,7 +976,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .340000004, y: 3, z: .899999976}
+  m_Size: {x: .340000004, y: 3, z: 1}
   m_Center: {x: .189999998, y: 0, z: 0}
 --- !u!65 &6576568
 BoxCollider:
@@ -1004,7 +988,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .189999998, y: 3, z: .899999976}
+  m_Size: {x: .209999993, y: 3, z: .949999988}
   m_Center: {x: .560000002, y: 0, z: -.0299999993}
 --- !u!65 &6588532
 BoxCollider:
@@ -4559,7 +4543,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1481281423
-  m_SortingOrder: 3
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300014, guid: 735487239b55ca145a92afaa030ea733, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200014
@@ -4637,7 +4621,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1481281423
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300026, guid: 735487239b55ca145a92afaa030ea733, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200020
@@ -4819,7 +4803,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1481281423
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300018, guid: 735487239b55ca145a92afaa030ea733, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200034
@@ -4845,7 +4829,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1481281423
-  m_SortingOrder: 6
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300024, guid: 735487239b55ca145a92afaa030ea733, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200036
@@ -4923,7 +4907,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1481281423
-  m_SortingOrder: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300016, guid: 735487239b55ca145a92afaa030ea733, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
