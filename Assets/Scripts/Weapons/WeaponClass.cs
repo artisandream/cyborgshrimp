@@ -38,12 +38,9 @@ public class WeaponClass : MonoBehaviour
 
 	void AddBackToAvaliableAmmo (float _supplyLevels)
 	{
-		print (_supplyLevels);
 		AvaliableAmmountToFire += _supplyLevels;
-		print (AvaliableAmmountToFire);
 		if(AvaliableAmmountToFire > startAvaliableAmmoToFire) {
 			AvaliableAmmountToFire = startAvaliableAmmoToFire;
-			print (AvaliableAmmountToFire);
 		}
 		UpdateAmmoBar();
 	}

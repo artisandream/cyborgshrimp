@@ -57,27 +57,26 @@ public class CharacterAdvanced : MonoBehaviour
 	IEnumerator StopJumpForce()
 	{
 		yield return new WaitForSeconds(0.001f);
+		if (ChangeAnimBool != null) {
+			ChangeAnimBool("Jump", true);
+		}
 		jumpForce = 0;
 	}
 
 	void JumpCharacter(float _jump)
 	{
-		if (ChangeAnimBool != null) {
-			ChangeAnimBool("Jump", true);
-		}
-
 		jumpForce = _jump;
 		StartCoroutine(StopJumpForce());
 	}
 	
 	void Update()
 	{
+
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
 			if (ChangeAnimBool != null) {
 				ChangeAnimBool("Jump", false);
 			}
 			moveDirection = new Vector3(hInput * speed, 0, 0);
-			
 			switch (StaticVars.currentDirection) {
 				case StaticVars.Direction.LEFT:
 					MoveAndChangeDirection(false, true);
@@ -86,7 +85,7 @@ public class CharacterAdvanced : MonoBehaviour
 					MoveAndChangeDirection(true, false);
 					break;
 			}
-			moveDirection.z = jumpForce;	
+			moveDirection.z = jumpForce;
 		} 
 		moveDirection.z -= gravity * Time.deltaTime;
 		myController.Move(moveDirection * Time.deltaTime);// move is a keyword (method really) that moves a charactor controller
