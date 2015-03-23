@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8a852f92283175c4ea59214f72e96a2f
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: 0in4out
     100002: 4in4out01
@@ -57,6 +57,10 @@ ModelImporter:
     100102: 8in8out03_001
     100104: 8in8out04_001
     100106: 8in8out05_001
+    100108: 4in0out
+    100110: 4in0out_001
+    100112: 8in0out
+    100114: 8in0out_001
     400000: 0in4out
     400002: 4in4out01
     400004: 4in4out02
@@ -111,6 +115,10 @@ ModelImporter:
     400102: 8in8out03_001
     400104: 8in8out04_001
     400106: 8in8out05_001
+    400108: 4in0out
+    400110: 4in0out_001
+    400112: 8in0out
+    400114: 8in0out_001
     2300000: 0in4out
     2300002: 4in4out01
     2300004: 4in4out02
@@ -137,6 +145,8 @@ ModelImporter:
     2300046: 4in8out01_001
     2300048: 8in4down01_001
     2300050: 8in4up01_001
+    2300052: 8in0out
+    2300054: 8in0out_001
     3300000: 0in4out
     3300002: 4in4out01
     3300004: 4in4out02
@@ -163,6 +173,8 @@ ModelImporter:
     3300046: 4in8out01_001
     3300048: 8in4down01_001
     3300050: 8in4up01_001
+    3300052: 8in0out
+    3300054: 8in0out_001
     4300000: 8in4out03
     4300002: 8in4out02
     4300004: 8in4out01
@@ -216,6 +228,10 @@ ModelImporter:
     4300100: 4in4out03_001
     4300102: 4in4out02_001
     4300104: 4in4out01_001
+    4300106: 4in0out_001
+    4300108: 4in0out
+    4300110: 8in0out_001
+    4300112: 8in0out
     7400000: Default Take
     9500000: //RootNode
     13700000: 0in4out
@@ -266,6 +282,8 @@ ModelImporter:
     13700090: 8in8out03_001
     13700092: 8in8out04_001
     13700094: 8in8out05_001
+    13700096: 4in0out
+    13700098: 4in0out_001
   materials:
     importMaterials: 1
     materialName: 0
@@ -293,11 +311,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -320,3 +340,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
