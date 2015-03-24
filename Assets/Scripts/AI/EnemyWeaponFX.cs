@@ -7,7 +7,7 @@ public class EnemyWeaponFX : EffectSettings {
 
 	public Action<EnemyWeaponFX> ResetAmmo;
 
-	//public float ammoPower = 0.1f;
+	public float ammoPower = 0.1f;
 
 	public override void OnEffectDeactivatedHandler ()
 	{
