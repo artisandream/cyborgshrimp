@@ -4,46 +4,51 @@ using System.Collections.Generic;
 
 public class EnemyController : MonoBehaviour
 {
-
+	public List<WeaponClass> killerWeaponsList;//this is a list of weapons used to kill the enemies 
 	public Animator EnemyAnims;//drop an Animator component here
 	public NavMeshAgent navMeshAgent; //accesses the navmesh component of an enemy
-	[HideInInspector]
-	//hides the public var just below from the Unity Editor
-	public GameObject
-		myTarget; // the location of the player the enemies case
-	private float velocity;//the current velocity of the enemy in x
+
+
 	public int health = 3;//the enemy health
 	public int healthReturn = 3;//the value that the enemy should return to if upon respawning
-	public int randomSpawningTime = 10;
+	public int randomSpawningTime = 10;//the highest posible amount of time when the enemy can respawn
+
+	
+	private float velocity;//the current velocity of the enemy in x
 	private float activationTime = 0.0F;//test this against the current time to activate a respawn
 	public float nextActivate = 1.0F;// the next time an enemy can respawn
-	private Vector3 SpawnLocation;//the location that the enemy will appear after respawning
-	private bool canRespawn;
-	public List<WeaponClass> killerWeaponsList;
-	public GameObject art;
-	public GameObject explosion;
 
-	public delegate void RunStartOnce();
 
-	public event RunStartOnce RunOnceEvent;
+	//private Vector3 SpawnLocation;//the location that the enemy will appear after respawning
+	//private bool canRespawn; 
 
-	EnemyController()
+	
+	public GameObject myTarget; // the location of the player the enemies case
+	public GameObject art;//game art that be deactivated when the it "explodes"
+	public GameObject explosion;//the FX for enemyExploding
+
+
+	public delegate void RunStartOnce();//used to start a new weaponList instance 
+	public event RunStartOnce RunOnceEvent;//used to subscribe to any weapons classes that might me instanced in a level
+
+
+	EnemyController()//the class contructor
 	{
-		RunOnceEvent += RunOnce;
-	}
-
-	void Start()
-	{// Update is called once per frame
-		navMeshAgent = this.GetComponent<NavMeshAgent>();
-		if (RunOnceEvent != null)
-			RunOnceEvent();
+		RunOnceEvent += RunOnce;//subcribes to the RunOnceEvent event
 	}
 
 	void RunOnce()
 	{
-		killerWeaponsList = new List<WeaponClass>();
-		WeaponClass.AddWeaponToList += AddKillerWeapons;
-		RunOnceEvent -= RunOnce;
+		killerWeaponsList = new List<WeaponClass>();//news up the killerWeaponsList instance 
+		WeaponClass.AddWeaponToList += AddKillerWeapons;//subscribes to any avaliable weaponClass instances
+		RunOnceEvent -= RunOnce;//unsubscribes to the RunOnce event if the enemy is respawned
+	}
+
+	void Start()
+	{
+		navMeshAgent = this.GetComponent<NavMeshAgent>();//finds the required NavMeshAgent
+		if (RunOnceEvent != null) //checks for subscribers
+			RunOnceEvent();//raises the RunOnceEvent
 	}
 	
 	void OnEnable()
@@ -60,12 +65,12 @@ public class EnemyController : MonoBehaviour
 
 	public void StartEnemyMove()
 	{
-		StartCoroutine(MoveEnemyToTarget());
+		StartCoroutine(MoveEnemyToTarget());//replaced the Update call and only runs when called
 	}
-	
-	IEnumerator MoveEnemyToTarget()
+
+
+	IEnumerator MoveEnemyToTarget()//sets the destination of the NavMeshAgent to the player
 	{
-		//		print ("GO");
 		navMeshAgent.destination = myTarget.transform.position;
 		// set the destination of the enemy to follow the player
 		velocity = navMeshAgent.velocity.x;
