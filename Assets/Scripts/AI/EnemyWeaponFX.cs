@@ -5,7 +5,9 @@ using System;
 
 public class EnemyWeaponFX : EffectSettings {
 
-	public Action<EnemyWeaponFX> ResetAmmo;
+
+	//and extention of the Effects Settings class as part of the Realistic FX Packs
+	public Action<EnemyWeaponFX> ResetAmmo;//a delegate that sends it's settings to the player's health
 
 	public float ammoPower = 0.1f;
 
@@ -18,6 +20,7 @@ public class EnemyWeaponFX : EffectSettings {
 		}
 	}
 
+	//waits to load into the game to add Action subscribers, then deactivates
 	public IEnumerator StartLate () {
 		yield return new WaitForSeconds (0.01f);
 		this.gameObject.SetActive (false);

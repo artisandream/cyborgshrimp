@@ -138,7 +138,7 @@ public class EnemyController : MonoBehaviour
 		}
 	}
 
-	Vector3 Reactivate(Vector3 _v)
+	void Reactivate(Vector3 _v)
 	{//the delegate passes a value of the location to respawn
 		EnemyAnims.SetLayerWeight(2, 0);
 		health = healthReturn;//resets the health var
@@ -149,12 +149,12 @@ public class EnemyController : MonoBehaviour
 			this.gameObject.SetActive(true);//actiovates the enemy
 			activationTime = Time.time + nextActivate + Random.Range(0, randomSpawningTime);//sets the next time it can be activated
 		}
-		return _v;//returns a Vector3
+		//return _v;//returns a Vector3
 	}
 
 	void OnTriggerEnter(Collider _c)
 	{
-		if (_c.gameObject.layer == 14) {
+		if (_c.gameObject.layer == 14) {//this should be the Player ammo
 			LowerHealth(_c);
 		}
 	}

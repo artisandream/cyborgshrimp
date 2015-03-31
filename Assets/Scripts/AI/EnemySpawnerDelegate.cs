@@ -3,23 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EnemySpawnerDelegate : MonoBehaviour {
+	
+	public Animator spawnAnim;//requires an animator component for the spawner 
+	public int randomSpawningTime = 10;//variation on respawn time
+	public delegate void ActivateEnemyHandler (Vector3 _v); //sends this location to enemies
+	public static ActivateEnemyHandler ActivateEnemyEvent; //invokes the delegate
 
-	public Animator spawnAnim;
-	public int randomSpawningTime = 10;
-	public delegate Vector3 ActivateEnemy (Vector3 _v);
-	public static event ActivateEnemy ActivateEnemyEvent;
-	//public event ActivateEnemy ActivateEnemyEvent;
-
-	private float activationTime = 0.0F;
-	public float nextActivate = 2.0F;
+	private float activationTime = 0.0F; //this will be added and compared to time.time
+	public float nextActivate = 2.0F; // how long it takes for the next activation time
 	
 	void Start() {
-		spawnAnim = this.GetComponent<Animator>();
-		OnActivateEnemy();
+		spawnAnim = this.GetComponent<Animator>();//references the animator component
+		OnActivateEnemy(); //runs the enemy activation event
 	}
 
 	void OnTriggerStay() {
-		OnActivateEnemy();
+		OnActivateEnemy(); //runs the enemy activation event
 	}
 
 	void TurnOffSpawn () {
@@ -28,12 +27,11 @@ public class EnemySpawnerDelegate : MonoBehaviour {
 
 	public void OnActivateEnemy () {
 		if(Time.time > activationTime) {
-			if( ActivateEnemyEvent != null ) {
-				ActivateEnemyEvent(this.transform.position);
+			if( ActivateEnemyEvent != null ) { //invokes the event
+				ActivateEnemyEvent(this.transform.position);//passes this postion to any 
 			}
 			spawnAnim.SetBool("Spawn", true);
-//			print("activate");
-			activationTime = Time.time + nextActivate+(Random.Range(0,randomSpawningTime));
+			activationTime = Time.time + nextActivate+(Random.Range(0,randomSpawningTime));//randomises the next activation time
 		}
 	}	
 }

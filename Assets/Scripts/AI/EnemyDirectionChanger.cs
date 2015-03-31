@@ -17,6 +17,6 @@ public class EnemyDirectionChanger : MonoBehaviour {
 
 	
 	void OnTriggerEnter ( ) {
-		StartCoroutine(TurnEnemyWithDelay ());
+		StartCoroutine(TurnEnemyWithDelay ());//starts a delay
 	}
 }

@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class EnemyFiringStateMachine : MonoBehaviour {
-	
+
+	//added to the enemy forward trigger
 	public Animator enemyAnim;
 
 	void EndFiring ()
