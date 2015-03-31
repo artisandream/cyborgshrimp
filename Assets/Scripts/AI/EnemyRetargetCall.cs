@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class EnemyRetargetCall : MonoBehaviour
 {
 
-		public delegate void UpdateEnemyTarget (Transform _playerTarget);
-
-		public static event UpdateEnemyTarget UpdateEnemyTargetEvent;
+		public static Action<Transform> UpdateEnemyTargetEvent;
 
 		void StartTarget (float _speed)
 		{

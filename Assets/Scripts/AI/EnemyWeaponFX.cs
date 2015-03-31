@@ -7,9 +7,9 @@ public class EnemyWeaponFX : EffectSettings {
 
 
 	//and extention of the Effects Settings class as part of the Realistic FX Packs
+	public float ammoPower = 0.1f;
 	public Action<EnemyWeaponFX> ResetAmmo;//a delegate that sends it's settings to the player's health
 
-	public float ammoPower = 0.1f;
 
 	public override void OnEffectDeactivatedHandler ()
 	{

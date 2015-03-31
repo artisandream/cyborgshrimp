@@ -4,13 +4,15 @@ using System.Collections.Generic;
 
 public class EnemySpawnerDelegate : MonoBehaviour {
 	
-	public Animator spawnAnim;//requires an animator component for the spawner 
+	private float activationTime = 0.0F; //this will be added and compared to time.time
+	public float nextActivate = 2.0F; // how long it takes for the next activation time
+
 	public int randomSpawningTime = 10;//variation on respawn time
+
+	public Animator spawnAnim;//requires an animator component for the spawner 
 	public delegate void ActivateEnemyHandler (Vector3 _v); //sends this location to enemies
 	public static ActivateEnemyHandler ActivateEnemyEvent; //invokes the delegate
 
-	private float activationTime = 0.0F; //this will be added and compared to time.time
-	public float nextActivate = 2.0F; // how long it takes for the next activation time
 	
 	void Start() {
 		spawnAnim = this.GetComponent<Animator>();//references the animator component

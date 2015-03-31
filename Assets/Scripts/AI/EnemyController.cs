@@ -4,29 +4,22 @@ using System.Collections.Generic;
 
 public class EnemyController : MonoBehaviour
 {
-	public List<WeaponClass> killerWeaponsList;//this is a list of weapons used to kill the enemies 
-	public Animator EnemyAnims;//drop an Animator component here
-	public NavMeshAgent navMeshAgent; //accesses the navmesh component of an enemy
-
-
-	public int health = 3;//the enemy health
-	public int healthReturn = 3;//the value that the enemy should return to if upon respawning
-	public int randomSpawningTime = 10;//the highest posible amount of time when the enemy can respawn
-
-	
 	private float velocity;//the current velocity of the enemy in x
 	private float activationTime = 0.0F;//test this against the current time to activate a respawn
 	public float nextActivate = 1.0F;// the next time an enemy can respawn
 
-
-	//private Vector3 SpawnLocation;//the location that the enemy will appear after respawning
-	//private bool canRespawn; 
-
+	public int health = 3;//the enemy health
+	public int healthReturn = 3;//the value that the enemy should return to if upon respawning
+	public int randomSpawningTime = 10;//the highest posible amount of time when the enemy can respawn
 	
 	public GameObject myTarget; // the location of the player the enemies case
 	public GameObject art;//game art that be deactivated when the it "explodes"
 	public GameObject explosion;//the FX for enemyExploding
 
+	public Animator EnemyAnims;//drop an Animator component here
+	public NavMeshAgent navMeshAgent; //accesses the navmesh component of an enemy
+
+	public List<WeaponClass> killerWeaponsList;//this is a list of weapons used to kill the enemies 
 
 	public delegate void RunStartOnce();//used to start a new weaponList instance 
 	public event RunStartOnce RunOnceEvent;//used to subscribe to any weapons classes that might me instanced in a level

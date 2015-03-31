@@ -3,9 +3,6 @@ using System.Collections;
 
 public class ActivateEnemyAI : MonoBehaviour {
 
-	//This script should be added to an object with a box collider to detect and go after the player
-	//needs a collider, is trigger true
-
 	public EnemyController EnemyNavMeshAgent;//instance of EnemyNav script on another game Object
 
 	void OnTriggerStay (Collider _c) {

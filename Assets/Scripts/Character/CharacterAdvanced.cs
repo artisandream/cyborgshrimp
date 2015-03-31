@@ -4,25 +4,22 @@ using System;
 
 public class CharacterAdvanced : MonoBehaviour
 {
+	private bool flipped;
+
+	private float hInput;
+	public float speed = 0.5f;
+	public float jumpForce;
+	public float gravity = 20;
+
+	private string animName = "Walk";
+	
+	private Vector3 moveDirection;
 
 	public CharacterController myController;
 	public Transform myArt;
 
-	public delegate void AnimatorBool(string _animPeram,bool _peramBool);
-
-	public static event AnimatorBool ChangeAnimBool;
-
-	public delegate void AnimatorFloat(string _animPeram,float _peramFLoat);
-
-	public static event AnimatorFloat ChangeAnimFloat;
-
-	private float hInput;
-	private string animName = "Walk";
-	public float speed = 0.5f;
-	private bool flipped;
-	private Vector3 moveDirection;
-	public float jumpForce;
-	public float gravity = 20;
+	public static Action<string, bool> ChangeAnimBool;
+	public static Action<string, float> ChangeAnimFloat;
 
 	void KillPlayer()
 	{

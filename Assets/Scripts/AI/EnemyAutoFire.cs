@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EnemyAutoFire : MonoBehaviour {
-
-	public EnemyWeaponFX[] enemyAmmo;
-	public List<EnemyWeaponFX> enemyAmmoList;
+	
 	private int i = 0;
 	public Animator EnemyAnimation;
 	public Transform ammoStart;
+	public EnemyWeaponFX[] enemyAmmo;
+	public List<EnemyWeaponFX> enemyAmmoList;
+
 
 	void StartAmmo (EnemyWeaponFX obj)
 	{

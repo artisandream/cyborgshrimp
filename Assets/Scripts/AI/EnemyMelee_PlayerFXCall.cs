@@ -4,11 +4,10 @@ using System.Collections;
 public class EnemyMelee_PlayerFXCall : MonoBehaviour {
 
 	//this is attached to FX on the player to shw a Melee hit
-
-	public ParticleSystem thisParticles;
-	public Vector3 randomPos;
 	public float randomDistance = 4;
 	public float heightOffset = 6;
+	public Vector3 randomPos;
+	public ParticleSystem thisParticles;
 
 	IEnumerator EndParticalPlay ()
 	{
