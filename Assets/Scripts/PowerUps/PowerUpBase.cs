@@ -1,15 +1,16 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class PowerUpBase : MonoBehaviour {
 
-	public Animator powerUpAnimator;
 	public int powerUpdate = 10;
 
 	public enum PowerUpType {Health, Ammo, Shields}
 
-	public delegate void UpdateLevels (float _supplyLevels);
-	public static event UpdateLevels UpdateLevelEvent;
+	public Animator powerUpAnimator;
+	
+	public static Action<float> UpdateLevelEvent;
 
 	// Use this for initialization
 	void Start () {

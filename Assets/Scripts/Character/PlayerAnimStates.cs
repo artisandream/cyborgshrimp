@@ -6,9 +6,10 @@ public class PlayerAnimStates : MonoBehaviour
 {
 
 	public Animator characterAnim;
+	public WeaponType.weaponSelection currentWeaponType;
+
 	public static Action<WeaponType.weaponSelection> ReturnFire;
 	public static Action<WeaponType.weaponSelection> EndReturnFire;
-	public WeaponType.weaponSelection currentWeaponType;
 
 	void ChangeToFiringState ()
 	{

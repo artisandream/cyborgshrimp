@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class MoveViaKeys : MonoBehaviour {
+
+	public static Action<float> MoveKeyEvt;
+	public static Action<float> JumpKeyEvt;
 
 	void DisableScript ()
 	{
@@ -14,11 +18,6 @@ public class MoveViaKeys : MonoBehaviour {
 		EndGame.TurnOffGame += DisableScript;
 	}
 
-	public delegate void MoveKeyDel (float _speed);
-	public static event MoveKeyDel MoveKeyEvt;
-
-	public delegate void JumpKeyDel (float _speed);
-	public static event JumpKeyDel JumpKeyEvt;
 
 	static void SendInput (StaticVars.Direction _direction)
 	{

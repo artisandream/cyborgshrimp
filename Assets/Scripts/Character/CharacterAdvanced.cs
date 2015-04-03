@@ -15,8 +15,8 @@ public class CharacterAdvanced : MonoBehaviour
 	
 	private Vector3 moveDirection;
 
-	public CharacterController myController;
 	public Transform myArt;
+	public CharacterController myController;
 
 	public static Action<string, bool> ChangeAnimBool;
 	public static Action<string, float> ChangeAnimFloat;
@@ -34,6 +34,7 @@ public class CharacterAdvanced : MonoBehaviour
 		MoveViaKeys.MoveKeyEvt += ChangeInputFloat;
 		MoveViaKeys.JumpKeyEvt += JumpCharacter;
 		EndGame.TurnOffGame += KillPlayer;
+		//JumpCharacter(jumpForce);
 	}
 
 	void ChangeInputFloat(float _f)
@@ -53,11 +54,16 @@ public class CharacterAdvanced : MonoBehaviour
 
 	IEnumerator StopJumpForce()
 	{
-		yield return new WaitForSeconds(0.001f);
+		yield return new WaitForSeconds(0.01f);
 		if (ChangeAnimBool != null) {
 			ChangeAnimBool("Jump", true);
 		}
-		jumpForce = 0;
+
+		while (jumpForce > 0 ) {
+			jumpForce--;
+			yield return null;
+		}
+		yield return new WaitForSeconds(0);
 	}
 
 	void JumpCharacter(float _jump)
@@ -65,26 +71,30 @@ public class CharacterAdvanced : MonoBehaviour
 		jumpForce = _jump;
 		StartCoroutine(StopJumpForce());
 	}
-	
-	void Update()
-	{
 
+	void MoveCharacter ()
+	{
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
 			if (ChangeAnimBool != null) {
-				ChangeAnimBool("Jump", false);
+				ChangeAnimBool ("Jump", false);
 			}
-			moveDirection = new Vector3(hInput * speed, 0, 0);
+			moveDirection = new Vector3 (hInput * speed, 0, 0);
 			switch (StaticVars.currentDirection) {
-				case StaticVars.Direction.LEFT:
-					MoveAndChangeDirection(false, true);
-					break;
-				case StaticVars.Direction.RIGHT:
-					MoveAndChangeDirection(true, false);
-					break;
+			case StaticVars.Direction.LEFT:
+				MoveAndChangeDirection (false, true);
+				break;
+			case StaticVars.Direction.RIGHT:
+				MoveAndChangeDirection (true, false);
+				break;
 			}
-			moveDirection.z = jumpForce;
-		} 
+			moveDirection.z = jumpForce * Time.deltaTime;
+		}
 		moveDirection.z -= gravity * Time.deltaTime;
-		myController.Move(moveDirection * Time.deltaTime);// move is a keyword (method really) that moves a charactor controller
+		myController.Move (moveDirection * Time.deltaTime); // move is a keyword (method really) that moves a charactor controller
+	}
+
+	void Update()
+	{
+		MoveCharacter (); 
 	}
 }

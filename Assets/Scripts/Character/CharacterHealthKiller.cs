@@ -4,9 +4,9 @@ using System;
 
 public class CharacterHealthKiller : MonoBehaviour {
 
-	public static Action<float> UpdateHealth;
 	public float ammoPower = 0.1f;
-	
+	public static Action<float> UpdateHealth;
+
 	void OnTriggerEnter (Collider _collider)
 	{
 		if(_collider.tag == "Player") {

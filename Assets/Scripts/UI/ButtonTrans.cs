@@ -2,19 +2,11 @@
 using System.Collections;
 
 public class ButtonTrans : MonoBehaviour {
-
-	//public WeaponsPickUpAndSwitch myWPAS;
 	
-	public SpriteRenderer ButtonSprite;
-	public BoxCollider2D boxCollider;
-	public Color fullColor;
-	public Color fadedColor;
-	private Color currentColor;
 	public bool activeButton = false;
+	public float duration = 1.0F;
 	public int activateNum = 0;
 
-	public float duration = 1.0F;
-	
 	public enum ButtonStates {
 		START,
 		OVER,
@@ -23,6 +15,13 @@ public class ButtonTrans : MonoBehaviour {
 	}
 	
 	public ButtonStates buttonState = ButtonStates.START;
+
+	public Color fullColor;
+	public Color fadedColor;
+	private Color currentColor;
+
+	public BoxCollider2D boxCollider;
+	public SpriteRenderer ButtonSprite;
 
 	void SetButtonStartState ()
 	{

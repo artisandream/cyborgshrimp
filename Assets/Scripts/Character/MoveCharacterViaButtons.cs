@@ -1,6 +1,4 @@
-﻿// Anthony Romrell ©2014
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -8,13 +6,12 @@ using System;
 public class MoveCharacterViaButtons : MonoBehaviour 
 {
 	public float jumpForce = 1;
+	public float direction = 1;
 
 	public StaticVars.Direction currentDirection = StaticVars.Direction.LEFT;
-	public float direction = 1;
-	public static Action<float> MoveCharacter;
 
-	public delegate void JumpKeyDel (float _speed);
-	public static event JumpKeyDel JumpKeyEvt;
+	public static Action<float> MoveCharacter;
+	public static Action<float> JumpKeyEvt;
 
 	public void OnMouseDown () {
 		StaticVars.currentDirection = currentDirection;
