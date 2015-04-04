@@ -6,16 +6,25 @@ public class EndGame : MonoBehaviour
 {
 	public static Action TurnOffGame;
 	public static Action<string> PlayZap;
+	public static Func<bool, bool> EndGameBoolHandler; 
+	
+	bool OnEndGameBool (bool _b) {
+		if(EndGameBoolHandler != null)
+			EndGameBoolHandler(_b);
 
-	//raises the TurnOffGame action to end the game
-	void EndThisGame ()
-	{
+		return _b;
+	}
+
+	void OnTurnOffGame () {
 		if(TurnOffGame != null)
 			TurnOffGame();
 	}
-
-	//subscribes to the HealthUpdater HealthOut delegate and listens for health to drop below zero
+	
 	void Start () {
-		HealthUpdater.HealthOut += EndThisGame;
+		//EndGameInput
+		HealthUpdater.HealthOut += OnEndGameBool;
+		EscapePod.EndGameHandler += OnEndGameBool;
+		//EndGameOutPut
+		CharacterAdvanced.EndGameWithWin += OnTurnOffGame;
 	}
 }

@@ -21,10 +21,32 @@ public class CharacterAdvanced : MonoBehaviour
 	public static Action<string, bool> ChangeAnimBool;
 	public static Action<string, float> ChangeAnimFloat;
 
-	void KillPlayer()
+	public Action MoveThis;
+	public Action EndMove;
+	public static Action EndGameWithWin;
+
+	void OnKillPlayer()
 	{
-		EndGame.TurnOffGame -= KillPlayer;
+		EndGame.EndGameBoolHandler -= OnEndPlayer;
 		this.enabled = false;
+	}
+
+	void OnWinGame ()
+	{
+		gravity = 0;
+		jumpForce = 5;
+		MoveThis -= MoveCharacter;
+		EndMove += EndCharacter;
+	}
+
+	bool OnEndPlayer (bool _b)
+	{
+		if(_b) {
+			OnWinGame();
+		} else {
+			OnKillPlayer();
+		}
+		return _b;
 	}
 
 	void Start()
@@ -33,8 +55,9 @@ public class CharacterAdvanced : MonoBehaviour
 		MoveCharacterViaButtons.JumpKeyEvt += JumpCharacter;
 		MoveViaKeys.MoveKeyEvt += ChangeInputFloat;
 		MoveViaKeys.JumpKeyEvt += JumpCharacter;
-		EndGame.TurnOffGame += KillPlayer;
-		//JumpCharacter(jumpForce);
+		//EndGame.TurnOffGame += KillPlayer;
+		EndGame.EndGameBoolHandler += OnEndPlayer;
+		MoveThis += MoveCharacter;
 	}
 
 	void ChangeInputFloat(float _f)
@@ -72,13 +95,33 @@ public class CharacterAdvanced : MonoBehaviour
 		StartCoroutine(StopJumpForce());
 	}
 
+	IEnumerator EndAllEventsWithWin ()
+	{
+		yield return new WaitForSeconds(1);
+		EndMove -= EndCharacter;
+		if(EndGameWithWin != null)
+			EndGameWithWin();
+	}
+
+	void EndCharacter () {
+		moveDirection.x = 0;
+		moveDirection.y = 2;
+		moveDirection.z = 0.15f;
+		myController.Move (moveDirection * Time.deltaTime);
+		StartCoroutine(EndAllEventsWithWin());
+	}
+
 	void MoveCharacter ()
 	{
 		if ((myController.collisionFlags & CollisionFlags.Sides) != 0) {
 			if (ChangeAnimBool != null) {
 				ChangeAnimBool ("Jump", false);
+				ChangeAnimBool ("Start", false);
 			}
-			moveDirection = new Vector3 (hInput * speed, 0, 0);
+			moveDirection.x = hInput * speed;
+			moveDirection.y = 0;
+			moveDirection.z = 0;
+
 			switch (StaticVars.currentDirection) {
 			case StaticVars.Direction.LEFT:
 				MoveAndChangeDirection (false, true);
@@ -95,6 +138,11 @@ public class CharacterAdvanced : MonoBehaviour
 
 	void Update()
 	{
-		MoveCharacter (); 
+		if(MoveThis != null) {
+			MoveThis();
+		}
+		if(EndMove != null) {
+			EndMove();
+		}
 	}
 }

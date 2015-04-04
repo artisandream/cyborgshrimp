@@ -63,7 +63,25 @@ public class PlayerAnimStates : MonoBehaviour
 		characterAnim.SetFloat (_animPeram, _peramFLoat);
 	}
 
-	void KillPlayer ()
+
+	void OnEnter () {
+		ChangeAnimBool("Start", true);
+
+	}
+
+	IEnumerator OnExitWinAndEndGame ()
+	{
+		yield return new WaitForSeconds(0.01f);
+		ChangeAnimBool("Win", false);
+	}
+
+	void OnWinGame ()
+	{
+		ChangeAnimBool("Win", true);
+		StartCoroutine(OnExitWinAndEndGame());
+	}
+
+	void OnLooseGame ()
 	{
 		characterAnim.SetBool ("Arm", false);
 		characterAnim.SetBool ("Arm", false);
@@ -72,18 +90,27 @@ public class PlayerAnimStates : MonoBehaviour
 		characterAnim.SetBool ("Arm", false);
 		characterAnim.SetLayerWeight (1, 0);
 		characterAnim.SetBool ("Die", true);
-		EndGame.TurnOffGame -= KillPlayer;
+		EndGame.EndGameBoolHandler -= OnEndGameEvent;
 		this.enabled = false;
+	}
+
+	bool OnEndGameEvent (bool _b)
+	{
+		if(_b) {
+			OnWinGame ();
+		} else {
+			OnLooseGame ();
+		}
+		return _b;
 	}
 
 	void Start ()
 	{
-		EndGame.TurnOffGame += KillPlayer;
+		EndGame.EndGameBoolHandler += OnEndGameEvent;
 		WeaponList.WeaponType += ChangeToFiringState;
 		CharacterAdvanced.ChangeAnimBool += ChangeAnimBool;
 		CharacterAdvanced.ChangeAnimFloat += ChangeAnimFloat;
 		WeaponClass.CallFireAnim += RunFireAnim;
 		WeaponClass.CallBlankAnim += RunBlankAnim;
-		//WeaponMeleeClass.CallFireAnim += RunFireAnim;
 	}
 }

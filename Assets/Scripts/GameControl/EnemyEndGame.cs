@@ -15,8 +15,26 @@ public class EnemyEndGame : MonoBehaviour {
 		StartCoroutine(PlayLaughAnim ());
 	}
 
+	void EnemyDie () {
+		print ("All Die");
+	}
+
+	bool EnemyEndState (bool arg)
+	{
+		if(arg){
+			EnemyDie ();
+		} else {
+			EnemyLaugh();
+		};
+		return arg;
+	}
+
 	// Use this for initialization
-	void Start () {
-		EndGame.TurnOffGame += EnemyLaugh;
+	void OnEnable () {
+		EndGame.EndGameBoolHandler += EnemyEndState;
+	}
+
+	void OnDisable () {
+		EndGame.EndGameBoolHandler -= EnemyEndState;
 	}
 }

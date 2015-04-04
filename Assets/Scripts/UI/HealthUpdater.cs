@@ -5,7 +5,7 @@ using System;
 public class HealthUpdater : MonoBehaviour {
 
 	public Vector3 updateScale;
-	public static Action HealthOut;
+	public static Func<bool, bool> HealthOut;
 
 	void UpdateHealth (float _ammoPower)
 	{
@@ -17,18 +17,15 @@ public class HealthUpdater : MonoBehaviour {
 			//CharacterHealth.UpdateHealth -= UpdateHealth;
 
 			if(HealthOut != null)
-				HealthOut();
+				HealthOut(false);
 		}
 	}
 	// Use this for initialization
 	void Start () {
-		//CharacterHealth.UpdateHealth += UpdateHealth;
 		CharacterHealthKiller.UpdateHealth += UpdateHealth;
 		EnemyMeleeOnAnimator.MeleeEvent += UpdateHealth;
 		updateScale.x = 1;
 		updateScale.y = 1;
 		updateScale.z = 1;
-		//float _screenTop = Screen.height*0.5F-20;
-		//this.transform.localPosition = new Vector3(0, _screenTop, 0 );
 	}
 }
