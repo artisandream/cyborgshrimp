@@ -31,10 +31,12 @@ public class EnemyEndGame : MonoBehaviour {
 
 	// Use this for initialization
 	void OnEnable () {
+		print ("off");
 		EndGame.EndGameBoolHandler += EnemyEndState;
 	}
 
 	void OnDisable () {
+		print ("On");
 		EndGame.EndGameBoolHandler -= EnemyEndState;
 	}
 }

@@ -55,7 +55,6 @@ public class CharacterAdvanced : MonoBehaviour
 		MoveCharacterViaButtons.JumpKeyEvt += JumpCharacter;
 		MoveViaKeys.MoveKeyEvt += ChangeInputFloat;
 		MoveViaKeys.JumpKeyEvt += JumpCharacter;
-		//EndGame.TurnOffGame += KillPlayer;
 		EndGame.EndGameBoolHandler += OnEndPlayer;
 		MoveThis += MoveCharacter;
 	}
@@ -105,8 +104,8 @@ public class CharacterAdvanced : MonoBehaviour
 
 	void EndCharacter () {
 		moveDirection.x = 0;
-		moveDirection.y = 2;
-		moveDirection.z = 0.15f;
+		moveDirection.y = 1;
+		moveDirection.z = 1;
 		myController.Move (moveDirection * Time.deltaTime);
 		StartCoroutine(EndAllEventsWithWin());
 	}
