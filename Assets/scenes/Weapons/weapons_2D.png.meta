@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 2591aeded66a2394dba77fe9632e2d35
+timeCreated: 1429031599
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: MissleLauncher
@@ -7,6 +9,7 @@ TextureImporter:
     21300004: Blaster
     21300006: SonicBat
     21300008: Spear
+    21300010: weapons_2D_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,6 +28,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -35,6 +41,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -52,21 +59,21 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1673
+        y: 1521
         width: 1328
-        height: 375
+        height: 527
       alignment: 9
-      pivot: {x: .930745602, y: .441375494}
+      pivot: {x: .930745602, y: .602417707}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlasmaGun
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1140
-        width: 781
-        height: 439
+        x: 30
+        y: 1051
+        width: 788
+        height: 466
       alignment: 9
-      pivot: {x: .877628446, y: .495849818}
+      pivot: {x: .892844737, y: .556442559}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Blaster
       rect:
@@ -81,8 +88,8 @@ TextureImporter:
     - name: SonicBat
       rect:
         serializedVersion: 2
-        x: 793
-        y: 1363
+        x: 842
+        y: 1314
         width: 1203
         height: 196
       alignment: 9
@@ -91,12 +98,24 @@ TextureImporter:
     - name: Spear
       rect:
         serializedVersion: 2
-        x: 4
-        y: 838
-        width: 2032
-        height: 302
+        x: 1
+        y: 679
+        width: 2040
+        height: 305
       alignment: 9
       pivot: {x: .647439063, y: .824860632}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weapons_2D_0
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1078
+        width: 221
+        height: 178
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
