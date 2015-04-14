@@ -17,6 +17,7 @@ public class UIAnimStates : MonoBehaviour {
 
 	public void OnEnd () {
 		startText.text = "Game Over";
+		startText.fontSize = 150;
 	}
 
 	IEnumerator EndGUI ()

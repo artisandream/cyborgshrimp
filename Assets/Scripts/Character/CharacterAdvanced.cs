@@ -105,7 +105,7 @@ public class CharacterAdvanced : MonoBehaviour
 	void EndCharacter () {
 		moveDirection.x = 0;
 		moveDirection.y = 1;
-		moveDirection.z = 1;
+		moveDirection.z = 0.5f;
 		myController.Move (moveDirection * Time.deltaTime);
 		StartCoroutine(EndAllEventsWithWin());
 	}
