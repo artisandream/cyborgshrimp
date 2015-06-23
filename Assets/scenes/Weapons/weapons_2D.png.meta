@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2591aeded66a2394dba77fe9632e2d35
-timeCreated: 1429031599
+timeCreated: 1435080090
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: SonicBat
     21300008: Spear
     21300010: weapons_2D_0
+    21300012: weapons_2D_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -114,6 +115,16 @@ TextureImporter:
         height: 178
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weapons_2D_1
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 343
+        width: 567
+        height: 330
+      alignment: 9
+      pivot: {x: .933140337, y: .711894989}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
