@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2591aeded66a2394dba77fe9632e2d35
-timeCreated: 1435080090
+timeCreated: 1435166838
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: Spear
     21300010: weapons_2D_0
     21300012: weapons_2D_1
+    21300014: weapons_2D_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -125,6 +126,16 @@ TextureImporter:
         height: 330
       alignment: 9
       pivot: {x: .933140337, y: .711894989}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weapons_2D_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 53
+        width: 259
+        height: 620
+      alignment: 9
+      pivot: {x: .279255509, y: .273011059}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
