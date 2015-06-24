@@ -11,12 +11,11 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 64: {fileID: 6400000}
-  - 114: {fileID: 11400002}
   m_Layer: 16
   m_Name: 4in4out01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100002
@@ -392,8 +391,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 5.54901973e-08, y: .707107008, z: .70710665, w: -1.0131037e-07}
-  m_LocalPosition: {x: -25, y: -0, z: 15}
+  m_LocalRotation: {x: 1.10874744e-07, y: 1, z: -3.27825546e-07, w: -3.23997469e-08}
+  m_LocalPosition: {x: 40, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -782,23 +781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c64a1a624c541238a05d2a239419b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnAnim: {fileID: 0}
-  randomSpawningTime: 10
   nextActivate: 2
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0beac34b386f4e58abd938989c298a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileChildren: []
-  levelChoices: 0
-  canRecycle: 1
+  randomSpawningTime: 10
+  spawnAnim: {fileID: 0}
 --- !u!212 &21203866
 SpriteRenderer:
   m_ObjectHideFlags: 1
